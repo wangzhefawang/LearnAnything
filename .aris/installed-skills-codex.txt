@@ -1,0 +1,10 @@
+version	1
+project_root	D:/SAVE/Project/GitHub/LearnAnything
+generated	2026-06-10T00:00:00Z
+packages	learn-anything-local
+kind	name	source_rel	target_rel	mode
+skill	learn-anything-explain	.claude/skills/learn-anything-explain	.agents/skills/learn-anything-explain	copy
+skill	learn-anything-practice	.claude/skills/learn-anything-practice	.agents/skills/learn-anything-practice	copy
+skill	learn-anything-review	.claude/skills/learn-anything-review	.agents/skills/learn-anything-review	copy
+skill	learn-anything-status	.claude/skills/learn-anything-status	.agents/skills/learn-anything-status	copy
+skill	learn-anything-topic	.claude/skills/learn-anything-topic	.agents/skills/learn-anything-topic	copy
