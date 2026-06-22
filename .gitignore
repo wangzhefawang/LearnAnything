@@ -1,0 +1,13 @@
+# OS 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器 / IDE
+.vscode/
+.idea/
+*.swp
+*~
+*.tmp
+
+# 注意：.learn/topics/ 是个人学习数据，刻意保留在版本控制中，不忽略
