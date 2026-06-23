@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"scripts/update_progress.py\"",
+            "timeout": 30,
+            "statusMessage": "刷新 README 学习进度"
+          }
+        ]
+      }
+    ]
+  }
+}

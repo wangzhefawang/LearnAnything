@@ -18,7 +18,9 @@
 
 - README 的「学习进度」区块由 `scripts/update_progress.py` 自动生成：读取 `.learn/topics/*/state.yaml`，零依赖、强制 UTF-8 输出喵。
 - 在产出学习内容、或更新过任何 `state.yaml` 之后，运行 `python scripts/update_progress.py` 刷新 README喵。
-- Claude Code 那一侧由 `.claude/settings.json` 的 `Stop` hook 每轮自动运行该脚本，Codex 没有对应 hook，因此必须在相关任务中主动运行喵。
+- Claude Code 那一侧由 `.claude/settings.json` 的 `Stop` hook 每轮自动运行该脚本喵。
+- Codex 这边支持项目级 `.codex/hooks.json` 的 `Stop` hook，可在每轮回复停止时自动运行 `python scripts/update_progress.py` 喵。
+- 如果当前 Codex 环境未加载或未信任该 hook，仍需在更新学习内容或 `state.yaml` 后主动运行 `python scripts/update_progress.py` 兜底喵。
 - 脚本只替换 README 中由 `LEARN-PROGRESS:START` 与 `LEARN-PROGRESS:END` 标记界定的内容，其余手写部分不会被动到喵。
 
 ## Project Skill Scope
