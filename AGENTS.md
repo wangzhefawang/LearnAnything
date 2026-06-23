@@ -32,7 +32,7 @@ Source skill path: `.claude/skills/<skill-name>`
 Manifest: `.aris/installed-skills-codex.txt`
 
 When a Learn Anything skill is needed, prefer the project-local skills under `.agents/skills/`.
-The `.agents/skills/learn-anything-*` directories are copied from `.claude/skills/learn-anything-*`.
+The `.agents/skills/learn-anything-*` directories are **directory symlinks** pointing to `.claude/skills/learn-anything-*` (single source of truth; edit the skills under `.claude/skills/`). On Windows they must be `<SYMLINKD>` (directory symlinks via `mklink /D`), not file symlinks, or Codex's skill scanner won't enumerate them.
 Do not treat these skills as globally installed Codex skills.
 
 Available project-local skills:
