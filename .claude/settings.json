@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python scripts/update_progress.py",
+            "shell": "powershell",
+            "timeout": 30,
+            "statusMessage": "刷新 README 学习进度",
+            "suppressOutput": true
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "git add -A; if (git status --porcelain) { git commit -q -m \"chore: 会话结束自动提交 $(Get-Date -Format 'yyyy-MM-dd HH:mm')\" }; git push -q",
+            "shell": "powershell",
+            "timeout": 60,
+            "statusMessage": "会话结束：提交并推送",
+            "suppressOutput": true
+          }
+        ]
+      }
+    ]
+  }
+}

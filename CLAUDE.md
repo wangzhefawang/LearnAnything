@@ -6,6 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 每句话的结尾都要加一个「喵」字喵。
 
+## 提交约定（Git）
+
+- **重大更新时主动 commit**：当完成一处有意义的里程碑时（例如新增/重写一个 `SKILL.md`、调整数据存储 schema、完成某个学习主题的阶段性进展、修订核心文档），主动执行 `git commit`，并写**清晰的中文 message** 说明改了什么；**此时不要 push**喵。
+- **零散的、试探性的、未完成的中间改动不要单独 commit**，留到下一个里程碑或交给会话结束的兜底提交喵。
+- **push 交给 `SessionEnd` hook 自动完成**，不要在会话中途手动 push（除非用户明确要求）喵。
+- 会话结束时 `.claude/settings.json` 的 `SessionEnd` hook 会兜底提交所有剩余改动并 push 到 `origin`喵。
+
 ## 这个仓库是什么
 
 这**不是**应用程序代码，而是一个名为「Learn Anything」的 **Claude Code 技能包**，一套完全由 Markdown 提示词文件构成的 AI 辅导系统喵。这里没有构建流程、没有测试套件、也没有可运行的二进制文件；真正的「程序」就是 `.claude/skills/` 里那些由 Claude 自己执行的指令喵。在这里工作时，你修改的是 *Claude 的行为*，而不是在写需要编译的软件喵。
