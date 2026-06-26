@@ -1,0 +1,144 @@
+topic: 具身智能
+created: 2026-06-26
+concepts:
+  - path: "大模型基础/Transformer 架构"
+    status: in_progress
+    last_practiced: null
+    last_session: 2026-06-26
+    practice_count: 0
+    confidence: 0.0
+  - path: "大模型基础/大模型预训练 Pretraining"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "大模型基础/监督微调 SFT"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "大模型基础/RLHF 与人类对齐"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "大模型基础/多模态视觉语言模型 VLM"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "VLA 视觉-语言-动作模型/VLA 架构范式"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "VLA 视觉-语言-动作模型/动作表征与 Action Tokenization"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "VLA 视觉-语言-动作模型/模仿学习与行为克隆 Behavior Cloning"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "VLA 视觉-语言-动作模型/端到端策略与决策推理"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/MDP 与策略-价值框架"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/PPO 算法"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/SAC 算法"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/TD3 算法"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/奖励工程 Reward Engineering"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/全身运动控制 Whole-body Control"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "强化学习/抗扰动与高频动态平衡"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "物理仿真与 Sim-to-Real/仿真引擎 Isaac Gym / MuJoCo"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "物理仿真与 Sim-to-Real/刚体动力学基础"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "物理仿真与 Sim-to-Real/接触模型与摩擦力辨识"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "物理仿真与 Sim-to-Real/域随机化 Domain Randomization"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "物理仿真与 Sim-to-Real/策略迁移与实机反向对齐"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "安全评测与红队对抗/多模态对抗样本注入"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "安全评测与红队对抗/安全熔断机制"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "安全评测与红队对抗/物理失效案例与迭代指标"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "工程与部署/ROS2 机器人操作系统生态"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "工程与部署/多源传感器数据处理"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "工程与部署/边缘侧推理框架"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
+  - path: "工程与部署/国产算力并行训练"
+    status: unexplored
+    last_practiced: null
+    practice_count: 0
+    confidence: 0.0
