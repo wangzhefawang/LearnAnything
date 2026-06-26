@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "topic": "ai-agent-应用开发",
+  "slug": "ai-agent-应用开发",
+  "created": "2026-06-10",
+  "domains": [
+    {
+      "name": "LLM 与 Prompt 基础",
+      "slug": "llm-与-prompt-基础",
+      "concepts": [
+        {
+          "name": "LLM 工作原理与 Token",
+          "slug": "llm-工作原理与-token",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": "2026-06-18",
+          "last_practiced": null,
+          "details": [
+            "自回归生成、上下文窗口、温度等采样参数"
+          ]
+        },
+        {
+          "name": "LLM API 调用与接口开发",
+          "slug": "llm-api-调用与接口开发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "OpenAI 兼容接口、流式输出、Python SDK"
+          ]
+        },
+        {
+          "name": "Prompt 工程",
+          "slug": "prompt-工程",
+          "status": "in_progress",
+          "confidence": 0.15,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": "2026-06-10",
+          "details": [
+            "角色设定、Few-shot、思维链 CoT、结构化输出"
+          ]
+        },
+        {
+          "name": "上下文设计与管理",
+          "slug": "上下文设计与管理",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": "2026-06-10",
+          "details": [
+            "系统提示词、对话历史裁剪、上下文压缩"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Agent 智能体",
+      "slug": "agent-智能体",
+      "concepts": [
+        {
+          "name": "Agent 架构与 ReAct 模式",
+          "slug": "agent-架构与-react-模式",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "工具调用 Function Calling",
+          "slug": "工具调用-function-calling",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "任务拆解与规划",
+          "slug": "任务拆解与规划",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "记忆机制",
+          "slug": "记忆机制",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": "2026-06-11",
+          "details": [
+            "短期对话记忆、长期持久化记忆"
+          ]
+        },
+        {
+          "name": "多智能体协同",
+          "slug": "多智能体协同",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "RAG 知识库",
+      "slug": "rag-知识库",
+      "concepts": [
+        {
+          "name": "文档解析与分块",
+          "slug": "文档解析与分块",
+          "status": "in_progress",
+          "confidence": 0.2,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": "2026-06-18",
+          "details": []
+        },
+        {
+          "name": "向量化 Embedding",
+          "slug": "向量化-embedding",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": "2026-06-11",
+          "details": []
+        },
+        {
+          "name": "向量数据库与检索",
+          "slug": "向量数据库与检索",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": "2026-06-11",
+          "details": [
+            "Chroma/Milvus/FAISS、相似度检索、混合检索"
+          ]
+        },
+        {
+          "name": "检索调优与重排序",
+          "slug": "检索调优与重排序",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "RAG 效果评估",
+          "slug": "rag-效果评估",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "工作流编排与自动化",
+      "slug": "工作流编排与自动化",
+      "concepts": [
+        {
+          "name": "工作流编排基础",
+          "slug": "工作流编排基础",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "办公系统集成",
+          "slug": "办公系统集成",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "飞书/钉钉/企微 API、数据库与文档打通"
+          ]
+        },
+        {
+          "name": "流程自动化设计",
+          "slug": "流程自动化设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "周报月报生成、会议纪要整理、任务排期"
+          ]
+        },
+        {
+          "name": "自迭代工作流",
+          "slug": "自迭代工作流",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "开发框架",
+      "slug": "开发框架",
+      "concepts": [
+        {
+          "name": "LangChain",
+          "slug": "langchain",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "LlamaIndex",
+          "slug": "llamaindex",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "Dify",
+          "slug": "dify",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "AutoGen 与多智能体框架",
+          "slug": "autogen-与多智能体框架",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "工程落地",
+      "slug": "工程落地",
+      "concepts": [
+        {
+          "name": "快速原型开发",
+          "slug": "快速原型开发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "评估与监控",
+          "slug": "评估与监控",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "安全与权限控制",
+          "slug": "安全与权限控制",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "成本与延迟优化",
+          "slug": "成本与延迟优化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,7 @@ packages	learn-anything-local
 kind	name	source_rel	target_rel	mode
 skill	learn-anything-explain	.claude/skills/learn-anything-explain	.agents/skills/learn-anything-explain	symlink
 skill	learn-anything-practice	.claude/skills/learn-anything-practice	.agents/skills/learn-anything-practice	symlink
+skill	learn-anything-quiz	.claude/skills/learn-anything-quiz	.agents/skills/learn-anything-quiz	symlink
 skill	learn-anything-review	.claude/skills/learn-anything-review	.agents/skills/learn-anything-review	symlink
 skill	learn-anything-status	.claude/skills/learn-anything-status	.agents/skills/learn-anything-status	symlink
 skill	learn-anything-topic	.claude/skills/learn-anything-topic	.agents/skills/learn-anything-topic	symlink

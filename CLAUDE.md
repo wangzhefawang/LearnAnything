@@ -19,19 +19,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 仓库结构
 
-- `.claude/commands/learn/*.md` —— 轻量的斜杠命令入口（`/learn:topic`、`/learn:explain`、`/learn:practice`、`/learn:review`、`/learn:status`），每个都只是转发给对应的技能喵。
+- `.claude/commands/learn/*.md` —— 轻量的斜杠命令入口（`/learn:topic`、`/learn:explain`、`/learn:practice`、`/learn:quiz`、`/learn:review`、`/learn:status`），每个都只是转发给对应的技能喵。
 - `.claude/skills/learn-anything-*/SKILL.md` —— 真正的逻辑所在；每个文件都是一段详细的提示词，定义了一条辅导工作流喵。
 - `.learn/topics/<topic-name>/` —— 运行时的数据存储，由技能在学习过程中创建和修改（在用户开始某个主题前为空）喵。
 
 每个命令文件都是对应技能的 1:1 包装 —— 要改变行为，请编辑 `SKILL.md`，而不是命令存根喵。
 
-## 五个技能及其关联
+## 六个技能及其关联
 
 这些技能是相互独立的命令，但共享一份契约：`.learn/topics/<topic>/` 数据存储喵。
 
 - **learn-anything-topic**（`/learn <topic>`）—— 入口；生成 `knowledge-map.md` + 初始 `state.yaml`，或加载已有主题并汇报进度喵。
 - **learn-anything-explain**（`/learn-explain <concept>`）—— 递归式深入讲解，采用「定位 → 类比 → 机制 → 代码 → 常见误区 → 苏格拉底式检查」的结构喵。
 - **learn-anything-practice**（`/learn-practice <concept>`）—— 双模式练习：**项目模式**为编程类主题在 `exercises/<slug>/` 下写真实文件，**对话模式**为概念类主题进行讨论喵。
+- **learn-anything-quiz**（`/learn-quiz <concept>`）—— 为已学概念出 5–8 题测验（选择/判断/填空/改错），把题库存进 `quizzes/<slug>/`，批改后更新进度；从上游 v1.4.0 移植，仅测验已 touched 的概念喵。
 - **learn-anything-review**（`/learn-review [topic]`）—— 分析进度，并用间隔重复的优先级评分推荐学习路径喵。
 - **learn-anything-status**（`/learn-status [topic]`）—— 只读的掌握度热力图可视化喵。
 
@@ -43,8 +44,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 .learn/topics/<topic-name>/
 ├── knowledge-map.md      # 层级化的概念树（## 领域 / - 概念 / 缩进的细节）
 ├── state.yaml            # 每个概念的进度，是所有技能的唯一真相来源
-├── sessions/             # 完整保存的讲解与练习记录
-└── exercises/<slug>/     # 项目模式的练习文件（README.md、starter.<ext> 等）
+├── sessions/             # 完整保存的讲解、练习与测验记录
+├── exercises/<slug>/     # 项目模式的练习文件（README.md、starter.<ext> 等）
+└── quizzes/<slug>/       # 测验题库 JSON（含答案与解析，可复用重练）
 ```
 
 `state.yaml` 每个概念的字段：`path`（"Domain/Concept"）、`status`、`last_practiced`、`practice_count`、`confidence`（0.0–1.0）喵。

@@ -39,5 +39,21 @@ Available project-local skills:
 - `learn-anything-topic`
 - `learn-anything-explain`
 - `learn-anything-practice`
+- `learn-anything-quiz`
 - `learn-anything-review`
 - `learn-anything-status`
+
+## 斜杠命令 → 技能对照表
+
+`/learn:*` 斜杠命令是 Claude Code 独有机制，Codex 没有这套命令系统喵。当用户在 Codex 里敲这些命令（或用大白话表达同样意图）时，按下表找到对应技能，读取其 `SKILL.md` 并照流程执行喵：
+
+| 用户输入的命令 | 对应技能 | 意图 |
+| --- | --- | --- |
+| `/learn:topic <主题>` | `learn-anything-topic` | 初始化或加载一个学习主题，生成/展示知识图谱喵 |
+| `/learn:explain <概念>` | `learn-anything-explain` | 递归式深入讲解某个概念喵 |
+| `/learn:practice <概念>` | `learn-anything-practice` | 动手练习（项目模式写真实文件 / 对话模式讨论）喵 |
+| `/learn:quiz <概念>` | `learn-anything-quiz` | 出题测验已学概念，自动批改并更新进度喵 |
+| `/learn:review [主题]` | `learn-anything-review` | 分析进度并按间隔重复推荐学习路径喵 |
+| `/learn:status [主题]` | `learn-anything-status` | 只读展示掌握度热力图喵 |
+
+用户即便不敲斜杠、只用自然语言描述意图（如「我想学 X 主题」「给我讲讲 Y」），也按同一张表匹配到对应技能执行喵。

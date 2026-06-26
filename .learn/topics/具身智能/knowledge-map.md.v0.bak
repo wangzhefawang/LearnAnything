@@ -1,0 +1,43 @@
+# 具身智能（Embodied AI）知识图谱
+
+> 对应岗位：具身智能核心算法专家（大脑-小脑协同架构）
+
+## 大模型基础（大脑底座）
+- Transformer 架构
+- 大模型预训练 Pretraining
+- 监督微调 SFT
+- RLHF 与人类对齐
+- 多模态视觉语言模型 VLM
+
+## VLA 视觉-语言-动作模型
+- VLA 架构范式
+- 动作表征与 Action Tokenization
+- 模仿学习与行为克隆 Behavior Cloning
+- 端到端策略与决策推理
+
+## 强化学习（小脑/运动智能）
+- MDP 与策略-价值框架
+- PPO 算法
+- SAC 算法
+- TD3 算法
+- 奖励工程 Reward Engineering
+- 全身运动控制 Whole-body Control
+- 抗扰动与高频动态平衡
+
+## 物理仿真与 Sim-to-Real
+- 仿真引擎 Isaac Gym / MuJoCo
+- 刚体动力学基础
+- 接触模型与摩擦力辨识
+- 域随机化 Domain Randomization
+- 策略迁移与实机反向对齐
+
+## 安全评测与红队对抗
+- 多模态对抗样本注入
+- 安全熔断机制
+- 物理失效案例与迭代指标
+
+## 工程与部署
+- ROS2 机器人操作系统生态
+- 多源传感器数据处理（IMU/力传感器/关节角度）
+- 边缘侧推理框架
+- 国产算力并行训练（昇腾/摩尔线程）
