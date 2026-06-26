@@ -4,7 +4,7 @@
 
 ## 大模型基础（大脑底座）
 
-- ⚪ **Transformer 架构** (unexplored)
+- 🔵 **Transformer 架构** (in progress)
 - ⚪ **大模型预训练 Pretraining** (unexplored)
 - ⚪ **监督微调 SFT** (unexplored)
 - ⚪ **RLHF 与人类对齐** (unexplored)
