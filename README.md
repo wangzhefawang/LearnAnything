@@ -1,6 +1,6 @@
 # LearnAnything
 
-个人学习仓库 —— 基于 [Learn Anything](.claude/skills/) Claude Code 技能包的 AI 辅导学习记录。
+个人学习仓库 —— 基于 [Learn Anything](.codex/skills/) / [Claude Code](.claude/skills/) 技能包的 AI 辅导学习记录。
 
 <!-- LEARN-PROGRESS:START 此区块由 scripts/update_progress.py 自动生成，请勿手动编辑 -->
 ## 📚 学习进度
@@ -55,11 +55,12 @@
 
 ## 🛠 如何使用
 
-在 Claude Code 会话中通过斜杠命令驱动学习流程：
+在 Claude Code 或 Codex 会话中通过学习命令驱动 6 个核心学习流程：
 
 - `/learn:topic <主题>` —— 初始化或加载一个学习主题
 - `/learn:explain <概念>` —— 递归式深入讲解
 - `/learn:practice <概念>` —— 项目模式 / 对话模式练习
+- `/learn:quiz <概念>` —— 测验检验理解程度
 - `/learn:review [主题]` —— 间隔重复推荐学习路径
 - `/learn:status [主题]` —— 掌握度热力图
 
