@@ -5,7 +5,7 @@
 <!-- LEARN-PROGRESS:START 此区块由 scripts/update_progress.py 自动生成，请勿手动编辑 -->
 ## 📚 学习进度
 
-> 数据来源：`.learn/topics/*/state.yaml` ｜ 快照时间：2026-06-23
+> 数据来源：`.learn/topics/*/state.yaml` ｜ 快照时间：2026-06-26
 > 图例：✅ 已掌握 ｜ 🔵 学习中 ｜ 🟡 待练习 ｜ ⚪ 未开始
 
 ### ai-agent-应用开发
