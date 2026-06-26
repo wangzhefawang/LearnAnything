@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""根据 .learn/topics/*/state.yaml 自动刷新 README 中的「学习进度」区块。
+"""根据 .learn/topics/*/state.json 自动刷新 README 中的「学习进度」区块。
 
 零依赖，仅用标准库；直接运行即可：
 
@@ -16,6 +16,7 @@ import datetime as _dt
 import argparse
 import re
 import sys
+import json
 from pathlib import Path
 
 # Windows 控制台默认可能用 GBK 编码 stdout，强制 UTF-8 以免中文输出乱码
@@ -66,6 +67,22 @@ def parse_state(text: str):
     return topic, concepts
 
 
+def parse_state_json(text: str):
+    """解析 v1 state.json，转换成 README 渲染所需的扁平概念列表。"""
+    state = json.loads(text)
+    concepts: list[dict] = []
+    for domain in state.get("domains", []):
+        domain_name = domain.get("name", "")
+        for concept in domain.get("concepts", []):
+            item = dict(concept)
+            item["domain"] = domain_name
+            item["path"] = f"{domain_name}/{concept.get('name', '')}"
+            if concept.get("last_explained") and not concept.get("last_practiced"):
+                item["last_session"] = concept.get("last_explained")
+            concepts.append(item)
+    return state.get("topic"), concepts
+
+
 def _conf(c: dict) -> float:
     try:
         return float(c.get("confidence", 0) or 0)
@@ -74,10 +91,10 @@ def _conf(c: dict) -> float:
 
 
 def render_topic(topic: str, concepts: list[dict]) -> str:
-    # 按领域（path 中 "/" 前的部分）分组，保持 state.yaml 原有顺序
+    # 按领域（path 中 "/" 前的部分）分组，保持状态文件原有顺序
     domains: dict[str, list[dict]] = {}
     for c in concepts:
-        domain = c["path"].split("/", 1)[0].strip()
+        domain = c.get("domain") or c["path"].split("/", 1)[0].strip()
         domains.setdefault(domain, []).append(c)
 
     counts = {k: 0 for k in STATUS_ICON}
@@ -114,10 +131,13 @@ def render_topic(topic: str, concepts: list[dict]) -> str:
             status = c.get("status", "unexplored")
             icon = STATUS_ICON.get(status, "⚪")
             pct = f"{round(_conf(c) * 100)}%"
-            last = c.get("last_session") or c.get("last_practiced") or "—"
+            last = c.get("last_session") or c.get("last_explained") or c.get("last_practiced") or "—"
             if last == "null":
                 last = "—"
-            pretty_path = c["path"].replace("/", " / ")
+            if c.get("domain") and c.get("name"):
+                pretty_path = f"{c['domain']} / {c['name']}"
+            else:
+                pretty_path = c["path"].replace("/", " / ")
             lines.append(f"| {pretty_path} | {icon} | {pct} | {last} |")
         lines.append("")
 
@@ -128,15 +148,25 @@ def build_block() -> str:
     today = _dt.date.today().isoformat()
     parts = [
         "## 📚 学习进度\n",
-        f"> 数据来源：`.learn/topics/*/state.yaml` ｜ 快照时间：{today}",
+        f"> 数据来源：`.learn/topics/*/state.json` ｜ 快照时间：{today}",
         "> 图例：✅ 已掌握 ｜ 🔵 学习中 ｜ 🟡 待练习 ｜ ⚪ 未开始\n",
     ]
 
-    state_files = sorted(TOPICS_DIR.glob("*/state.yaml"))
+    state_files = []
+    for topic_dir in sorted(p for p in TOPICS_DIR.iterdir() if p.is_dir()):
+        json_state = topic_dir / "state.json"
+        yaml_state = topic_dir / "state.yaml"
+        if json_state.exists():
+            state_files.append(json_state)
+        elif yaml_state.exists():
+            state_files.append(yaml_state)
     if not state_files:
         parts.append("_暂无学习记录。运行 `/learn:topic <主题>` 开始第一个主题。_")
     for sf in state_files:
-        topic, concepts = parse_state(sf.read_text(encoding="utf-8"))
+        if sf.suffix == ".json":
+            topic, concepts = parse_state_json(sf.read_text(encoding="utf-8"))
+        else:
+            topic, concepts = parse_state(sf.read_text(encoding="utf-8"))
         topic = topic or sf.parent.name
         parts.append(render_topic(topic, concepts))
 

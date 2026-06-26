@@ -59,6 +59,76 @@ concepts:
 
             self.assertEqual("", stdout.getvalue())
 
+    def test_build_block_reads_state_json_topics(self):
+        module = load_update_progress()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            topics = root / ".learn" / "topics" / "demo"
+            topics.mkdir(parents=True)
+            (topics / "state.json").write_text(
+                json.dumps(
+                    {
+                        "version": 1,
+                        "topic": "demo",
+                        "slug": "demo",
+                        "created": "2026-06-27",
+                        "domains": [
+                            {
+                                "name": "基础",
+                                "slug": "基础",
+                                "concepts": [
+                                    {
+                                        "name": "Transformer 架构",
+                                        "slug": "transformer-架构",
+                                        "status": "in_progress",
+                                        "confidence": 0.1,
+                                        "practice_count": 0,
+                                        "explain_count": 1,
+                                        "last_explained": "2026-06-27",
+                                        "last_practiced": None,
+                                        "details": [],
+                                    }
+                                ],
+                            },
+                            {
+                                "name": "强化学习（小脑/运动智能）",
+                                "slug": "强化学习小脑-运动智能",
+                                "concepts": [
+                                    {
+                                        "name": "PPO 算法",
+                                        "slug": "ppo-算法",
+                                        "status": "unexplored",
+                                        "confidence": 0,
+                                        "practice_count": 0,
+                                        "explain_count": 0,
+                                        "last_explained": None,
+                                        "last_practiced": None,
+                                        "details": [],
+                                    }
+                                ],
+                            },
+                        ],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+
+            module.TOPICS_DIR = root / ".learn" / "topics"
+
+            block = module.build_block()
+
+            self.assertIn("`.learn/topics/*/state.json`", block)
+            self.assertIn("### demo", block)
+            self.assertIn("基础 / Transformer 架构", block)
+            self.assertIn("强化学习（小脑/运动智能）", block)
+            self.assertNotIn("| 强化学习（小脑 |", block)
+            self.assertIn("🔵", block)
+            self.assertIn("10%", block)
+            self.assertIn("2026-06-27", block)
+            self.assertNotIn("暂无学习记录", block)
+
 
 if __name__ == "__main__":
     unittest.main()
