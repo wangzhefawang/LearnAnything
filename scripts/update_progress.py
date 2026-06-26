@@ -13,6 +13,7 @@
 from __future__ import annotations
 
 import datetime as _dt
+import argparse
 import re
 import sys
 from pathlib import Path
@@ -142,7 +143,7 @@ def build_block() -> str:
     return "\n".join(parts).rstrip()
 
 
-def main() -> None:
+def main(quiet: bool = False) -> None:
     block = build_block()
     text = README.read_text(encoding="utf-8")
 
@@ -157,11 +158,16 @@ def main() -> None:
     new_text = pattern.sub(lambda _: replacement, text)
 
     if new_text == text:
-        print("README 进度已是最新，无需更新。")
+        if not quiet:
+            print("README 进度已是最新，无需更新。")
         return
     README.write_text(new_text, encoding="utf-8")
-    print("已更新 README.md 学习进度区块。")
+    if not quiet:
+        print("已更新 README.md 学习进度区块。")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="刷新 README 学习进度区块。")
+    parser.add_argument("--quiet", action="store_true", help="不向 stdout 输出普通状态消息。")
+    args = parser.parse_args()
+    main(quiet=args.quiet)
