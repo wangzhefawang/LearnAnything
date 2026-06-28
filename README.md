@@ -5,7 +5,7 @@
 <!-- LEARN-PROGRESS:START 此区块由 scripts/update_progress.py 自动生成，请勿手动编辑 -->
 ## 📚 学习进度
 
-> 数据来源：`.learn/topics/*/state.json` ｜ 快照时间：2026-06-27
+> 数据来源：`.learn/topics/*/state.json` ｜ 快照时间：2026-06-28
 > 图例：✅ 已掌握 ｜ 🔵 学习中 ｜ 🟡 待练习 ｜ ⚪ 未开始
 
 ### ai-agent-应用开发
@@ -50,7 +50,7 @@
 
 | 概念 | 状态 | 掌握度 | 最近学习 |
 | --- | --- | --- | --- |
-| 大模型基础（大脑底座） / Transformer 架构 | 🔵 | 20% | 2026-06-27 |
+| 大模型基础（大脑底座） / Transformer 架构 | 🔵 | 25% | 2026-06-28 |
 <!-- LEARN-PROGRESS:END -->
 
 ## 🛠 如何使用
