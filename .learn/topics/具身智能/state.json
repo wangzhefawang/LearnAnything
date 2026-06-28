@@ -22,11 +22,11 @@
         {
           "name": "大模型预训练 Pretraining",
           "slug": "大模型预训练-pretraining",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-06-28",
           "last_practiced": null,
           "details": []
         },

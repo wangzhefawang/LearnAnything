@@ -5,7 +5,7 @@
 ## 大模型基础（大脑底座）
 
 - 🔵 **Transformer 架构** (in progress)
-- ⚪ **大模型预训练 Pretraining** (unexplored)
+- 🔵 **大模型预训练 Pretraining** (in progress)
 - ⚪ **监督微调 SFT** (unexplored)
 - ⚪ **RLHF 与人类对齐** (unexplored)
 - ⚪ **多模态视觉语言模型 VLM** (unexplored)
