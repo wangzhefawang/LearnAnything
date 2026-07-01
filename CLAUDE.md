@@ -6,6 +6,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 每句话的结尾都要加一个「喵」字喵。
 
+## 默认工作方式
+
+- **除非用户明确要求，默认召唤 codex 来干活，Claude 负责审查其产出内容**——即先把任务交给 codex（`mcp__codex__codex` 工具）执行，Claude 再对结果做审查、把关和必要的修正喵。
+- **适用范围包含讲解辅导**：不只是写代码/改文件/跑脚本这类实现任务，连 learn-anything 的讲解、练习、答疑等内容，也要先让 codex 起草，Claude 再审查修正后交付喵。
+- 用户明确说「你自己做」「不用 codex」之类时，Claude 直接执行，不再转交喵。
+- **codex 也必须遵守本文件的所有约定**：委派 codex 起草时，要把「会话文件命名规范」等约束一并传达给它；无论是 codex 还是 Claude 落盘，最终文件名都必须符合下面的规范喵。
+
+## 会话文件命名规范
+
+learn-anything 的会话文件（`.learn/topics/<topic>/sessions/<domain-slug>/`）统一采用如下命名喵：
+
+```
+<概念名原样>--<子主题-kebab>-YYYY-MM-DD.md
+```
+
+- `<概念名原样>`：与 `state.json` 中该概念的 `name` 完全一致，不翻译、不改写（例如 `Transformer 架构`、`大模型预训练 Pretraining`）喵。
+- 分隔符是**双连字符 `--`**，用来把概念名和子主题清晰隔开喵。
+- `<子主题-kebab>`：本次讲解聚焦的子主题，转成 kebab-case（拉丁字母小写、以连字符连词，中文照写），例如 `多头注意力`、`位置编码`、`qkv计算机制`、`softmax注意力权重`；若本次就是该概念的总览，用 `整体概览`喵。
+- 结尾是讲解日期 `YYYY-MM-DD`；同一概念同一天的不同子主题因子主题不同而天然不重名喵。
+
+> 注意：此规范覆盖并优先于 `SKILL.md` 里旧的 `<concept-name>-YYYY-MM-DD.md` 写法喵。
+
 ## 提交约定（Git）
 
 - **重大更新时主动 commit**：当完成一处有意义的里程碑时（例如新增/重写一个 `SKILL.md`、调整数据存储 schema、完成某个学习主题的阶段性进展、修订核心文档），主动执行 `git commit`，并写**清晰的中文 message** 说明改了什么；**此时不要 push**喵。

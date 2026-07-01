@@ -12,10 +12,10 @@
           "name": "Transformer 架构",
           "slug": "transformer-架构",
           "status": "in_progress",
-          "confidence": 0.25,
+          "confidence": 0.45,
           "practice_count": 0,
-          "explain_count": 3,
-          "last_explained": "2026-06-28",
+          "explain_count": 5,
+          "last_explained": "2026-07-02",
           "last_practiced": null,
           "details": []
         },
