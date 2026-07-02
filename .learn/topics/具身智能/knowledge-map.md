@@ -13,7 +13,7 @@
 ## VLA 视觉-语言-动作模型
 
 - 🔵 **VLA 架构范式** (in progress)
-- ⚪ **动作表征与 Action Tokenization** (unexplored)
+- 🔵 **动作表征与 Action Tokenization** (in progress)
 - ⚪ **模仿学习与行为克隆 Behavior Cloning** (unexplored)
 - ⚪ **端到端策略与决策推理** (unexplored)
 

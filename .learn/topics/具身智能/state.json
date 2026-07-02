@@ -83,11 +83,11 @@
         {
           "name": "动作表征与 Action Tokenization",
           "slug": "动作表征与-action-tokenization",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
           "last_practiced": null,
           "details": []
         },
