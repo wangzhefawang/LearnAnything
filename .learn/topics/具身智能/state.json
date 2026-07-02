@@ -12,9 +12,9 @@
           "name": "Transformer 架构",
           "slug": "transformer-架构",
           "status": "in_progress",
-          "confidence": 0.45,
+          "confidence": 0.55,
           "practice_count": 0,
-          "explain_count": 5,
+          "explain_count": 6,
           "last_explained": "2026-07-02",
           "last_practiced": null,
           "details": []
@@ -72,11 +72,11 @@
         {
           "name": "VLA 架构范式",
           "slug": "vla-架构范式",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
           "last_practiced": null,
           "details": []
         },

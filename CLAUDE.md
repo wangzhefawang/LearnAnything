@@ -18,13 +18,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 learn-anything 的会话文件（`.learn/topics/<topic>/sessions/<domain-slug>/`）统一采用如下命名喵：
 
 ```
-<概念名原样>--<子主题-kebab>-YYYY-MM-DD.md
+<概念名原样>--YYYY-MM-DD--<子主题-kebab>.md
 ```
 
 - `<概念名原样>`：与 `state.json` 中该概念的 `name` 完全一致，不翻译、不改写（例如 `Transformer 架构`、`大模型预训练 Pretraining`）喵。
-- 分隔符是**双连字符 `--`**，用来把概念名和子主题清晰隔开喵。
+- 分隔符是**双连字符 `--`**，把「概念名 / 日期 / 子主题」三段清晰隔开喵。
+- **日期 `YYYY-MM-DD` 夹在中间**：这样同一概念的会话文件在文件系统里会先按概念聚合、再按时间自然排序，便于回看学习时间线喵。
 - `<子主题-kebab>`：本次讲解聚焦的子主题，转成 kebab-case（拉丁字母小写、以连字符连词，中文照写），例如 `多头注意力`、`位置编码`、`qkv计算机制`、`softmax注意力权重`；若本次就是该概念的总览，用 `整体概览`喵。
-- 结尾是讲解日期 `YYYY-MM-DD`；同一概念同一天的不同子主题因子主题不同而天然不重名喵。
+- 同一概念同一天的不同子主题因子主题不同而天然不重名喵。
 
 > 注意：此规范覆盖并优先于 `SKILL.md` 里旧的 `<concept-name>-YYYY-MM-DD.md` 写法喵。
 
