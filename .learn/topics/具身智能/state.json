@@ -94,11 +94,11 @@
         {
           "name": "模仿学习与行为克隆 Behavior Cloning",
           "slug": "模仿学习与行为克隆-behavior-cloning",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
           "last_practiced": null,
           "details": []
         },
@@ -305,11 +305,11 @@
         {
           "name": "ROS2 机器人操作系统生态",
           "slug": "ros2-机器人操作系统生态",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
           "last_practiced": null,
           "details": []
         },

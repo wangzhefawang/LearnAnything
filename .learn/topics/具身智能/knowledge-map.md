@@ -14,7 +14,7 @@
 
 - 🔵 **VLA 架构范式** (in progress)
 - 🔵 **动作表征与 Action Tokenization** (in progress)
-- ⚪ **模仿学习与行为克隆 Behavior Cloning** (unexplored)
+- 🔵 **模仿学习与行为克隆 Behavior Cloning** (in progress)
 - ⚪ **端到端策略与决策推理** (unexplored)
 
 ## 强化学习（小脑/运动智能）
@@ -43,7 +43,7 @@
 
 ## 工程与部署
 
-- ⚪ **ROS2 机器人操作系统生态** (unexplored)
+- 🔵 **ROS2 机器人操作系统生态** (in progress)
 - ⚪ **多源传感器数据处理（IMU/力传感器/关节角度）** (unexplored)
 - ⚪ **边缘侧推理框架** (unexplored)
 - ⚪ **国产算力并行训练（昇腾/摩尔线程）** (unexplored)
