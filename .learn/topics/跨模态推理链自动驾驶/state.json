@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "topic": "跨模态推理链可解释端到端自动驾驶（Cross-modal ReCoT）",
+  "slug": "cross-modal-recot",
+  "created": "2026-07-11",
+  "domains": [
+    {
+      "name": "项目定位与整体架构",
+      "slug": "project-overview",
+      "concepts": [
+        {
+          "name": "研究问题与动机",
+          "slug": "research-motivation",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["端到端驾驶的黑箱问题", "可解释性诉求", "各模态贡献缺乏受控验证"]
+        },
+        {
+          "name": "OpenEMMA 基座与 FSDrive 相关工作",
+          "slug": "base-and-related-work",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["OpenEMMA 免训练 MLLM 驾驶", "FSDrive 视觉时空 CoT", "novelty 差异化"]
+        },
+        {
+          "name": "三分支架构总览",
+          "slug": "three-branch-architecture",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["视觉 CoT 世界模型", "文本 CoT 推理", "数值 CoT 规划+自审计"]
+        },
+        {
+          "name": "发现弧线叙事定位",
+          "slug": "discovery-narrative",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["建构跨模态 CoT", "消融发现视觉拖后腿", "受控归因研究"]
+        }
+      ]
+    },
+    {
+      "name": "多模态大模型",
+      "slug": "mllm",
+      "concepts": [
+        {
+          "name": "MLLM/VLM 基础",
+          "slug": "mllm-basics",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["视觉编码器+LLM", "视觉-语言对齐", "图文交错输入"]
+        },
+        {
+          "name": "Qwen-VL / Llama-Vision 主干",
+          "slug": "backbones",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["Qwen2.5-VL-7B", "Llama-3.2-11B-Vision", "第二主干外部效度"]
+        },
+        {
+          "name": "多图条件输入",
+          "slug": "multi-image-conditioning",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["当前帧+未来帧双图提示", "时序接地混淆风险"]
+        },
+        {
+          "name": "免训练推理范式",
+          "slug": "zero-train-inference",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["零训练驱动", "max_new_tokens 与解析", "推理调用次数与成本"]
+        }
+      ]
+    },
+    {
+      "name": "思维链推理（CoT）",
+      "slug": "cot",
+      "concepts": [
+        {
+          "name": "思维链（CoT）原理",
+          "slug": "cot-basics",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["逐步推理", "提示工程", "结构化 vs 松散链"]
+        },
+        {
+          "name": "结构化文本 CoT",
+          "slug": "structured-textual-cot",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["事实→归因→决策", "解析成功率", "文本分支主导增益"]
+        },
+        {
+          "name": "数值 CoT 规划",
+          "slug": "numeric-cot",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["speed/curvature 序列", "作为自审计信号"]
+        },
+        {
+          "name": "跨模态 CoT 耦合与解耦",
+          "slug": "cross-modal-coupling",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["分支可自由组合", "视觉不与文本叠加", "增益归因"]
+        }
+      ]
+    },
+    {
+      "name": "视觉世界模型与生成",
+      "slug": "visual-world-model",
+      "concepts": [
+        {
+          "name": "世界模型与未来帧预测",
+          "slug": "world-model",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["1s 后未来帧", "作为视觉推理中间步骤", "回输主干"]
+        },
+        {
+          "name": "SD-VAE 潜空间编解码",
+          "slug": "sd-vae",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["图像压缩到潜空间", "编码器/解码器", "潜表示维度"]
+        },
+        {
+          "name": "ViT 潜空间回归（LatentDiT）",
+          "slug": "latent-regression",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["非扩散：单次前向直接回归", "潜空间 MSE + LPIPS", "回归到均值模糊"]
+        },
+        {
+          "name": "视觉分支负结果与边界",
+          "slug": "visual-negative-result",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["oracle 真帧仍有害", "LoRA 也无法解锁", "界定 FSDrive 范式边界"]
+        }
+      ]
+    },
+    {
+      "name": "轨迹规划与数值自审计",
+      "slug": "planning-audit",
+      "concepts": [
+        {
+          "name": "端到端轨迹规划",
+          "slug": "e2e-planning",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["从感知直接到轨迹", "开环规划"]
+        },
+        {
+          "name": "speed-curvature 参数化与积分",
+          "slug": "speed-curvature",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["速度-曲率建模", "积分成轨迹", "运动学约束"]
+        },
+        {
+          "name": "数值物理自审计",
+          "slug": "numeric-self-audit",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["加速度双侧钳制", "零成本后处理", "碰撞失败率归零"]
+        },
+        {
+          "name": "3D 检测侧信息（YOLO3D）",
+          "slug": "yolo3d",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["3D 目标检测", "BEV 表示", "作为感知辅助"]
+        }
+      ]
+    },
+    {
+      "name": "参数高效微调与实验方法",
+      "slug": "peft-methodology",
+      "concepts": [
+        {
+          "name": "LoRA 参数高效微调",
+          "slug": "lora",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["低秩适配", "LLM vs 视觉塔适配", "模仿式微调 -37%"]
+        },
+        {
+          "name": "消融实验与受控归因",
+          "slug": "ablation-attribution",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["8 配置消融", "把增益归到具体分支", "增益与视觉解耦"]
+        },
+        {
+          "name": "统计显著性与等价性检验",
+          "slug": "statistics",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["配对 t 检验 / Wilcoxon", "TOST 等价性检验", "置信区间", "伪复制风险"]
+        },
+        {
+          "name": "oracle / 安慰剂对照设计",
+          "slug": "placebo-control",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["oracle 真帧 vs 复制当前帧", "双臂配对", "混淆去除"]
+        },
+        {
+          "name": "可解释性量化",
+          "slug": "interpretability-metrics",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["推理一致性（文本决策 vs 数值轨迹）", "横向 vs 纵向", "混淆矩阵", "不预测准确率"]
+        }
+      ]
+    },
+    {
+      "name": "数据、评测与工程实现",
+      "slug": "data-eval-engineering",
+      "concepts": [
+        {
+          "name": "nuScenes 与开环评测",
+          "slug": "nuscenes-eval",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["nuScenes 数据集", "val-150 划分", "定位精度 ≤0.1m"]
+        },
+        {
+          "name": "评测指标",
+          "slug": "metrics",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["ADE@T / L2", "CFR 碰撞失败率", "ParseRate 解析率", "推理成本"]
+        },
+        {
+          "name": "PyTorch / CUDA 训练推理流水线",
+          "slug": "pytorch-cuda",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["RTX 5090 / bf16", "latent 编码与样本对构造", "断点续跑", "pixi 环境管理"]
+        },
+        {
+          "name": "LaTeX 学术写作与可视化",
+          "slug": "latex-writing",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": ["XeLaTeX + biblatex-apa", "TikZ 矢量图", "浮动体排版"]
+        }
+      ]
+    }
+  ]
+}
