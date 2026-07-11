@@ -3,6 +3,9 @@
 Thumbs.db
 desktop.ini
 
+# Claude Code 后台会话的隔离 worktree，防止被 SessionEnd hook 的 git add -A 误提交
+.claude/worktrees/
+
 # 编辑器 / IDE
 .vscode/
 .idea/
