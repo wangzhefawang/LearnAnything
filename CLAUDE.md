@@ -13,6 +13,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 用户明确说「你自己做」「不用 codex」之类时，Claude 直接执行，不再转交喵。
 - **codex 也必须遵守本文件的所有约定**：委派 codex 起草时，要把「会话文件命名规范」等约束一并传达给它；无论是 codex 还是 Claude 落盘，最终文件名都必须符合下面的规范喵。
 
+## 开始学习时同步跨 topic 知识点进度
+
+不同 topic 常常共享同一个底座知识点（例如「Transformer 架构」既在《具身智能》里、又是《cross-modal-recot》里 CoT/VLM 的前置；「多模态视觉语言模型 VLM」≈「MLLM/VLM 基础」；「LoRA」「思维链 CoT」等亦然）。因此**每次开始一段学习时（进入某个 topic、或对某概念开讲之前），先做一次跨 topic 知识点进度同步**喵：
+
+- **只读感知，绝不改写**：扫描 `.learn/topics/*/state.json`，找出与本次将要学习的概念在其它 topic 中重叠的知识点，把它们已有的 `confidence` / `status` / `explain_count` / `last_explained` 作为**背景信息**读进来，用于调整讲解深度、避免从零重讲；**不修改任何 topic 的 state 数值**（同名概念在不同 topic 里深度/侧重可能不同，盲目对齐会污染学习数据）喵。
+- **匹配口径 = 名称 + 语义判断**：以概念 `name` 为主，辅以语义判断认定「同一知识点」（如上面 VLM 的例子），不局限于字符串严格相等喵。
+- **发现重叠时主动告知用户**：例如「这个『Transformer 架构』你在《具身智能》里已学到 confidence 0.55、讲过 6 次，这次我按已有基础往上接，不从头讲」，让用户心里有数喵。
+- 若判断确有价值把某 topic 的进度对齐到另一 topic，**只提出建议、征得用户明确同意后才回写**，默认不自动写喵。
+
 ## 会话文件命名规范
 
 learn-anything 的会话文件（`.learn/topics/<topic>/sessions/<domain-slug>/`）统一采用如下命名喵：
