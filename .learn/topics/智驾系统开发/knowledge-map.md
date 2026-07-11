@@ -61,7 +61,7 @@
 
 ## 自动驾驶功能与算法链路
 
-- ⚪ **ADAS/NOA 功能定义** (unexplored)
+- 🔵 **ADAS/NOA 功能定义** (in progress)
   - ACC/LCC/AEB/APA
   - 高速 NOA 与城市 NOA
   - ODD 运行设计域
