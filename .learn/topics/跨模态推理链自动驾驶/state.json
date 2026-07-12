@@ -1,16 +1,16 @@
 {
   "version": 1,
   "topic": "跨模态推理链可解释端到端自动驾驶（Cross-modal ReCoT）",
-  "slug": "cross-modal-recot",
+  "slug": "跨模态推理链自动驾驶",
   "created": "2026-07-11",
   "domains": [
     {
       "name": "项目定位与整体架构",
-      "slug": "project-overview",
+      "slug": "项目定位与整体架构",
       "concepts": [
         {
           "name": "研究问题与动机",
-          "slug": "research-motivation",
+          "slug": "研究问题与动机",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -21,7 +21,7 @@
         },
         {
           "name": "OpenEMMA 基座与 FSDrive 相关工作",
-          "slug": "base-and-related-work",
+          "slug": "openemma-基座与-fsdrive-相关工作",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -32,7 +32,7 @@
         },
         {
           "name": "三分支架构总览",
-          "slug": "three-branch-architecture",
+          "slug": "三分支架构总览",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -43,7 +43,7 @@
         },
         {
           "name": "发现弧线叙事定位",
-          "slug": "discovery-narrative",
+          "slug": "发现弧线叙事定位",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -56,11 +56,11 @@
     },
     {
       "name": "多模态大模型",
-      "slug": "mllm",
+      "slug": "多模态大模型-mllm",
       "concepts": [
         {
           "name": "MLLM/VLM 基础",
-          "slug": "mllm-basics",
+          "slug": "mllm-vlm-基础",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -71,7 +71,7 @@
         },
         {
           "name": "Qwen-VL / Llama-Vision 主干",
-          "slug": "backbones",
+          "slug": "qwen-vl-与-llama-vision-主干",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -82,7 +82,7 @@
         },
         {
           "name": "多图条件输入",
-          "slug": "multi-image-conditioning",
+          "slug": "多图条件输入",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -93,7 +93,7 @@
         },
         {
           "name": "免训练推理范式",
-          "slug": "zero-train-inference",
+          "slug": "免训练推理范式",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -105,12 +105,12 @@
       ]
     },
     {
-      "name": "思维链推理（CoT）",
-      "slug": "cot",
+      "name": "思维链推理",
+      "slug": "思维链推理-cot",
       "concepts": [
         {
           "name": "思维链（CoT）原理",
-          "slug": "cot-basics",
+          "slug": "思维链-cot-原理",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -121,7 +121,7 @@
         },
         {
           "name": "结构化文本 CoT",
-          "slug": "structured-textual-cot",
+          "slug": "结构化文本-cot",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -132,7 +132,7 @@
         },
         {
           "name": "数值 CoT 规划",
-          "slug": "numeric-cot",
+          "slug": "数值-cot-规划",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -143,7 +143,7 @@
         },
         {
           "name": "跨模态 CoT 耦合与解耦",
-          "slug": "cross-modal-coupling",
+          "slug": "跨模态-cot-耦合与解耦",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -156,11 +156,11 @@
     },
     {
       "name": "视觉世界模型与生成",
-      "slug": "visual-world-model",
+      "slug": "视觉世界模型与生成",
       "concepts": [
         {
           "name": "世界模型与未来帧预测",
-          "slug": "world-model",
+          "slug": "世界模型与未来帧预测",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -171,7 +171,7 @@
         },
         {
           "name": "SD-VAE 潜空间编解码",
-          "slug": "sd-vae",
+          "slug": "sd-vae-潜空间编解码",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -182,7 +182,7 @@
         },
         {
           "name": "ViT 潜空间回归（LatentDiT）",
-          "slug": "latent-regression",
+          "slug": "vit-潜空间回归-latentdit",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -193,7 +193,7 @@
         },
         {
           "name": "视觉分支负结果与边界",
-          "slug": "visual-negative-result",
+          "slug": "视觉分支负结果与边界",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -206,11 +206,11 @@
     },
     {
       "name": "轨迹规划与数值自审计",
-      "slug": "planning-audit",
+      "slug": "轨迹规划与数值自审计",
       "concepts": [
         {
           "name": "端到端轨迹规划",
-          "slug": "e2e-planning",
+          "slug": "端到端轨迹规划",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -221,7 +221,7 @@
         },
         {
           "name": "speed-curvature 参数化与积分",
-          "slug": "speed-curvature",
+          "slug": "speed-curvature-参数化与积分",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -232,7 +232,7 @@
         },
         {
           "name": "数值物理自审计",
-          "slug": "numeric-self-audit",
+          "slug": "数值物理自审计",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -243,7 +243,7 @@
         },
         {
           "name": "3D 检测侧信息（YOLO3D）",
-          "slug": "yolo3d",
+          "slug": "3d-检测侧信息-yolo3d",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -255,12 +255,12 @@
       ]
     },
     {
-      "name": "参数高效微调与实验方法",
-      "slug": "peft-methodology",
+      "name": "微调与实验方法",
+      "slug": "微调与实验方法",
       "concepts": [
         {
           "name": "LoRA 参数高效微调",
-          "slug": "lora",
+          "slug": "lora-参数高效微调",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -271,7 +271,7 @@
         },
         {
           "name": "消融实验与受控归因",
-          "slug": "ablation-attribution",
+          "slug": "消融实验与受控归因",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -282,7 +282,7 @@
         },
         {
           "name": "统计显著性与等价性检验",
-          "slug": "statistics",
+          "slug": "统计显著性与等价性检验-tost",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -293,7 +293,7 @@
         },
         {
           "name": "oracle / 安慰剂对照设计",
-          "slug": "placebo-control",
+          "slug": "oracle-安慰剂对照设计",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -304,7 +304,7 @@
         },
         {
           "name": "可解释性量化",
-          "slug": "interpretability-metrics",
+          "slug": "可解释性量化",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -317,11 +317,11 @@
     },
     {
       "name": "数据、评测与工程实现",
-      "slug": "data-eval-engineering",
+      "slug": "数据评测与工程",
       "concepts": [
         {
           "name": "nuScenes 与开环评测",
-          "slug": "nuscenes-eval",
+          "slug": "nuscenes-与开环评测",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -332,7 +332,7 @@
         },
         {
           "name": "评测指标",
-          "slug": "metrics",
+          "slug": "评测指标-ade-cfr-parserate",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -343,7 +343,7 @@
         },
         {
           "name": "PyTorch / CUDA 训练推理流水线",
-          "slug": "pytorch-cuda",
+          "slug": "pytorch-cuda-训练推理流水线",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -354,7 +354,7 @@
         },
         {
           "name": "LaTeX 学术写作与可视化",
-          "slug": "latex-writing",
+          "slug": "latex-学术写作与可视化",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
