@@ -210,9 +210,9 @@
           "name": "ADAS/NOA 功能定义",
           "slug": "adas-noa-功能定义",
           "status": "in_progress",
-          "confidence": 0.1,
+          "confidence": 0.15,
           "practice_count": 0,
-          "explain_count": 1,
+          "explain_count": 2,
           "last_explained": "2026-07-12",
           "last_practiced": null,
           "details": [
