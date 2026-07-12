@@ -143,11 +143,11 @@
         {
           "name": "摄像头与环视感知系统",
           "slug": "摄像头与环视感知系统",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
           "last_practiced": null,
           "details": [
             "前视侧视后视相机",
@@ -158,11 +158,11 @@
         {
           "name": "毫米波雷达与超声波雷达",
           "slug": "毫米波雷达与超声波雷达",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
           "last_practiced": null,
           "details": [
             "目标距离速度角度",
@@ -173,11 +173,11 @@
         {
           "name": "激光雷达与组合定位",
           "slug": "激光雷达与组合定位",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
           "last_practiced": null,
           "details": [
             "点云特性与安装位置",
@@ -188,11 +188,11 @@
         {
           "name": "智驾域控制器计算平台",
           "slug": "智驾域控制器计算平台",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
           "last_practiced": null,
           "details": [
             "SoC/GPU/NPU 算力",
