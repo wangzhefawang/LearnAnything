@@ -1,0 +1,416 @@
+{
+  "version": 1,
+  "topic": "机器人开发与仿真测试实习",
+  "slug": "robot-dev-sim-testing-internship",
+  "created": "2026-07-12",
+  "domains": [
+    {
+      "name": "Linux 与远程开发部署",
+      "slug": "linux-与远程开发部署",
+      "concepts": [
+        {
+          "name": "SSH 远程登录与隧道转发",
+          "slug": "ssh-远程登录与隧道转发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "密钥认证与权限配置",
+            "端口转发与远程服务访问",
+            "远程命令执行与会话管理"
+          ]
+        },
+        {
+          "name": "MobaXterm 远程开发工作流",
+          "slug": "mobaxterm-远程开发工作流",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "SFTP 文件同步",
+            "远程终端与多会话管理",
+            "X11 图形界面转发"
+          ]
+        },
+        {
+          "name": "机器人远程部署与日志排查",
+          "slug": "机器人远程部署与日志排查",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "部署包与依赖检查",
+            "启动脚本与服务管理",
+            "运行日志与故障定位"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ROS 机器人操作系统",
+      "slug": "ros-机器人操作系统",
+      "concepts": [
+        {
+          "name": "ROS 节点与话题通信",
+          "slug": "ros-节点与话题通信",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "发布者与订阅者模型",
+            "消息类型定义",
+            "频率与延迟观测"
+          ]
+        },
+        {
+          "name": "ROS 服务与动作通信",
+          "slug": "ros-服务与动作通信",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "同步请求响应",
+            "长任务反馈机制",
+            "导航与机械臂任务接口"
+          ]
+        },
+        {
+          "name": "TF 坐标变换体系",
+          "slug": "tf-坐标变换体系",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "坐标系树",
+            "静态与动态变换",
+            "传感器坐标与机器人基座坐标"
+          ]
+        },
+        {
+          "name": "launch 启动编排与参数管理",
+          "slug": "launch-启动编排与参数管理",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "rosbag 数据录制与回放",
+          "slug": "rosbag-数据录制与回放",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "Gazebo 仿真环境",
+      "slug": "gazebo-仿真环境",
+      "concepts": [
+        {
+          "name": "URDF 与 SDF 机器人建模",
+          "slug": "urdf-与-sdf-机器人建模",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "连杆与关节",
+            "碰撞体与视觉模型",
+            "惯性参数"
+          ]
+        },
+        {
+          "name": "Gazebo 传感器插件",
+          "slug": "gazebo-传感器插件",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "激光雷达插件",
+            "相机与深度相机插件",
+            "IMU 与里程计仿真"
+          ]
+        },
+        {
+          "name": "仿真世界构建与物理参数配置",
+          "slug": "仿真世界构建与物理参数配置",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "地图与障碍物布置",
+            "摩擦与重力参数",
+            "仿真时间与实时因子"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "机器人导航",
+      "slug": "机器人导航",
+      "concepts": [
+        {
+          "name": "SLAM 建图基础",
+          "slug": "slam-建图基础",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "栅格地图",
+            "激光雷达建图",
+            "回环检测"
+          ]
+        },
+        {
+          "name": "AMCL 蒙特卡洛定位",
+          "slug": "amcl-蒙特卡洛定位",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "代价地图 Costmap",
+          "slug": "代价地图-costmap",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "静态层",
+            "障碍物层",
+            "膨胀层"
+          ]
+        },
+        {
+          "name": "move_base 与 Nav2 路径规划",
+          "slug": "move-base-与-nav2-路径规划",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "全局规划器",
+            "局部规划器",
+            "导航行为树"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "机械臂控制与运动规划",
+      "slug": "机械臂控制与运动规划",
+      "concepts": [
+        {
+          "name": "机械臂正逆运动学",
+          "slug": "机械臂正逆运动学",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "关节空间",
+            "末端位姿",
+            "奇异位形"
+          ]
+        },
+        {
+          "name": "MoveIt 运动规划",
+          "slug": "moveit-运动规划",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "规划组配置",
+            "碰撞检测",
+            "轨迹生成与执行"
+          ]
+        },
+        {
+          "name": "机械臂抓取任务流程",
+          "slug": "机械臂抓取任务流程",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "目标识别",
+            "抓取位姿估计",
+            "夹爪控制"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3D 视觉感知与 Open3D",
+      "slug": "3d-视觉感知与-open3d",
+      "concepts": [
+        {
+          "name": "点云数据结构与滤波",
+          "slug": "点云数据结构与滤波",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "体素下采样",
+            "离群点去除",
+            "法向量估计"
+          ]
+        },
+        {
+          "name": "点云配准 ICP",
+          "slug": "点云配准-icp",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "粗配准",
+            "精配准",
+            "误差度量"
+          ]
+        },
+        {
+          "name": "三维重建与场景扫描",
+          "slug": "三维重建与场景扫描",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "多视角融合",
+            "网格重建",
+            "场景尺度与坐标对齐"
+          ]
+        },
+        {
+          "name": "RGB-D 感知数据处理",
+          "slug": "rgb-d-感知数据处理",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "软件测试与团队协作",
+      "slug": "软件测试与团队协作",
+      "concepts": [
+        {
+          "name": "机器人测试用例设计方法",
+          "slug": "机器人测试用例设计方法",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "功能测试",
+            "边界条件",
+            "仿真与实机对照"
+          ]
+        },
+        {
+          "name": "缺陷管理与问题清单",
+          "slug": "缺陷管理与问题清单",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "复现步骤",
+            "期望结果与实际结果",
+            "严重等级与跟踪状态"
+          ]
+        },
+        {
+          "name": "Git 团队协作流",
+          "slug": "git-团队协作流",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "name": "代码评审与集成测试",
+          "slug": "代码评审与集成测试",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    }
+  ]
+}
