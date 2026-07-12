@@ -333,4 +333,4 @@ if __name__ == "__main__":
 
 ## Next Steps
 
-(Will be updated after the user chooses a sub-topic direction)
+- 2026-07-12：用户选择深入子主题「高速 NOA 与城市 NOA 场景难点深挖」，见 `ADAS-NOA 功能定义--2026-07-12--高速-noa-与城市-noa-场景难点深挖.md` 喵。
