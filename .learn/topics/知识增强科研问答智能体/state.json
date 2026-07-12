@@ -301,11 +301,11 @@
         {
           "name": "GraphRAG 与 KG+LLM 融合",
           "slug": "graphrag-and-kg-llm-integration",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
           "last_practiced": null,
           "details": [
             "结合图查询、向量检索和 LLM 生成回答复杂问题",
@@ -322,11 +322,11 @@
         {
           "name": "Function Calling 工具接口",
           "slug": "function-calling-tool-interface",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": [
             "定义检索、图查询、摘要、重排等工具的输入输出 schema",
@@ -337,11 +337,11 @@
         {
           "name": "ReAct 推理与行动循环",
           "slug": "react-reasoning-and-acting-loop",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": [
             "理解 Thought、Action、Observation 的基本循环",
@@ -352,11 +352,11 @@
         {
           "name": "长文本问答策略",
           "slug": "long-context-question-answering-strategies",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": [
             "使用分层检索、逐段摘要和证据合并处理论文长文本",

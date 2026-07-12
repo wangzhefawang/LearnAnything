@@ -85,22 +85,22 @@
   - 从论文语料中抽取实体、关系、属性和出处
   - 进行实体规范化、去重、消歧与关系校验
   - 建立从原文证据到图谱事实的可追溯链路
-- ⚪ **GraphRAG 与 KG+LLM 融合** (unexplored)
+- 🔵 **GraphRAG 与 KG+LLM 融合** (in progress)
   - 结合图查询、向量检索和 LLM 生成回答复杂问题
   - 用知识图谱约束答案实体、关系和推理路径
   - 设计图谱证据与文本证据的融合策略
 
 ## Agent 与工具调用
 
-- ⚪ **Function Calling 工具接口** (unexplored)
+- 🔵 **Function Calling 工具接口** (in progress)
   - 定义检索、图查询、摘要、重排等工具的输入输出 schema
   - 处理参数生成、类型校验、异常返回和重试
   - 控制工具结果如何回填给 LLM 继续推理
-- ⚪ **ReAct 推理与行动循环** (unexplored)
+- 🔵 **ReAct 推理与行动循环** (in progress)
   - 理解 Thought、Action、Observation 的基本循环
   - 让 Agent 根据中间观察决定继续检索、查询图谱或生成答案
   - 识别循环失控、工具误用和无效推理链的问题
-- ⚪ **长文本问答策略** (unexplored)
+- 🔵 **长文本问答策略** (in progress)
   - 使用分层检索、逐段摘要和证据合并处理论文长文本
   - 针对综述型、事实型、比较型问题选择不同回答流程
   - 控制答案结构、引用来源和不确定性表达
