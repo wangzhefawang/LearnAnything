@@ -361,11 +361,11 @@
         {
           "name": "机器人测试用例设计方法",
           "slug": "机器人测试用例设计方法",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": [
             "功能测试",
@@ -376,11 +376,11 @@
         {
           "name": "缺陷管理与问题清单",
           "slug": "缺陷管理与问题清单",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": [
             "复现步骤",
@@ -391,22 +391,22 @@
         {
           "name": "Git 团队协作流",
           "slug": "git-团队协作流",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": []
         },
         {
           "name": "代码评审与集成测试",
           "slug": "代码评审与集成测试",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": []
         }
