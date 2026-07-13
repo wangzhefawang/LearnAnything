@@ -369,4 +369,4 @@ for t in range(10):
 
 ## Next Steps
 
-(Will be updated after the user chooses a sub-topic direction)
+- 2026-07-13：用户选择深入子主题「有图 / 轻图 / 无图技术路线之争」，见 `ADAS-NOA 功能定义--2026-07-13--有图-轻图-无图技术路线之争.md` 喵。
