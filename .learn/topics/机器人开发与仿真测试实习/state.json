@@ -362,9 +362,9 @@
           "name": "机器人测试用例设计方法",
           "slug": "机器人测试用例设计方法",
           "status": "in_progress",
-          "confidence": 0.05,
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 1,
+          "explain_count": 2,
           "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": [
