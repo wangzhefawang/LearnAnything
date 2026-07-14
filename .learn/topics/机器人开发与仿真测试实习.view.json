@@ -1,0 +1,113 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "机器人开发与仿真测试实习",
+  "slug": "机器人开发与仿真测试实习",
+  "created": "2026-07-14",
+  "concepts": [
+    {
+      "concept_id": "ssh-远程登录与隧道转发",
+      "importance": "core"
+    },
+    {
+      "concept_id": "mobaxterm-远程开发工作流",
+      "importance": "core"
+    },
+    {
+      "concept_id": "机器人远程部署与日志排查",
+      "importance": "core"
+    },
+    {
+      "concept_id": "ros-节点与话题通信",
+      "importance": "core"
+    },
+    {
+      "concept_id": "ros-服务与动作通信",
+      "importance": "core"
+    },
+    {
+      "concept_id": "tf-坐标变换体系",
+      "importance": "core"
+    },
+    {
+      "concept_id": "launch-启动编排与参数管理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rosbag-数据录制与回放",
+      "importance": "core"
+    },
+    {
+      "concept_id": "urdf-与-sdf-机器人建模",
+      "importance": "core"
+    },
+    {
+      "concept_id": "gazebo-传感器插件",
+      "importance": "core"
+    },
+    {
+      "concept_id": "仿真世界构建与物理参数配置",
+      "importance": "core"
+    },
+    {
+      "concept_id": "slam-建图基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "amcl-蒙特卡洛定位",
+      "importance": "core"
+    },
+    {
+      "concept_id": "代价地图-costmap",
+      "importance": "core"
+    },
+    {
+      "concept_id": "move-base-与-nav2-路径规划",
+      "importance": "core"
+    },
+    {
+      "concept_id": "机械臂正逆运动学",
+      "importance": "core"
+    },
+    {
+      "concept_id": "moveit-运动规划",
+      "importance": "core"
+    },
+    {
+      "concept_id": "机械臂抓取任务流程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "点云数据结构与滤波",
+      "importance": "core"
+    },
+    {
+      "concept_id": "点云配准-icp",
+      "importance": "core"
+    },
+    {
+      "concept_id": "三维重建与场景扫描",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rgb-d-感知数据处理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "机器人测试用例设计方法",
+      "importance": "core"
+    },
+    {
+      "concept_id": "缺陷管理与问题清单",
+      "importance": "core"
+    },
+    {
+      "concept_id": "git-团队协作流",
+      "importance": "core"
+    },
+    {
+      "concept_id": "代码评审与集成测试",
+      "importance": "core"
+    }
+  ]
+}

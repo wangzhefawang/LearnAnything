@@ -39,19 +39,34 @@ When teaching about a specific library or framework, verify your explanations ag
 
 If Context7 MCP tools are not available in your environment, proceed with your built-in knowledge.
 
+## Data Contract v2 (Mandatory)
+
+- Knowledge definitions and progress live in `./.learn/topics/<knowledge-domain>/state.json` with `version: 2` and `kind: "knowledge_domain"`; the domain owns `knowledge-map.md`, `sessions/`, `exercises/`, and `quizzes/`.
+- Learning views are sibling `<view-name>.view.json` files with `version: 2` and `kind: "learning_view"`; generated `<view-name>.md` reports are output only.
+- `concept_id` is the 权威 identifier. Resolve a spoken concept name across v2 domain states to exactly one ID. If ambiguous, list candidates with their owning knowledge domains and let the user choose.
+- If a state has `version: 1` or is missing `kind`, explicitly say the store has not been migrated and stop. Do not parse v1 state data. The quiz deck's own schema version is independent of the learning-store state version.
+- ⚠️ **CRITICAL same-turn persistence**: after grading and updating any domain state, validate and refresh view reports before recommendations:
+
+```powershell
+node scripts/validate-learning-store.mjs .learn/topics
+node scripts/render-views.mjs .learn/topics
+```
+
+Examples must work on Windows/PowerShell; do not rely on Bash-only `find` or `mkdir -p`.
+
 ## Command: /learn:quiz <concept-or-domain>
 
 ### Step 1: Load Context
 
-Find topics under `./.learn/topics/`. Read `./.learn/topics/<topic-name>/state.json` — state.json is the single source of truth; do NOT read knowledge-map.md.
+Read v2 knowledge-domain states under `./.learn/topics/<knowledge-domain>/`. Resolve names to canonical `concept_id` values and retain each concept's owning domain. Do not use knowledge-map.md or generated view Markdown as truth.
 
 Resolve scope:
 - **Default (a concept name)**: quiz only that concept.
-- **A domain name or `all`**: cover each touched concept in that scope. Generate ONE deck PER concept.
-- A touched concept satisfies at least one of: `status !== "unexplored"`, `explain_count > 0`, `practice_count > 0`, or `confidence > 0`.
-- If a concept is not touched, do not quiz it — suggest `/learn:explain` first and stop. Never quiz unexplored concepts.
+- **A knowledge-domain name, view name, subdomain name, or `all`**: resolve the scope, then generate ONE deck PER eligible concept.
+- A concept is eligible only when `explain_count > 0` OR `status !== "unexplored"`.
+- A concept is "not touched" only when `explain_count === 0 AND status === "unexplored"`; do not quiz that concept, suggest `/learn:explain` first, and stop if the selected scope has no eligible concepts.
 - If the scope has no touched concepts, stop and suggest `/learn:explain`.
-- Ambiguous name: list close matches from state.json and ask. Do not silently add concepts.
+- Ambiguous name: list concept name, `concept_id`, subdomain, and owning knowledge domain, then ask. Do not silently add concepts.
 
 ### Step 2: Assess Difficulty
 
@@ -81,16 +96,16 @@ Keep answers and explanations to yourself — do NOT reveal them while asking.
 
 Write ONE file per covered concept under:
 
-`./.learn/topics/<topic-name>/quizzes/<concept-slug>/<concept-name>-quiz-YYYY-MM-DD-HHmmss.json`
+`./.learn/topics/<知识领域>/quizzes/<concept_id>/<concept-name>-quiz-YYYY-MM-DD-HHmmss.json`
 
-Use the concept name as-is from state.json. Schema (version 1):
+Use the concept name as-is from its owning v2 state.json. Before writing, verify that it contains no Windows-invalid filename characters (`< > : " / \\ | ? *`) or control characters; if invalid, stop and report the stored name instead of silently sanitizing it. The reusable quiz artifact keeps its existing deck schema (version 1); this is not a v1 learning-store state. Set `topic`/`topic_slug` to the owning knowledge domain and set `concept_slug` to the canonical `concept_id`:
 
 ```json
 {
   "version": 1,
-  "topic": "...",
-  "topic_slug": "...",
-  "concept_slug": "...",
+  "topic": "<knowledge-domain-display-name>",
+  "topic_slug": "<knowledge-domain-slug>",
+  "concept_slug": "<concept_id>",
   "concept_name": "...",
   "created": "YYYY-MM-DD HH:mm:ss",
   "questions": [
@@ -110,12 +125,11 @@ This file is the single persisted artifact — answers and explanations live onl
 
 After writing each deck, validate it:
 
-```bash
-VSCRIPT=$(find . -path '*/learn-anything-quiz/scripts/validate-quiz.mjs' -print -quit 2>/dev/null)
-node "$VSCRIPT" <the deck path you just wrote>
+```powershell
+node .claude/skills/learn-anything-quiz/scripts/validate-quiz.mjs <deck-path>
 ```
 
-validate-quiz.mjs checks the deck against the v1 schema (field types, type↔gradeable consistency, required sub-fields). Fix errors in the deck and re-run until it passes, before presenting questions.
+validate-quiz.mjs checks quiz artifact schema version 1 (field types, type↔gradeable consistency, required sub-fields); it does not validate learning-store state. Fix deck errors and re-run until it passes before presenting questions.
 
 ### Step 5: Present & Collect (batch)
 
@@ -136,22 +150,22 @@ Give per-question feedback (why right or wrong, the underlying misconception). T
 
 ### Step 7: Update State & Summarize
 
-For each covered concept, score it by its own performance and update state.json with the Edit tool:
+For each covered concept, score it by its own performance and update the `state.json` in that concept's owning knowledge domain with the Edit tool:
 
 | Performance | Criteria | Updates |
 |---|---|---|
-| ✅ Strong | Almost all correct (or code runs correctly, handles edge cases) | confidence +0.1~0.15 (cap 1.0), practice_count +1, last_practiced = today. If confidence > 0.7 AND practice_count ≥ 2 → mastered, else in_progress |
+| ✅ Strong | Almost all correct and the reasoning handles edge cases | confidence +0.1~0.15 (cap 1.0), practice_count +1, last_practiced = today. If confidence > 0.7 AND practice_count ≥ 2 → mastered, else in_progress |
 | 🟡 Partial | Core ideas right, some mistakes (or minor issues) | confidence +0.05 (cap 1.0), practice_count +1, last_practiced = today, status → needs_practice |
 | 🔴 Weak | Mostly wrong or blank (or doesn't run / wrong direction) | confidence unchanged, practice_count unchanged, status → needs_practice |
 
-After updating state.json, run render.mjs:
+⚠️ **CRITICAL**: in the same turn as the state update, validate the whole store and refresh all affected view reports:
 
-```bash
-SCRIPT=$(find . -path '*/learn-anything-quiz/scripts/render.mjs' -print -quit 2>/dev/null)
-node "$SCRIPT" ./.learn/topics/<topic-name>
+```powershell
+node scripts/validate-learning-store.mjs .learn/topics
+node scripts/render-views.mjs .learn/topics
 ```
 
-render.mjs validates state.json against the v1 schema — fix errors and re-run render.mjs if validation fails.
+Fix validation or rendering errors before presenting Step 8.
 
 ### Step 8: Recommend Next
 
@@ -161,8 +175,8 @@ For weak concepts, suggest `/learn:explain` or `/learn:practice`. Mention that t
 
 ## Edge Cases
 
-- No topics: ask the user to run `/learn:topic <topic-name>`.
-- Concept not in state.json: same handling as `/learn-explain` — list close matches and ask.
+- No knowledge domains: ask the user to run `/learn:topic <knowledge-domain>`.
+- Concept not in any v2 state.json: offer to add it through `/learn:topic`; never create a view-owned definition.
 - User wants to write real code: point them to `/learn:practice`.
 - User abandons mid-quiz (no answers): the deck file already exists and stays for future re-practice, but do NOT update state.json.
 - Regrading: if the user re-answers an existing deck, grade again but never increment `practice_count` twice without explicit confirmation.

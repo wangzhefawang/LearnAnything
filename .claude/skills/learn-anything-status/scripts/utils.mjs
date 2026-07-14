@@ -82,6 +82,49 @@ const CONCEPT_RULES = {
     last_practiced: nullable(dateStr),
     details: arr(str()),
 };
+const CONCEPT_ID_RE = /^[\p{Script=Han}a-z0-9]+(?:-[\p{Script=Han}a-z0-9]+)*$/u;
+const conceptId = (v) => {
+    if (typeof v !== 'string' || v.length === 0)
+        return 'Must be a non-empty string';
+    if (v.normalize('NFC') !== v)
+        return 'Must use Unicode NFC normalization';
+    if ([...v].length > 64)
+        return 'Must be at most 64 characters';
+    if (!CONCEPT_ID_RE.test(v))
+        return 'Must contain only Han characters, lowercase ASCII letters, digits, and single hyphens';
+    return null;
+};
+const STATE_V2_RULES = {
+    version: literal(2),
+    kind: literal('knowledge_domain'),
+    topic: str(),
+    slug: str(),
+    created: dateStr,
+    domains: arr(),
+};
+const CONCEPT_V2_RULES = {
+    concept_id: conceptId,
+    name: str(),
+    status: oneOf('unexplored', 'in_progress', 'needs_practice', 'mastered'),
+    confidence: num({ min: 0, max: 1 }),
+    practice_count: num({ min: 0, int: true }),
+    explain_count: num({ min: 0, int: true }),
+    last_explained: nullable(dateStr),
+    last_practiced: nullable(dateStr),
+    details: arr(str()),
+};
+const VIEW_V2_RULES = {
+    version: literal(2),
+    kind: literal('learning_view'),
+    name: str(),
+    slug: str(),
+    created: dateStr,
+    concepts: arr(),
+};
+const VIEW_CONCEPT_RULES = {
+    concept_id: conceptId,
+    importance: oneOf('core', 'recommended', 'optional'),
+};
 // ── Core engine ──────────────────────────────────────────────────────
 function checkFields(obj, rules, prefix, errors) {
     if (obj === null || typeof obj !== 'object')
@@ -107,6 +150,54 @@ export function validateStateV1(data) {
                 const concepts = domain.concepts;
                 for (const [ci, concept] of concepts.entries())
                     checkFields(concept, CONCEPT_RULES, `${dp}.concepts[${ci}]`, errors);
+            }
+        }
+    }
+    return errors;
+}
+export function validateStateV2(data) {
+    if (data === null || typeof data !== 'object' || Array.isArray(data))
+        return [{ path: '', message: 'Expected a non-null object' }];
+    const errors = [];
+    checkFields(data, STATE_V2_RULES, '', errors);
+    if (Array.isArray(data.domains)) {
+        for (const [di, domain] of data.domains.entries()) {
+            const dp = `domains[${di}]`;
+            if (domain === null || typeof domain !== 'object' || Array.isArray(domain)) {
+                errors.push({ path: dp, message: 'Expected a non-null object' });
+                continue;
+            }
+            checkFields(domain, DOMAIN_RULES, dp, errors);
+            if (Array.isArray(domain.concepts)) {
+                for (const [ci, concept] of domain.concepts.entries()) {
+                    const cp = `${dp}.concepts[${ci}]`;
+                    if (concept === null || typeof concept !== 'object' || Array.isArray(concept)) {
+                        errors.push({ path: cp, message: 'Expected a non-null object' });
+                        continue;
+                    }
+                    checkFields(concept, CONCEPT_V2_RULES, cp, errors);
+                }
+            }
+        }
+    }
+    return errors;
+}
+export function validateViewV2(data) {
+    if (data === null || typeof data !== 'object' || Array.isArray(data))
+        return [{ path: '', message: 'Expected a non-null object' }];
+    const errors = [];
+    checkFields(data, VIEW_V2_RULES, '', errors);
+    if (Array.isArray(data.concepts)) {
+        for (const [ci, concept] of data.concepts.entries()) {
+            const cp = `concepts[${ci}]`;
+            if (concept === null || typeof concept !== 'object' || Array.isArray(concept)) {
+                errors.push({ path: cp, message: 'Expected a non-null object' });
+                continue;
+            }
+            checkFields(concept, VIEW_CONCEPT_RULES, cp, errors);
+            for (const key of Object.keys(concept)) {
+                if (!(key in VIEW_CONCEPT_RULES))
+                    errors.push({ path: `${cp}.${key}`, message: 'Unexpected field' });
             }
         }
     }

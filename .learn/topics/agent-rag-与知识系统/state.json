@@ -1,0 +1,607 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "Agent、RAG 与知识系统",
+  "slug": "agent-rag-与知识系统",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "Prompt 与上下文工程",
+      "slug": "prompt-与上下文工程",
+      "concepts": [
+        {
+          "concept_id": "prompt-工程",
+          "name": "Prompt 工程",
+          "status": "in_progress",
+          "confidence": 0.15,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-10",
+          "last_practiced": null,
+          "details": [
+            "角色设定、Few-shot、思维链 CoT、结构化输出",
+            "设计科研问答中的系统提示词、任务提示词与约束提示词"
+          ]
+        },
+        {
+          "concept_id": "上下文设计与管理",
+          "name": "上下文设计与管理",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-10",
+          "last_practiced": null,
+          "details": [
+            "系统提示词、对话历史裁剪、上下文压缩",
+            "控制引用材料、用户问题与工具结果在上下文中的组织顺序",
+            "处理长上下文截断、冗余信息与无关证据干扰"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RAG 与向量检索",
+      "slug": "rag-与向量检索",
+      "concepts": [
+        {
+          "concept_id": "向量化-embedding",
+          "name": "向量化 Embedding",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-11",
+          "last_practiced": null,
+          "details": [
+            "将论文标题、摘要、段落或问题映射为稠密向量",
+            "理解向量维度、归一化与批量编码的工程影响",
+            "评估 embedding 模型对同义表达和跨句语义的捕捉能力"
+          ]
+        },
+        {
+          "concept_id": "语义相似度计算",
+          "name": "语义相似度计算",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "掌握余弦相似度、点积与欧氏距离的差异",
+            "理解向量归一化对相似度排序结果的影响",
+            "分析语义匹配误召回与漏召回的常见原因"
+          ]
+        },
+        {
+          "concept_id": "论文文档分块-chunking",
+          "name": "论文文档分块 Chunking",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "按章节、段落、滑动窗口或语义边界切分论文长文本",
+            "设置 chunk size、overlap 与元数据字段",
+            "处理公式、表格、引用和跨段落依赖对分块质量的影响"
+          ]
+        },
+        {
+          "concept_id": "rag-召回与重排流程",
+          "name": "RAG 召回与重排流程",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "构建 query embedding、向量召回、候选片段过滤的流水线",
+            "使用 cross-encoder 或规则特征进行 reranking",
+            "理解多路召回、去重和证据聚合对答案质量的作用"
+          ]
+        },
+        {
+          "concept_id": "上下文注入与答案生成",
+          "name": "上下文注入与答案生成",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "将检索片段、来源信息和回答约束注入 LLM 上下文",
+            "要求模型基于证据回答并避免无依据扩展",
+            "处理上下文过长、证据冲突和引用定位问题"
+          ]
+        },
+        {
+          "concept_id": "rag-效果评估",
+          "name": "RAG 效果评估",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "区分检索指标、生成指标和端到端问答准确率",
+            "设计人工标注、基准问题集与消融实验",
+            "评估答案相关性、忠实性、引用准确性和可复现性"
+          ]
+        },
+        {
+          "concept_id": "文档解析与分块",
+          "name": "文档解析与分块",
+          "status": "in_progress",
+          "confidence": 0.2,
+          "practice_count": 0,
+          "explain_count": 2,
+          "last_explained": "2026-06-18",
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "向量数据库与检索",
+          "name": "向量数据库与检索",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-11",
+          "last_practiced": null,
+          "details": [
+            "Chroma/Milvus/FAISS、相似度检索、混合检索"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "向量检索与 FAISS",
+      "slug": "向量检索与-faiss",
+      "concepts": [
+        {
+          "concept_id": "faiss-向量索引构建",
+          "name": "FAISS 向量索引构建",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "理解向量入库、ID 映射、元数据回查与索引持久化",
+            "掌握批量构建索引与增量更新的基本流程",
+            "区分 CPU 索引与 GPU 加速检索的使用场景"
+          ]
+        },
+        {
+          "concept_id": "flat-ivf-hnsw-pq-索引类型",
+          "name": "Flat、IVF、HNSW、PQ 索引类型",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "理解 Flat 精确检索与近似检索的取舍",
+            "掌握 IVF 聚类倒排、HNSW 图检索与 PQ 量化压缩的核心思想",
+            "根据语料规模、延迟目标和内存限制选择索引类型"
+          ]
+        },
+        {
+          "concept_id": "向量相似度度量选择",
+          "name": "向量相似度度量选择",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "召回率与检索性能优化",
+          "name": "召回率与检索性能优化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "调节 top-k、nprobe、efSearch 等参数平衡召回与延迟",
+            "设计基准集评估召回率、检索耗时和内存占用",
+            "分析分块粒度、向量质量和索引参数对召回效果的影响"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "知识图谱与 GraphRAG",
+      "slug": "知识图谱与-graphrag",
+      "concepts": [
+        {
+          "concept_id": "图数据模型与知识表示",
+          "name": "图数据模型与知识表示",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "用节点、关系、属性表达论文、作者、方法、任务和指标",
+            "设计 schema 约束与实体类型层次",
+            "理解图结构查询相比纯向量检索的优势与边界"
+          ]
+        },
+        {
+          "concept_id": "neo4j-与-cypher-查询",
+          "name": "Neo4j 与 Cypher 查询",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "掌握 MATCH、WHERE、RETURN、MERGE 等基础语句",
+            "编写多跳关系查询和路径查询",
+            "理解索引、约束和查询计划对图查询性能的影响"
+          ]
+        },
+        {
+          "concept_id": "科研知识图谱构建",
+          "name": "科研知识图谱构建",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "从论文语料中抽取实体、关系、属性和出处",
+            "进行实体规范化、去重、消歧与关系校验",
+            "建立从原文证据到图谱事实的可追溯链路"
+          ]
+        },
+        {
+          "concept_id": "graphrag-与-kg-llm-融合",
+          "name": "GraphRAG 与 KG+LLM 融合",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "结合图查询、向量检索和 LLM 生成回答复杂问题",
+            "用知识图谱约束答案实体、关系和推理路径",
+            "设计图谱证据与文本证据的融合策略"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Agent 智能体",
+      "slug": "agent-智能体",
+      "concepts": [
+        {
+          "concept_id": "function-calling-工具调用",
+          "name": "Function Calling 工具调用",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "定义检索、图查询、摘要、重排等工具的输入输出 schema",
+            "处理参数生成、类型校验、异常返回和重试",
+            "控制工具结果如何回填给 LLM 继续推理"
+          ]
+        },
+        {
+          "concept_id": "react-推理与行动循环",
+          "name": "ReAct 推理与行动循环",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "理解 Thought、Action、Observation 的基本循环",
+            "让 Agent 根据中间观察决定继续检索、查询图谱或生成答案",
+            "识别循环失控、工具误用和无效推理链的问题"
+          ]
+        },
+        {
+          "concept_id": "长文本问答策略",
+          "name": "长文本问答策略",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "使用分层检索、逐段摘要和证据合并处理论文长文本",
+            "针对综述型、事实型、比较型问题选择不同回答流程",
+            "控制答案结构、引用来源和不确定性表达"
+          ]
+        },
+        {
+          "concept_id": "agent-架构基础",
+          "name": "Agent 架构基础",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "任务拆解与规划",
+          "name": "任务拆解与规划",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "记忆机制",
+          "name": "记忆机制",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-11",
+          "last_practiced": null,
+          "details": [
+            "短期对话记忆、长期持久化记忆"
+          ]
+        },
+        {
+          "concept_id": "多智能体协同",
+          "name": "多智能体协同",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "系统架构与评估",
+      "slug": "系统架构与评估",
+      "concepts": [
+        {
+          "concept_id": "端到端系统架构设计",
+          "name": "端到端系统架构设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "划分语料处理、向量索引、知识图谱、Agent 编排和 LLM 服务模块",
+            "设计模块间数据流、接口协议和失败回退路径",
+            "明确离线构建与在线问答链路的职责边界"
+          ]
+        },
+        {
+          "concept_id": "论文语料处理流水线",
+          "name": "论文语料处理流水线",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "完成论文解析、清洗、分块、元数据提取和版本管理",
+            "建立语料到向量库与知识图谱的双通道入库流程",
+            "处理重复论文、格式噪声和增量更新"
+          ]
+        },
+        {
+          "concept_id": "问答准确率评估与工程化部署",
+          "name": "问答准确率评估与工程化部署",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "定义本地大模型增强前后的准确率对比实验",
+            "记录约 18% 提升所需的样本集、评分标准和消融变量",
+            "补充日志、缓存、配置管理、资源监控和部署脚本等工程能力"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "应用工程与落地",
+      "slug": "应用工程与落地",
+      "concepts": [
+        {
+          "concept_id": "llm-api-调用与接口开发",
+          "name": "LLM API 调用与接口开发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "OpenAI 兼容接口、流式输出、Python SDK"
+          ]
+        },
+        {
+          "concept_id": "快速原型开发",
+          "name": "快速原型开发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "评估与监控",
+          "name": "评估与监控",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "安全与权限控制",
+          "name": "安全与权限控制",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "成本与延迟优化",
+          "name": "成本与延迟优化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "工作流编排与自动化",
+      "slug": "工作流编排与自动化",
+      "concepts": [
+        {
+          "concept_id": "工作流编排基础",
+          "name": "工作流编排基础",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "办公系统集成",
+          "name": "办公系统集成",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "飞书/钉钉/企微 API、数据库与文档打通"
+          ]
+        },
+        {
+          "concept_id": "流程自动化设计",
+          "name": "流程自动化设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "周报月报生成、会议纪要整理、任务排期"
+          ]
+        },
+        {
+          "concept_id": "自迭代工作流",
+          "name": "自迭代工作流",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "开发框架",
+      "slug": "开发框架",
+      "concepts": [
+        {
+          "concept_id": "langchain",
+          "name": "LangChain",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "llamaindex",
+          "name": "LlamaIndex",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "dify",
+          "name": "Dify",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "autogen-与多智能体框架",
+          "name": "AutoGen 与多智能体框架",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    }
+  ]
+}

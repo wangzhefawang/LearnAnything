@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "研究视图",
+  "slug": "研究视图",
+  "created": "2026-07-01",
+  "concepts": [
+    { "concept_id": "transformer-架构", "importance": "core" }
+  ]
+}

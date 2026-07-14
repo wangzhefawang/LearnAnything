@@ -1,0 +1,103 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "感知、传感器与空间智能",
+  "slug": "感知与空间智能",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "3D 视觉与点云",
+      "slug": "3d-视觉与点云",
+      "concepts": [
+        {
+          "concept_id": "点云数据结构与滤波",
+          "name": "点云数据结构与滤波",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "体素下采样",
+            "离群点去除",
+            "法向量估计"
+          ]
+        },
+        {
+          "concept_id": "点云配准-icp",
+          "name": "点云配准 ICP",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "粗配准",
+            "精配准",
+            "误差度量"
+          ]
+        },
+        {
+          "concept_id": "三维重建与场景扫描",
+          "name": "三维重建与场景扫描",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "多视角融合",
+            "网格重建",
+            "场景尺度与坐标对齐"
+          ]
+        },
+        {
+          "concept_id": "rgb-d-感知数据处理",
+          "name": "RGB-D 感知数据处理",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "3d-检测侧信息-yolo3d",
+          "name": "3D 检测侧信息（YOLO3D）",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "3D 目标检测",
+            "BEV 表示",
+            "作为感知辅助"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "传感器与数据处理",
+      "slug": "传感器与数据处理",
+      "concepts": [
+        {
+          "concept_id": "多源传感器数据处理-imu-力传感器-关节角度",
+          "name": "多源传感器数据处理（IMU/力传感器/关节角度）",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "大模型基础、训练与对齐",
+  "slug": "大模型基础与对齐",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "大模型基础",
+      "slug": "大模型基础",
+      "concepts": [
+        {
+          "concept_id": "transformer-架构",
+          "name": "Transformer 架构",
+          "status": "in_progress",
+          "confidence": 0.55,
+          "practice_count": 0,
+          "explain_count": 7,
+          "last_explained": "2026-07-02",
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "llm-工作原理与-token",
+          "name": "LLM 工作原理与 Token",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-18",
+          "last_practiced": null,
+          "details": [
+            "自回归生成、上下文窗口、温度等采样参数",
+            "理解自回归生成、token、上下文窗口与概率采样"
+          ]
+        },
+        {
+          "concept_id": "transformer-编码架构",
+          "name": "Transformers 编码架构",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "理解 self-attention、位置编码与多头注意力",
+            "区分 encoder-only、decoder-only 与 encoder-decoder 架构",
+            "理解科研文本编码任务中 encoder 模型的适用性"
+          ]
+        },
+        {
+          "concept_id": "roberta-文本编码器",
+          "name": "RoBERTa 文本编码器",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "理解 RoBERTa 相对 BERT 的训练策略差异",
+            "掌握 CLS 向量、平均池化等句向量提取方式",
+            "了解领域语料对科研文本语义表示质量的影响"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "训练与对齐",
+      "slug": "训练与对齐",
+      "concepts": [
+        {
+          "concept_id": "大模型预训练-pretraining",
+          "name": "大模型预训练 Pretraining",
+          "status": "in_progress",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-06-28",
+          "last_practiced": null,
+          "details": [
+            "掌握预训练、指令微调与对齐的基本区别"
+          ]
+        },
+        {
+          "concept_id": "监督微调-sft",
+          "name": "监督微调 SFT",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "rlhf-与人类对齐",
+          "name": "RLHF 与人类对齐",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "lora-参数高效微调",
+          "name": "LoRA 参数高效微调",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "低秩适配",
+            "LLM vs 视觉塔适配",
+            "模仿式微调 -37%"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "推理与思维链",
+      "slug": "推理与思维链",
+      "concepts": [
+        {
+          "concept_id": "思维链-cot-原理",
+          "name": "思维链（CoT）原理",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "逐步推理",
+            "提示工程",
+            "结构化 vs 松散链"
+          ]
+        },
+        {
+          "concept_id": "结构化文本-cot",
+          "name": "结构化文本 CoT",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "事实→归因→决策",
+            "解析成功率",
+            "文本分支主导增益"
+          ]
+        }
+      ]
+    }
+  ]
+}

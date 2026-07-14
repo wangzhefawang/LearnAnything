@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "ai-agent-应用开发",
+  "slug": "ai-agent-应用开发",
+  "created": "2026-07-14",
+  "concepts": [
+    {
+      "concept_id": "llm-工作原理与-token",
+      "importance": "core"
+    },
+    {
+      "concept_id": "llm-api-调用与接口开发",
+      "importance": "core"
+    },
+    {
+      "concept_id": "prompt-工程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "上下文设计与管理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "agent-架构基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "react-推理与行动循环",
+      "importance": "core"
+    },
+    {
+      "concept_id": "function-calling-工具调用",
+      "importance": "core"
+    },
+    {
+      "concept_id": "任务拆解与规划",
+      "importance": "core"
+    },
+    {
+      "concept_id": "记忆机制",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多智能体协同",
+      "importance": "core"
+    },
+    {
+      "concept_id": "文档解析与分块",
+      "importance": "core"
+    },
+    {
+      "concept_id": "向量化-embedding",
+      "importance": "core"
+    },
+    {
+      "concept_id": "向量数据库与检索",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rag-召回与重排流程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rag-效果评估",
+      "importance": "core"
+    },
+    {
+      "concept_id": "工作流编排基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "办公系统集成",
+      "importance": "core"
+    },
+    {
+      "concept_id": "流程自动化设计",
+      "importance": "core"
+    },
+    {
+      "concept_id": "自迭代工作流",
+      "importance": "core"
+    },
+    {
+      "concept_id": "langchain",
+      "importance": "core"
+    },
+    {
+      "concept_id": "llamaindex",
+      "importance": "core"
+    },
+    {
+      "concept_id": "dify",
+      "importance": "core"
+    },
+    {
+      "concept_id": "autogen-与多智能体框架",
+      "importance": "core"
+    },
+    {
+      "concept_id": "快速原型开发",
+      "importance": "core"
+    },
+    {
+      "concept_id": "评估与监控",
+      "importance": "core"
+    },
+    {
+      "concept_id": "安全与权限控制",
+      "importance": "core"
+    },
+    {
+      "concept_id": "成本与延迟优化",
+      "importance": "core"
+    }
+  ]
+}

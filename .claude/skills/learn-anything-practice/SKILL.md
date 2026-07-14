@@ -36,7 +36,22 @@ When teaching about a specific library or framework, verify your explanations ag
 
 If Context7 MCP tools are not available in your environment, proceed with your built-in knowledge.
 
-## Command: /learn-practice <concept-name>
+## Data Contract v2 (Mandatory)
+
+- Knowledge definitions and progress live in `./.learn/topics/<knowledge-domain>/state.json` with `version: 2` and `kind: "knowledge_domain"`; the same directory owns `knowledge-map.md`, `sessions/`, `exercises/`, and `quizzes/`.
+- Learning views are sibling `<view-name>.view.json` files with `version: 2` and `kind: "learning_view"`. They reference domain-owned concepts; generated `<view-name>.md` reports are never edited manually.
+- `concept_id` is the 权威 identifier. Resolve a spoken concept name across all domain states to exactly one `concept_id`; if ambiguous, list candidates and owning knowledge domains for the user to choose.
+- If any state read here has `version: 1` or is missing `kind`, say the learning store has not been migrated and stop. Never support v1 as a fallback.
+- ⚠️ **CRITICAL same-turn persistence**: after updating any owning `state.json`, and before next-step suggestions, run:
+
+```powershell
+node scripts/validate-learning-store.mjs .learn/topics
+node scripts/render-views.mjs .learn/topics
+```
+
+Examples must work in Windows/PowerShell; do not rely on Bash-only `mkdir -p` or `find`.
+
+## Command: /learn:practice <concept-name>
 
 ### Step 0: Determine Practice Mode
 
@@ -47,8 +62,7 @@ If unsure, ask the user which they prefer.
 
 ### Step 1: Load Context
 
-1. **Match topic and concept**: same logic as `/learn-explain`.
-   Read `./.learn/topics/<topic-name>/state.json` — state.json is the single source of truth, do NOT read knowledge-map.md or state.yaml.
+1. **Resolve the concept**: search v2 knowledge-domain states, resolve the spoken name to one canonical `concept_id`, and locate its owning knowledge domain and subdomain. A view can scope the search but never owns the definition. Do not read generated Markdown as truth.
 
 2. **Check prerequisites**: if prerequisite concepts are `unexplored`, suggest learning them first. If `needs_practice`, remind to solidify basics.
 
@@ -66,8 +80,8 @@ If unsure, ask the user which they prefer.
 
 ### Step 3P: Create Exercise Files
 
-```bash
-mkdir -p ./.learn/topics/<topic-name>/exercises/<concept-slug>
+```powershell
+New-Item -ItemType Directory -Force ".learn/topics/<知识领域>/exercises/<concept_id>" | Out-Null
 ```
 
 Create these files:
@@ -152,15 +166,23 @@ The user submits code in chat. Provide feedback using the Feedback Framework bel
 
 ⚠️ **CRITICAL**: Write the session file FIRST, then echo its EXACT content to the conversation (do NOT rephrase). This ensures zero drift between saved and displayed content.
 
-**Filename**: `./.learn/topics/<topic-name>/exercises/<concept-slug>/<concept-name>-practice-YYYY-MM-DD.md`
-Use concept name as-is from state.json, match the user's language, don't force-translate.
+**Filename**: `./.learn/topics/<知识领域>/exercises/<concept_id>/<概念名原样>--YYYY-MM-DD--practice-<练习名-kebab>.md`
+Use the primary concept name exactly as stored and match the user's language. Before writing, verify that the stored concept name and derived exercise name contain no Windows-invalid filename characters (`< > : " / \\ | ? *`) or control characters. If they do, stop and report the invalid stored name; never silently sanitize it. The concept the user explicitly chose for practice is primary; if several concepts were requested without a primary, ask the user to choose before persisting. If one exercise covers multiple concepts, put the project assets and its single session record only under the primary concept's exercise directory, put the primary `concept_id` first, and list every covered ID in the header.
 
 **Session file format:**
 ```markdown
 # Practice Session - <date>
 
+> **Date:** YYYY-MM-DD
+> **Concept-IDs:** [primary-concept-id, other-concept-id]
+> **Knowledge Domain:** [primary concept's owning knowledge domain]
+> **Path:** [subdomain → primary concept]
+> **Level:** [beginner/intermediate/challenge]
+
+---
+
 ## Concept Practiced
-- Concept: [name] | Difficulty: [level] | Exercise: [name]
+- Concept: [name] (`concept_id`) | Difficulty: [level] | Exercise: [name]
 
 ## User's Submitted Code
 ```[language]
@@ -175,12 +197,12 @@ Use concept name as-is from state.json, match the user's language, don't force-t
 - Status: [old] → [new] | Confidence: [old] → [new]
 ```
 
-After updating state.json, run render.mjs:
-```bash
-SCRIPT=$(find . -path '*/learn-anything-practice/scripts/render.mjs' -print -quit 2>/dev/null)
-node "$SCRIPT" ./.learn/topics/<topic-name>
+Update every covered concept in its own knowledge-domain `state.json`. Then validate and refresh affected view reports in the same turn:
+```powershell
+node scripts/validate-learning-store.mjs .learn/topics
+node scripts/render-views.mjs .learn/topics
 ```
-render.mjs validates state.json against the v1 schema — fix errors and re-run render.mjs if validation fails.
+Fix any validation error before presenting next steps.
 
 ---
 
@@ -188,7 +210,8 @@ render.mjs validates state.json against the v1 schema — fix errors and re-run 
 
 - **Security vulnerability in code**: point it out gently.
 - **User fails repeatedly**: lower difficulty or change the exercise angle.
-- **Concept not in state.json**: same handling as `/learn-explain`.
+- **Concept not in any v2 state.json**: offer to add it to the semantically correct knowledge domain through `/learn:topic`.
+- **Ambiguous concept name**: list each candidate's name, `concept_id`, subdomain, and knowledge domain; wait for the user to choose.
 - **No runtime installed** (Project Mode): suggest installation or fall back to Chat Mode.
 - **User wants to switch mode mid-exercise**: let them. Record progress so far.
 - **Exercise directory exists**: append suffix or overwrite — ask the user.

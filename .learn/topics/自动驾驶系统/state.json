@@ -1,0 +1,242 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "自动驾驶系统",
+  "slug": "自动驾驶系统",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "轨迹规划与数值自审计",
+      "slug": "轨迹规划与数值自审计",
+      "concepts": [
+        {
+          "concept_id": "数值-cot-规划",
+          "name": "数值 CoT 规划",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "speed/curvature 序列",
+            "作为自审计信号"
+          ]
+        },
+        {
+          "concept_id": "端到端轨迹规划",
+          "name": "端到端轨迹规划",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "从感知直接到轨迹",
+            "开环规划"
+          ]
+        },
+        {
+          "concept_id": "speed-curvature-参数化与积分",
+          "name": "speed-curvature 参数化与积分",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "速度-曲率建模",
+            "积分成轨迹",
+            "运动学约束"
+          ]
+        },
+        {
+          "concept_id": "数值物理自审计",
+          "name": "数值物理自审计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "加速度双侧钳制",
+            "零成本后处理",
+            "碰撞失败率归零"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "数据与评测",
+      "slug": "数据与评测",
+      "concepts": [
+        {
+          "concept_id": "nuscenes-与开环评测",
+          "name": "nuScenes 与开环评测",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "nuScenes 数据集",
+            "val-150 划分",
+            "定位精度 ≤0.1m"
+          ]
+        },
+        {
+          "concept_id": "评测指标",
+          "name": "评测指标",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "ADE@T / L2",
+            "CFR 碰撞失败率",
+            "ParseRate 解析率",
+            "推理成本"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "智驾硬件与传感器系统",
+      "slug": "智驾硬件与传感器系统",
+      "concepts": [
+        {
+          "concept_id": "摄像头与环视感知系统",
+          "name": "摄像头与环视感知系统",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "前视侧视后视相机",
+            "内外参标定",
+            "曝光畸变与遮挡问题"
+          ]
+        },
+        {
+          "concept_id": "毫米波雷达与超声波雷达",
+          "name": "毫米波雷达与超声波雷达",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "目标距离速度角度",
+            "泊车低速感知",
+            "误检漏检与干扰"
+          ]
+        },
+        {
+          "concept_id": "激光雷达与组合定位",
+          "name": "激光雷达与组合定位",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "点云特性与安装位置",
+            "GNSS/IMU/轮速融合",
+            "时间同步与坐标系"
+          ]
+        },
+        {
+          "concept_id": "智驾域控制器计算平台",
+          "name": "智驾域控制器计算平台",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "SoC/GPU/NPU 算力",
+            "传感器输入链路",
+            "热设计与电源管理"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "功能与算法链路",
+      "slug": "功能与算法链路",
+      "concepts": [
+        {
+          "concept_id": "adas-noa-功能定义",
+          "name": "ADAS/NOA 功能定义",
+          "status": "in_progress",
+          "confidence": 0.25,
+          "practice_count": 0,
+          "explain_count": 4,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "ACC/LCC/AEB/APA",
+            "高速 NOA 与城市 NOA",
+            "ODD 运行设计域"
+          ]
+        },
+        {
+          "concept_id": "感知融合工程化",
+          "name": "感知融合工程化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "目标车道线与占用网络",
+            "多传感器融合",
+            "感知结果接口与置信度"
+          ]
+        },
+        {
+          "concept_id": "预测规划控制接口",
+          "name": "预测规划控制接口",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "行为预测与交互",
+            "轨迹规划约束",
+            "控制量输出与仲裁"
+          ]
+        },
+        {
+          "concept_id": "端到端与大模型智驾落地",
+          "name": "端到端与大模型智驾落地",
+          "status": "in_progress",
+          "confidence": 0.15,
+          "practice_count": 0,
+          "explain_count": 3,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "感知决策一体化",
+            "VLM/MLLM 辅助理解",
+            "工程边界与安全约束"
+          ]
+        }
+      ]
+    }
+  ]
+}

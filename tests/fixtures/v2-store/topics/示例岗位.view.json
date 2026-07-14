@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "示例岗位",
+  "slug": "示例岗位",
+  "created": "2026-07-01",
+  "concepts": [
+    { "concept_id": "react-循环", "importance": "core" },
+    { "concept_id": "transformer-架构", "importance": "recommended" },
+    { "concept_id": "注意力机制", "importance": "optional" }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "基础领域",
+  "slug": "基础领域",
+  "created": "2026-07-01",
+  "domains": [
+    {
+      "name": "模型基础",
+      "slug": "模型基础",
+      "concepts": [
+        {
+          "concept_id": "transformer-架构",
+          "name": "Transformer 架构",
+          "status": "in_progress",
+          "confidence": 0.5,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
+          "last_practiced": null,
+          "details": ["注意力与前馈网络"]
+        },
+        {
+          "concept_id": "注意力机制",
+          "name": "注意力机制",
+          "status": "mastered",
+          "confidence": 1,
+          "practice_count": 1,
+          "explain_count": 1,
+          "last_explained": "2026-07-03",
+          "last_practiced": "2026-07-04",
+          "details": []
+        }
+      ]
+    }
+  ]
+}

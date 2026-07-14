@@ -1,0 +1,273 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "车辆工程、车载系统与功能安全",
+  "slug": "车辆工程与功能安全",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "汽车结构与整车工作原理",
+      "slug": "汽车结构与整车工作原理",
+      "concepts": [
+        {
+          "concept_id": "车辆动力与底盘基础",
+          "name": "车辆动力与底盘基础",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "纯电平台动力系统",
+            "悬架与轮胎力",
+            "制动能量回收边界"
+          ]
+        },
+        {
+          "concept_id": "转向制动与线控执行系统",
+          "name": "转向制动与线控执行系统",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "EPS 电动助力转向",
+            "ESC/IBC 制动控制",
+            "控制指令到执行器响应"
+          ]
+        },
+        {
+          "concept_id": "车身与座舱电气负载",
+          "name": "车身与座舱电气负载",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "低压供电与唤醒",
+            "车灯雨刮门锁",
+            "智驾功能的人机交互依赖"
+          ]
+        },
+        {
+          "concept_id": "车辆状态信号与动力学边界",
+          "name": "车辆状态信号与动力学边界",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "车速加速度横摆角速度",
+            "轮速与方向盘角",
+            "附着系数与极限工况"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "电子电气架构与车载通信",
+      "slug": "电子电气架构与车载通信",
+      "concepts": [
+        {
+          "concept_id": "整车-e-e-架构与域控制器",
+          "name": "整车 E/E 架构与域控制器",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "分布式到集中式架构",
+            "智驾域与车身域协同",
+            "中央网关与区域控制器"
+          ]
+        },
+        {
+          "concept_id": "车载网络-can-lin-flexray-以太网",
+          "name": "车载网络 CAN/LIN/FlexRay/以太网",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "报文周期与优先级",
+            "DBC/ARXML 信号定义",
+            "车载以太网与 SOME/IP"
+          ]
+        },
+        {
+          "concept_id": "车载操作系统与中间件",
+          "name": "车载操作系统与中间件",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "AUTOSAR Classic/Adaptive",
+            "QNX/Linux/RTOS",
+            "DDS 与服务化通信"
+          ]
+        },
+        {
+          "concept_id": "诊断刷写与标定-uds-xcp",
+          "name": "诊断刷写与标定 UDS/XCP",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "DTC 与诊断会话",
+            "ECU 软件刷写",
+            "参数标定与数据采集"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "整车开发流程与系统集成",
+      "slug": "整车开发流程与系统集成",
+      "concepts": [
+        {
+          "concept_id": "v-模型开发流程",
+          "name": "V 模型开发流程",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "需求分解与系统设计",
+            "单元集成系统验证",
+            "整车 SOP 节点"
+          ]
+        },
+        {
+          "concept_id": "需求管理与功能方案设计",
+          "name": "需求管理与功能方案设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "用户场景到系统需求",
+            "功能边界与降级策略",
+            "接口控制文档 ICD"
+          ]
+        },
+        {
+          "concept_id": "整车集成与台架联调",
+          "name": "整车集成与台架联调",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "HIL/SIL/实车联调",
+            "传感器与控制器匹配",
+            "网络信号与时序排查"
+          ]
+        },
+        {
+          "concept_id": "问题闭环与版本发布",
+          "name": "问题闭环与版本发布",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "缺陷分级与根因分析",
+            "日志回灌与复现",
+            "软件版本与发布准入"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "安全测试验证与协同交付",
+      "slug": "安全测试验证与协同交付",
+      "concepts": [
+        {
+          "concept_id": "功能安全-iso-26262",
+          "name": "功能安全 ISO 26262",
+          "status": "in_progress",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "HARA 与 ASIL",
+            "安全目标与技术安全需求",
+            "故障诊断与安全机制"
+          ]
+        },
+        {
+          "concept_id": "预期功能安全-sotif",
+          "name": "预期功能安全 SOTIF",
+          "status": "in_progress",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "性能局限与触发条件",
+            "未知危险场景发现",
+            "ODD 内外风险识别"
+          ]
+        },
+        {
+          "concept_id": "智驾测试验证体系",
+          "name": "智驾测试验证体系",
+          "status": "in_progress",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "场景库与仿真测试",
+            "封闭场地与道路测试",
+            "覆盖率指标与准出标准"
+          ]
+        },
+        {
+          "concept_id": "供应商协作与技术文档",
+          "name": "供应商协作与技术文档",
+          "status": "in_progress",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-12",
+          "last_practiced": null,
+          "details": [
+            "SOR/技术协议",
+            "评审纪要与问题清单",
+            "跨部门节点推进"
+          ]
+        }
+      ]
+    }
+  ]
+}

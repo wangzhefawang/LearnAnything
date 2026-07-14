@@ -1,27 +1,23 @@
 #!/usr/bin/env python3
-"""根据 .learn/topics/*/state.json 自动刷新 README 中的「学习进度」区块。
+"""按 v2 学习视图刷新 README 中的「学习进度」区块。
 
-零依赖，仅用标准库；直接运行即可：
-
-    python scripts/update_progress.py
-
-脚本只会替换 README.md 中
-<!-- LEARN-PROGRESS:START --> 与 <!-- LEARN-PROGRESS:END --> 之间的内容，
-其余部分（简介、使用说明等）原样保留。
+零依赖，仅用标准库；脚本只替换 LEARN-PROGRESS 标记之间的内容。
+当学习存储不是完整 v2 格式或没有 view 时，脚本不会改动 README。
 """
 
 from __future__ import annotations
 
-import datetime as _dt
 import argparse
+import json
 import re
 import sys
-import json
+import unicodedata
 from pathlib import Path
 
-# Windows 控制台默认可能用 GBK 编码 stdout，强制 UTF-8 以免中文输出乱码
-if hasattr(sys.stdout, "reconfigure"):
-    sys.stdout.reconfigure(encoding="utf-8")
+
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TOPICS_DIR = REPO_ROOT / ".learn" / "topics"
@@ -30,163 +26,243 @@ README = REPO_ROOT / "README.md"
 START = "<!-- LEARN-PROGRESS:START 此区块由 scripts/update_progress.py 自动生成，请勿手动编辑 -->"
 END = "<!-- LEARN-PROGRESS:END -->"
 
-STATUS_ICON = {
-    "mastered": "✅",
-    "needs_practice": "🟡",
-    "in_progress": "🔵",
-    "unexplored": "⚪",
-}
-STATUS_LABEL = {
-    "mastered": "已掌握",
-    "needs_practice": "待练习",
-    "in_progress": "学习中",
-    "unexplored": "未开始",
-}
+STATUSES = {"unexplored", "in_progress", "needs_practice", "mastered"}
+IMPORTANCE = {"core", "recommended", "optional"}
+CONCEPT_ID_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fffa-z0-9]+(?:-[\u3400-\u4dbf\u4e00-\u9fffa-z0-9]+)*$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}( \d{2}:\d{2}:\d{2})?$")
 
 
-def parse_state(text: str):
-    """极简解析针对本仓库固定结构的 state.yaml（topic + concepts 列表）。"""
-    topic = None
-    concepts: list[dict] = []
-    cur: dict | None = None
-    for line in text.splitlines():
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
-            continue
-        if line.startswith("topic:"):
-            topic = line.split(":", 1)[1].strip().strip('"')
-        elif re.match(r"^\s*-\s*path:", line):
-            if cur:
-                concepts.append(cur)
-            cur = {"path": line.split("path:", 1)[1].strip().strip('"')}
-        elif cur is not None and re.match(r"^\s+\w+:", line):
-            key, _, val = stripped.partition(":")
-            cur[key.strip()] = val.strip().strip('"')
-    if cur:
-        concepts.append(cur)
-    return topic, concepts
+class StoreValidationError(Exception):
+    """学习存储无法安全聚合。"""
 
 
-def parse_state_json(text: str):
-    """解析 v1 state.json，转换成 README 渲染所需的扁平概念列表。"""
-    state = json.loads(text)
-    concepts: list[dict] = []
-    for domain in state.get("domains", []):
-        domain_name = domain.get("name", "")
-        for concept in domain.get("concepts", []):
-            item = dict(concept)
-            item["domain"] = domain_name
-            item["path"] = f"{domain_name}/{concept.get('name', '')}"
-            if concept.get("last_explained") and not concept.get("last_practiced"):
-                item["last_session"] = concept.get("last_explained")
-            concepts.append(item)
-    return state.get("topic"), concepts
-
-
-def _conf(c: dict) -> float:
+def _read_json(path: Path) -> dict:
     try:
-        return float(c.get("confidence", 0) or 0)
-    except ValueError:
-        return 0.0
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise StoreValidationError(f"{path}: JSON 读取失败：{exc}") from exc
+    if not isinstance(value, dict):
+        raise StoreValidationError(f"{path}: 顶层必须是对象")
+    return value
 
 
-def render_topic(topic: str, concepts: list[dict]) -> str:
-    # 按领域（path 中 "/" 前的部分）分组，保持状态文件原有顺序
-    domains: dict[str, list[dict]] = {}
-    for c in concepts:
-        domain = c.get("domain") or c["path"].split("/", 1)[0].strip()
-        domains.setdefault(domain, []).append(c)
+def _require_keys(value: dict, keys: tuple[str, ...], path: Path, scope: str) -> None:
+    missing = [key for key in keys if key not in value]
+    if missing:
+        raise StoreValidationError(f"{path}: {scope} 缺少字段 {', '.join(missing)}")
 
-    counts = {k: 0 for k in STATUS_ICON}
-    for c in concepts:
-        counts[c.get("status", "unexplored")] = counts.get(c.get("status", "unexplored"), 0) + 1
 
-    lines: list[str] = []
-    lines.append(f"### {topic}\n")
-    lines.append(
-        f"总览：{len(concepts)} 个概念 · "
-        f"🔵 学习中 {counts['in_progress']} · "
-        f"⚪ 未开始 {counts['unexplored']} · "
-        f"🟡 待练习 {counts['needs_practice']} · "
-        f"✅ 已掌握 {counts['mastered']}\n"
+def _valid_concept_id(value: object) -> bool:
+    return (
+        isinstance(value, str)
+        and unicodedata.normalize("NFC", value) == value
+        and value == value.lower()
+        and len(value) <= 64
+        and bool(CONCEPT_ID_RE.fullmatch(value))
     )
 
-    # 领域汇总表
-    lines.append("| 领域 | 进度 | 已掌握 / 总数 |")
-    lines.append("| --- | --- | --- |")
-    for domain, items in domains.items():
-        bar = "".join(STATUS_ICON.get(i.get("status", "unexplored"), "⚪") for i in items)
-        mastered = sum(1 for i in items if i.get("status") == "mastered")
-        lines.append(f"| {domain} | {bar} | {mastered} / {len(items)} |")
-    lines.append("")
 
-    # 当前正在学习/待练习的概念
-    active = [c for c in concepts if c.get("status") in ("in_progress", "needs_practice")]
-    active.sort(key=_conf, reverse=True)
-    if active:
-        lines.append("**当前正在学习的概念**（按掌握度 confidence 排序）：\n")
-        lines.append("| 概念 | 状态 | 掌握度 | 最近学习 |")
-        lines.append("| --- | --- | --- | --- |")
-        for c in active:
-            status = c.get("status", "unexplored")
-            icon = STATUS_ICON.get(status, "⚪")
-            pct = f"{round(_conf(c) * 100)}%"
-            last = c.get("last_session") or c.get("last_explained") or c.get("last_practiced") or "—"
-            if last == "null":
-                last = "—"
-            if c.get("domain") and c.get("name"):
-                pretty_path = f"{c['domain']} / {c['name']}"
-            else:
-                pretty_path = c["path"].replace("/", " / ")
-            lines.append(f"| {pretty_path} | {icon} | {pct} | {last} |")
-        lines.append("")
+def _validate_state(state: dict, path: Path) -> None:
+    if state.get("version") != 2 or state.get("kind") != "knowledge_domain":
+        version = state.get("version")
+        kind = state.get("kind")
+        raise StoreValidationError(
+            f"{path}: 检测到 v1/未迁移格式（version={version!r}, kind={kind!r}），请先完成数据迁移"
+        )
+    _require_keys(state, ("topic", "slug", "created", "domains"), path, "state")
+    for key in ("topic", "slug"):
+        if not isinstance(state[key], str) or not state[key]:
+            raise StoreValidationError(f"{path}: {key} 必须是非空字符串")
+    if not isinstance(state["created"], str) or not DATE_RE.fullmatch(state["created"]):
+        raise StoreValidationError(f"{path}: created 日期格式无效")
+    if not isinstance(state["domains"], list):
+        raise StoreValidationError(f"{path}: domains 必须是数组")
+    concept_keys = (
+        "concept_id",
+        "name",
+        "status",
+        "confidence",
+        "practice_count",
+        "explain_count",
+        "last_explained",
+        "last_practiced",
+        "details",
+    )
+    for domain_index, domain in enumerate(state["domains"]):
+        if not isinstance(domain, dict):
+            raise StoreValidationError(f"{path}: domains[{domain_index}] 必须是对象")
+        _require_keys(domain, ("name", "slug", "concepts"), path, f"domains[{domain_index}]")
+        if any(not isinstance(domain[key], str) or not domain[key] for key in ("name", "slug")):
+            raise StoreValidationError(f"{path}: domains[{domain_index}] 的 name/slug 必须是非空字符串")
+        if not isinstance(domain["concepts"], list):
+            raise StoreValidationError(f"{path}: domains[{domain_index}].concepts 必须是数组")
+        for concept_index, concept in enumerate(domain["concepts"]):
+            scope = f"domains[{domain_index}].concepts[{concept_index}]"
+            if not isinstance(concept, dict):
+                raise StoreValidationError(f"{path}: {scope} 必须是对象")
+            _require_keys(concept, concept_keys, path, scope)
+            if not _valid_concept_id(concept["concept_id"]):
+                raise StoreValidationError(f"{path}: {scope}.concept_id 不符合规范")
+            if not isinstance(concept["status"], str) or concept["status"] not in STATUSES:
+                raise StoreValidationError(f"{path}: {scope}.status 不在四态枚举中")
+            if not isinstance(concept["name"], str) or not concept["name"]:
+                raise StoreValidationError(f"{path}: {scope}.name 必须是非空字符串")
+            confidence = concept["confidence"]
+            if isinstance(confidence, bool) or not isinstance(confidence, (int, float)) or not 0 <= confidence <= 1:
+                raise StoreValidationError(f"{path}: {scope}.confidence 必须在 0–1 之间")
+            for count_key in ("practice_count", "explain_count"):
+                count = concept[count_key]
+                if isinstance(count, bool) or not isinstance(count, int) or count < 0:
+                    raise StoreValidationError(f"{path}: {scope}.{count_key} 必须是非负整数")
+            for date_key in ("last_explained", "last_practiced"):
+                date = concept[date_key]
+                if date is not None and (not isinstance(date, str) or not DATE_RE.fullmatch(date)):
+                    raise StoreValidationError(f"{path}: {scope}.{date_key} 日期格式无效")
+            if (concept["explain_count"] > 0) != (concept["last_explained"] is not None):
+                raise StoreValidationError(f"{path}: {scope} 的 explain_count 与 last_explained 不一致")
+            if (concept["practice_count"] > 0) != (concept["last_practiced"] is not None):
+                raise StoreValidationError(f"{path}: {scope} 的 practice_count 与 last_practiced 不一致")
+            if not isinstance(concept["details"], list) or any(
+                not isinstance(detail, str) or not detail for detail in concept["details"]
+            ):
+                raise StoreValidationError(f"{path}: {scope}.details 必须是非空字符串数组")
 
-    return "\n".join(lines)
+
+def _validate_view(view: dict, path: Path) -> None:
+    if view.get("version") != 2 or view.get("kind") != "learning_view":
+        raise StoreValidationError(f"{path}: 检测到 v1/未迁移 view 格式，请先完成数据迁移")
+    _require_keys(view, ("name", "slug", "created", "concepts"), path, "view")
+    for key in ("name", "slug"):
+        if not isinstance(view[key], str) or not view[key]:
+            raise StoreValidationError(f"{path}: {key} 必须是非空字符串")
+    if not isinstance(view["created"], str) or not DATE_RE.fullmatch(view["created"]):
+        raise StoreValidationError(f"{path}: created 日期格式无效")
+    if not isinstance(view["concepts"], list):
+        raise StoreValidationError(f"{path}: concepts 必须是数组")
+    for index, reference in enumerate(view["concepts"]):
+        if not isinstance(reference, dict):
+            raise StoreValidationError(f"{path}: concepts[{index}] 必须是对象")
+        if set(reference) != {"concept_id", "importance"}:
+            raise StoreValidationError(f"{path}: concepts[{index}] 只能包含 concept_id 与 importance")
+        if not _valid_concept_id(reference["concept_id"]):
+            raise StoreValidationError(f"{path}: concepts[{index}].concept_id 不符合规范")
+        if not isinstance(reference["importance"], str) or reference["importance"] not in IMPORTANCE:
+            raise StoreValidationError(f"{path}: concepts[{index}].importance 不在三档枚举中")
+
+
+def load_store() -> tuple[list[dict], list[dict]]:
+    try:
+        entries = sorted(TOPICS_DIR.iterdir(), key=lambda path: path.name)
+    except OSError as exc:
+        raise StoreValidationError(f"无法读取 topics 根目录 {TOPICS_DIR}：{exc}") from exc
+
+    states: list[dict] = []
+    views: list[dict] = []
+    definitions: dict[str, list[dict]] = {}
+
+    for entry in entries:
+        if entry.is_dir():
+            path = entry / "state.json"
+            if not path.exists():
+                continue
+            state = _read_json(path)
+            _validate_state(state, path)
+            record = {"path": path, "dir_name": entry.name, "state": state}
+            states.append(record)
+            for domain in state["domains"]:
+                for concept in domain["concepts"]:
+                    definitions.setdefault(concept["concept_id"], []).append(
+                        {"concept": concept, "state": state, "domain": domain}
+                    )
+        elif entry.is_file() and entry.name.endswith(".view.json"):
+            view = _read_json(entry)
+            _validate_view(view, entry)
+            views.append({"path": entry, "view": view})
+
+    if not views:
+        raise StoreValidationError(f"{TOPICS_DIR}: 未找到任何 .view.json 学习视图")
+
+    duplicates = sorted(concept_id for concept_id, items in definitions.items() if len(items) != 1)
+    if duplicates:
+        raise StoreValidationError(f"concept_id 存在全局重复定义：{', '.join(duplicates)}")
+
+    for record in views:
+        seen: set[str] = set()
+        for reference in record["view"]["concepts"]:
+            concept_id = reference["concept_id"]
+            if concept_id in seen:
+                raise StoreValidationError(f"{record['path']}: 视图内重复引用 {concept_id}")
+            seen.add(concept_id)
+            if len(definitions.get(concept_id, [])) != 1:
+                raise StoreValidationError(f"{record['path']}: concept_id {concept_id} 无法解析到恰好一个定义")
+        record["definitions"] = definitions
+
+    return states, views
+
+
+def _percentage(value: float) -> str:
+    return f"{round(value * 100)}%"
+
+
+def _summary(concepts: list[dict]) -> tuple[int, float, int]:
+    total = len(concepts)
+    mean = sum(float(concept["confidence"]) for concept in concepts) / total if total else 0.0
+    mastered = sum(concept["status"] == "mastered" for concept in concepts)
+    return total, mean, mastered
 
 
 def build_block() -> str:
-    today = _dt.date.today().isoformat()
+    states, views = load_store()
     parts = [
-        "## 📚 学习进度\n",
-        f"> 数据来源：`.learn/topics/*/state.json` ｜ 快照时间：{today}",
-        "> 图例：✅ 已掌握 ｜ 🔵 学习中 ｜ 🟡 待练习 ｜ ⚪ 未开始\n",
+        "## 📚 学习进度",
+        "",
+        "> 数据来源：`.learn/topics/*.view.json` 与各知识领域 `state.json`",
+        "",
+        "### 学习视图",
+        "",
+        "| 名称 | 概念数 | mean(confidence) | 已掌握 / 总数 |",
+        "| --- | --- | --- | --- |",
     ]
 
-    state_files = []
-    for topic_dir in sorted(p for p in TOPICS_DIR.iterdir() if p.is_dir()):
-        json_state = topic_dir / "state.json"
-        yaml_state = topic_dir / "state.yaml"
-        if json_state.exists():
-            state_files.append(json_state)
-        elif yaml_state.exists():
-            state_files.append(yaml_state)
-    if not state_files:
-        parts.append("_暂无学习记录。运行 `/learn:topic <主题>` 开始第一个主题。_")
-    for sf in state_files:
-        if sf.suffix == ".json":
-            topic, concepts = parse_state_json(sf.read_text(encoding="utf-8"))
-        else:
-            topic, concepts = parse_state(sf.read_text(encoding="utf-8"))
-        topic = topic or sf.parent.name
-        parts.append(render_topic(topic, concepts))
+    for record in views:
+        view = record["view"]
+        concepts = [record["definitions"][item["concept_id"]][0]["concept"] for item in view["concepts"]]
+        total, mean, mastered = _summary(concepts)
+        report_name = record["path"].name.removesuffix(".view.json") + ".md"
+        link = f"[{view['name']}](.learn/topics/{report_name})"
+        parts.append(f"| {link} | {total} | {_percentage(mean)} | {mastered} / {total} |")
 
+    parts.extend(
+        [
+            "",
+            "### 知识领域总览",
+            "",
+            "| 名称 | 概念数 | mean(confidence) | 已掌握 / 总数 |",
+            "| --- | --- | --- | --- |",
+        ]
+    )
+    for record in states:
+        concepts = [concept for domain in record["state"]["domains"] for concept in domain["concepts"]]
+        total, mean, mastered = _summary(concepts)
+        parts.append(
+            f"| {record['state']['topic']} | {total} | {_percentage(mean)} | {mastered} / {total} |"
+        )
     return "\n".join(parts).rstrip()
 
 
 def main(quiet: bool = False) -> None:
-    block = build_block()
+    try:
+        block = build_block()
+    except StoreValidationError as exc:
+        print(f"学习进度未更新：{exc}", file=sys.stderr)
+        raise SystemExit(1) from exc
+
     text = README.read_text(encoding="utf-8")
-
-    pattern = re.compile(
-        re.escape(START) + r".*?" + re.escape(END), re.DOTALL
-    )
-    replacement = f"{START}\n{block}\n{END}"
+    pattern = re.compile(re.escape(START) + r".*?" + re.escape(END), re.DOTALL)
     if not pattern.search(text):
-        raise SystemExit(
-            "未在 README.md 中找到 LEARN-PROGRESS 标记，请确认标记是否存在。"
-        )
+        raise SystemExit("未在 README.md 中找到 LEARN-PROGRESS 标记，请确认标记是否存在。")
+    replacement = f"{START}\n{block}\n{END}"
     new_text = pattern.sub(lambda _: replacement, text)
-
     if new_text == text:
         if not quiet:
             print("README 进度已是最新，无需更新。")

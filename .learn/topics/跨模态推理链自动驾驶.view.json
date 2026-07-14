@@ -1,0 +1,125 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "跨模态推理链自动驾驶",
+  "slug": "跨模态推理链自动驾驶",
+  "created": "2026-07-14",
+  "concepts": [
+    {
+      "concept_id": "研究问题与动机",
+      "importance": "core"
+    },
+    {
+      "concept_id": "openemma-基座与-fsdrive-相关工作",
+      "importance": "core"
+    },
+    {
+      "concept_id": "三分支架构总览",
+      "importance": "core"
+    },
+    {
+      "concept_id": "发现弧线叙事定位",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多模态大模型-mllm-vlm-基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "qwen-vl-llama-vision-主干",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多图条件输入",
+      "importance": "core"
+    },
+    {
+      "concept_id": "免训练推理范式",
+      "importance": "core"
+    },
+    {
+      "concept_id": "思维链-cot-原理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "结构化文本-cot",
+      "importance": "core"
+    },
+    {
+      "concept_id": "数值-cot-规划",
+      "importance": "core"
+    },
+    {
+      "concept_id": "跨模态-cot-耦合与解耦",
+      "importance": "core"
+    },
+    {
+      "concept_id": "世界模型与未来帧预测",
+      "importance": "core"
+    },
+    {
+      "concept_id": "sd-vae-潜空间编解码",
+      "importance": "core"
+    },
+    {
+      "concept_id": "vit-潜空间回归-latentdit",
+      "importance": "core"
+    },
+    {
+      "concept_id": "视觉分支负结果与边界",
+      "importance": "core"
+    },
+    {
+      "concept_id": "端到端轨迹规划",
+      "importance": "core"
+    },
+    {
+      "concept_id": "speed-curvature-参数化与积分",
+      "importance": "core"
+    },
+    {
+      "concept_id": "数值物理自审计",
+      "importance": "core"
+    },
+    {
+      "concept_id": "3d-检测侧信息-yolo3d",
+      "importance": "core"
+    },
+    {
+      "concept_id": "lora-参数高效微调",
+      "importance": "core"
+    },
+    {
+      "concept_id": "消融实验与受控归因",
+      "importance": "core"
+    },
+    {
+      "concept_id": "统计显著性与等价性检验",
+      "importance": "core"
+    },
+    {
+      "concept_id": "oracle-安慰剂对照设计",
+      "importance": "core"
+    },
+    {
+      "concept_id": "可解释性量化",
+      "importance": "core"
+    },
+    {
+      "concept_id": "nuscenes-与开环评测",
+      "importance": "core"
+    },
+    {
+      "concept_id": "评测指标",
+      "importance": "core"
+    },
+    {
+      "concept_id": "pytorch-cuda-训练推理流水线",
+      "importance": "core"
+    },
+    {
+      "concept_id": "latex-学术写作与可视化",
+      "importance": "core"
+    }
+  ]
+}

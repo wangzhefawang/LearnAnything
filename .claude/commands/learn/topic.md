@@ -1,12 +1,9 @@
 ---
 name: "Learn: Topic"
-description: "Initialize or load a learning topic — view knowledge map, track progress, choose your path"
+description: "Load or extend a knowledge domain, or assemble a learning view for a role or project"
 category: Learning
 tags: [learning, topic, initialize]
 ---
 
-Use the learn-anything-topic skill to handle the user's /learn <topic-name> request.
-Follow the workflow defined in the skill:
-1. Determine if the topic exists
-2. New topic: create directory structure → generate state.json (v1 with domains/concepts hierarchy) → run render.mjs → run init-sessions.mjs → present knowledge map and guide the user
-3. Existing topic: read state.json → run init-sessions.mjs → calculate progress → give personalized recommendations
+Use the `learn-anything-topic` skill to handle `/learn:topic <name-or-description>`.
+Forward the user's input unchanged. The skill owns v2 knowledge-domain reuse/creation, learning-view assembly, validation, persistence, and reporting; do not duplicate that logic here.
