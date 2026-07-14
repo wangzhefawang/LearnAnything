@@ -146,11 +146,11 @@
         {
           "concept_id": "科研课题申报与项目论证",
           "name": "科研课题申报与项目论证",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-14",
           "last_practiced": null,
           "details": []
         },
