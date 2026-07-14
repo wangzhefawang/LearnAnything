@@ -13,25 +13,25 @@
 - [x] 2.3 为其余机械搬迁概念标注目标领域与 canonical concept_id（含 NFC/小写/连字符规范化）
 - [x] 2.4 建立 36 份会话的 `(source_session_path, activity_type, concept_id)` 事件三元组清单（含孤儿会话挂载、primary concept 指定）
 - [x] 2.5 归并表完整性自检：每个旧概念恰好一条决议、concept_id 在定义间全局唯一、每份会话恰好映射一次
-- [ ] 2.6 归并表交用户抽查（冲突项全审、搬迁项抽查）后定稿
+- [x] 2.6 归并表交用户抽查（冲突项全审、搬迁项抽查）后定稿
 
 ## 3. 校验器、渲染器与测试先行
 
-- [ ] 3.1 各技能 utils.mjs：单文件结构校验 `validateStateV2` / `validateViewV2`（v2 字段、四态 status、importance 三值）
-- [ ] 3.2 新增权威跨文件校验器 `validate-learning-store.mjs`：concept_id 定义间全局唯一、view 引用可解析且视图内无重复、会话 Concept-IDs 关联、计数/日期一致性
-- [ ] 3.3 新增共享渲染模块 + `render-views` 入口（确定性输出、输入摘要哈希、「勿手改」声明）与 `--check` 模式
-- [ ] 3.4 status.mjs 支持知识领域视角与 view 聚合视角双模式（importance 仅作次级排序键）
-- [ ] 3.5 update_progress.py 改为按视图汇总 README 进度（mean(confidence) + mastered/total）并链接岗位 md
-- [ ] 3.6 自动化测试：concept_id 规范化与唯一性、view 引用解析/重复/importance 枚举、status 双模式、render-views 确定性与 --check 非写入、update_progress 岗位汇总；更新既有 tests/test_update_progress.py
+- [x] 3.1 各技能 utils.mjs：单文件结构校验 `validateStateV2` / `validateViewV2`（v2 字段、四态 status、importance 三值）
+- [x] 3.2 新增权威跨文件校验器 `validate-learning-store.mjs`：concept_id 定义间全局唯一、view 引用可解析且视图内无重复、会话 Concept-IDs 关联、计数/日期一致性
+- [x] 3.3 新增共享渲染模块 + `render-views` 入口（确定性输出、输入摘要哈希、「勿手改」声明）与 `--check` 模式
+- [x] 3.4 status.mjs 支持知识领域视角与 view 聚合视角双模式（importance 仅作次级排序键）
+- [x] 3.5 update_progress.py 改为按视图汇总 README 进度（mean(confidence) + mastered/total）并链接岗位 md
+- [x] 3.6 自动化测试：concept_id 规范化与唯一性、view 引用解析/重复/importance 枚举、status 双模式、render-views 确定性与 --check 非写入、update_progress 岗位汇总；更新既有 tests/test_update_progress.py
 
 ## 4. 迁移脚本与数据生成
 
-- [ ] 4.1 编写迁移脚本：读冻结快照 + 归并表，生成 10 个知识领域目录（knowledge-map.md + state.json v2）
-- [ ] 4.2 进度合并与计数重建：confidence 取最高、日期取最新、status 取最高 confidence 来源、计数按事件三元组去重重建（修复 ai-agent 与 Transformer 脏数据）
-- [ ] 4.3 会话迁移：36 份会话按 primary concept 移入目标领域 sessions/，注入 Concept-IDs 头部
-- [ ] 4.4 生成 6 个 view.json（原 6 个 topic 各一，concepts 顺序沿用原 knowledge-map 顺序，importance 初值 core，供用户后调）
-- [ ] 4.5 迁移输出通过 3.1/3.2 全部校验与 3.6 测试；针对冻结快照写精确断言测试（概念总数、36 份会话、关键概念进度值）
-- [ ] 4.6 首次运行 render-views，生成 6 份岗位 md 报告并复核样式
+- [x] 4.1 编写迁移脚本：读冻结快照 + 归并表，生成 10 个知识领域目录（knowledge-map.md + state.json v2）
+- [x] 4.2 进度合并与计数重建：confidence 取最高、日期取最新、status 取最高 confidence 来源、计数按事件三元组去重重建（修复 ai-agent 与 Transformer 脏数据）
+- [x] 4.3 会话迁移：36 份会话按 primary concept 移入目标领域 sessions/，注入 Concept-IDs 头部
+- [x] 4.4 生成 6 个 view.json（原 6 个 topic 各一，concepts 顺序沿用原 knowledge-map 顺序，importance 初值 core，供用户后调）
+- [x] 4.5 迁移输出通过 3.1/3.2 全部校验与 3.6 测试；针对冻结快照写精确断言测试（概念总数、36 份会话、关键概念进度值）
+- [x] 4.6 首次运行 render-views，生成 6 份岗位 md 报告并复核样式
 
 ## 5. 六技能与契约切换
 

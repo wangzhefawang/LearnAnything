@@ -23,6 +23,20 @@ test('validator accepts the isolated v2 fixture store', () => {
     }
 });
 
+test('validator finds Concept-IDs after a title and blank line', () => {
+    const store = makeStore();
+    try {
+        const sessionPath = join(store.topics, '应用领域', 'sessions', 'agent-系统', 'ReAct 循环--2026-07-06--跨领域概览.md');
+        const original = readFileSync(sessionPath, 'utf8');
+        writeFileSync(sessionPath, `# ReAct 循环\n\n${original}`, 'utf8');
+        const result = validate(store.topics);
+        assert.equal(result.status, 0, result.stderr);
+    }
+    finally {
+        store.cleanup();
+    }
+});
+
 test('validator rejects globally duplicated concept definitions', () => {
     const store = makeStore();
     try {

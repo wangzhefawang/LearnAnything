@@ -1,0 +1,117 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "知识增强科研问答智能体",
+  "slug": "知识增强科研问答智能体",
+  "created": "2026-07-14",
+  "concepts": [
+    {
+      "concept_id": "llm-工作原理与-token",
+      "importance": "core"
+    },
+    {
+      "concept_id": "大模型预训练-pretraining",
+      "importance": "core"
+    },
+    {
+      "concept_id": "本地大模型部署与推理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "prompt-工程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "上下文设计与管理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "transformer-编码架构",
+      "importance": "core"
+    },
+    {
+      "concept_id": "roberta-文本编码器",
+      "importance": "core"
+    },
+    {
+      "concept_id": "向量化-embedding",
+      "importance": "core"
+    },
+    {
+      "concept_id": "语义相似度计算",
+      "importance": "core"
+    },
+    {
+      "concept_id": "faiss-向量索引构建",
+      "importance": "core"
+    },
+    {
+      "concept_id": "flat-ivf-hnsw-pq-索引类型",
+      "importance": "core"
+    },
+    {
+      "concept_id": "向量相似度度量选择",
+      "importance": "core"
+    },
+    {
+      "concept_id": "召回率与检索性能优化",
+      "importance": "core"
+    },
+    {
+      "concept_id": "论文文档分块-chunking",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rag-召回与重排流程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "上下文注入与答案生成",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rag-效果评估",
+      "importance": "core"
+    },
+    {
+      "concept_id": "图数据模型与知识表示",
+      "importance": "core"
+    },
+    {
+      "concept_id": "neo4j-与-cypher-查询",
+      "importance": "core"
+    },
+    {
+      "concept_id": "科研知识图谱构建",
+      "importance": "core"
+    },
+    {
+      "concept_id": "graphrag-与-kg-llm-融合",
+      "importance": "core"
+    },
+    {
+      "concept_id": "function-calling-工具调用",
+      "importance": "core"
+    },
+    {
+      "concept_id": "react-推理与行动循环",
+      "importance": "core"
+    },
+    {
+      "concept_id": "长文本问答策略",
+      "importance": "core"
+    },
+    {
+      "concept_id": "端到端系统架构设计",
+      "importance": "core"
+    },
+    {
+      "concept_id": "论文语料处理流水线",
+      "importance": "core"
+    },
+    {
+      "concept_id": "问答准确率评估与工程化部署",
+      "importance": "core"
+    }
+  ]
+}

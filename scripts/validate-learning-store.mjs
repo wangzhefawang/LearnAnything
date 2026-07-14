@@ -82,7 +82,7 @@ export function validateLearningStore(topicsDir) {
         const sessionsDir = join(topicsDir, stateRecord.dirName, 'sessions');
         for (const sessionPath of walkMarkdown(sessionsDir)) {
             const text = readFileSync(sessionPath, 'utf8');
-            const header = text.split(/\r?\n\s*\r?\n/, 1)[0];
+            const header = text.split(/\r?\n/, 20).join('\n');
             const match = header.match(/^>\s*\*\*Concept-IDs:\*\*\s*\[([^\]]*)\]\s*$/m);
             const shown = displayPath(topicsDir, sessionPath);
             if (!match) {

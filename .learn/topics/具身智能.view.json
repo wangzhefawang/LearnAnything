@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "具身智能",
+  "slug": "具身智能",
+  "created": "2026-07-14",
+  "concepts": [
+    {
+      "concept_id": "transformer-架构",
+      "importance": "core"
+    },
+    {
+      "concept_id": "大模型预训练-pretraining",
+      "importance": "core"
+    },
+    {
+      "concept_id": "监督微调-sft",
+      "importance": "core"
+    },
+    {
+      "concept_id": "rlhf-与人类对齐",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多模态大模型-mllm-vlm-基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "vla-架构范式",
+      "importance": "core"
+    },
+    {
+      "concept_id": "动作表征与-action-tokenization",
+      "importance": "core"
+    },
+    {
+      "concept_id": "模仿学习与行为克隆-behavior-cloning",
+      "importance": "core"
+    },
+    {
+      "concept_id": "端到端策略与决策推理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "mdp-与策略-价值框架",
+      "importance": "core"
+    },
+    {
+      "concept_id": "ppo-算法",
+      "importance": "core"
+    },
+    {
+      "concept_id": "sac-算法",
+      "importance": "core"
+    },
+    {
+      "concept_id": "td3-算法",
+      "importance": "core"
+    },
+    {
+      "concept_id": "奖励工程-reward-engineering",
+      "importance": "core"
+    },
+    {
+      "concept_id": "全身运动控制-whole-body-control",
+      "importance": "core"
+    },
+    {
+      "concept_id": "抗扰动与高频动态平衡",
+      "importance": "core"
+    },
+    {
+      "concept_id": "仿真引擎-isaac-gym-mujoco",
+      "importance": "core"
+    },
+    {
+      "concept_id": "刚体动力学基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "接触模型与摩擦力辨识",
+      "importance": "core"
+    },
+    {
+      "concept_id": "域随机化-domain-randomization",
+      "importance": "core"
+    },
+    {
+      "concept_id": "策略迁移与实机反向对齐",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多模态对抗样本注入",
+      "importance": "core"
+    },
+    {
+      "concept_id": "安全熔断机制",
+      "importance": "core"
+    },
+    {
+      "concept_id": "物理失效案例与迭代指标",
+      "importance": "core"
+    },
+    {
+      "concept_id": "ros2-机器人操作系统生态",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多源传感器数据处理-imu-力传感器-关节角度",
+      "importance": "core"
+    },
+    {
+      "concept_id": "边缘侧推理框架",
+      "importance": "core"
+    },
+    {
+      "concept_id": "国产算力并行训练-昇腾-摩尔线程",
+      "importance": "core"
+    }
+  ]
+}

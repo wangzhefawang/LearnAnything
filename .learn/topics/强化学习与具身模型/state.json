@@ -1,0 +1,181 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "强化学习、模仿学习与具身模型",
+  "slug": "强化学习与具身模型",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "VLA 视觉-语言-动作模型",
+      "slug": "vla-视觉-语言-动作模型",
+      "concepts": [
+        {
+          "concept_id": "vla-架构范式",
+          "name": "VLA 架构范式",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "动作表征与-action-tokenization",
+          "name": "动作表征与 Action Tokenization",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "模仿学习与行为克隆-behavior-cloning",
+          "name": "模仿学习与行为克隆 Behavior Cloning",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-02",
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "端到端策略与决策推理",
+          "name": "端到端策略与决策推理",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "强化学习与运动控制",
+      "slug": "强化学习与运动控制",
+      "concepts": [
+        {
+          "concept_id": "mdp-与策略-价值框架",
+          "name": "MDP 与策略-价值框架",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "ppo-算法",
+          "name": "PPO 算法",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "sac-算法",
+          "name": "SAC 算法",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "td3-算法",
+          "name": "TD3 算法",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "奖励工程-reward-engineering",
+          "name": "奖励工程 Reward Engineering",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "全身运动控制-whole-body-control",
+          "name": "全身运动控制 Whole-body Control",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "抗扰动与高频动态平衡",
+          "name": "抗扰动与高频动态平衡",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "安全评测与红队对抗",
+      "slug": "安全评测与红队对抗",
+      "concepts": [
+        {
+          "concept_id": "多模态对抗样本注入",
+          "name": "多模态对抗样本注入",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "安全熔断机制",
+          "name": "安全熔断机制",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "物理失效案例与迭代指标",
+          "name": "物理失效案例与迭代指标",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    }
+  ]
+}

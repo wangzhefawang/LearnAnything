@@ -1,0 +1,164 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "科研方法、评测与实验设计",
+  "slug": "科研方法与实验",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "研究定位与叙事",
+      "slug": "研究定位与叙事",
+      "concepts": [
+        {
+          "concept_id": "研究问题与动机",
+          "name": "研究问题与动机",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "端到端驾驶的黑箱问题",
+            "可解释性诉求",
+            "各模态贡献缺乏受控验证"
+          ]
+        },
+        {
+          "concept_id": "openemma-基座与-fsdrive-相关工作",
+          "name": "OpenEMMA 基座与 FSDrive 相关工作",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "OpenEMMA 免训练 MLLM 驾驶",
+            "FSDrive 视觉时空 CoT",
+            "novelty 差异化"
+          ]
+        },
+        {
+          "concept_id": "三分支架构总览",
+          "name": "三分支架构总览",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "视觉 CoT 世界模型",
+            "文本 CoT 推理",
+            "数值 CoT 规划+自审计"
+          ]
+        },
+        {
+          "concept_id": "发现弧线叙事定位",
+          "name": "发现弧线叙事定位",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "建构跨模态 CoT",
+            "消融发现视觉拖后腿",
+            "受控归因研究"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "实验设计与统计",
+      "slug": "实验设计与统计",
+      "concepts": [
+        {
+          "concept_id": "消融实验与受控归因",
+          "name": "消融实验与受控归因",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "8 配置消融",
+            "把增益归到具体分支",
+            "增益与视觉解耦"
+          ]
+        },
+        {
+          "concept_id": "统计显著性与等价性检验",
+          "name": "统计显著性与等价性检验",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "配对 t 检验 / Wilcoxon",
+            "TOST 等价性检验",
+            "置信区间",
+            "伪复制风险"
+          ]
+        },
+        {
+          "concept_id": "oracle-安慰剂对照设计",
+          "name": "oracle / 安慰剂对照设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "oracle 真帧 vs 复制当前帧",
+            "双臂配对",
+            "混淆去除"
+          ]
+        },
+        {
+          "concept_id": "可解释性量化",
+          "name": "可解释性量化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "推理一致性（文本决策 vs 数值轨迹）",
+            "横向 vs 纵向",
+            "混淆矩阵",
+            "不预测准确率"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "学术写作与可视化",
+      "slug": "学术写作与可视化",
+      "concepts": [
+        {
+          "concept_id": "latex-学术写作与可视化",
+          "name": "LaTeX 学术写作与可视化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "XeLaTeX + biblatex-apa",
+            "TikZ 矢量图",
+            "浮动体排版"
+          ]
+        }
+      ]
+    }
+  ]
+}

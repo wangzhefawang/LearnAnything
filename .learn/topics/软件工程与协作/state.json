@@ -1,0 +1,178 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "软件与机器学习工程协作",
+  "slug": "软件工程与协作",
+  "created": "2026-07-14",
+  "domains": [
+    {
+      "name": "Linux 与远程开发部署",
+      "slug": "linux-与远程开发部署",
+      "concepts": [
+        {
+          "concept_id": "ssh-远程登录与隧道转发",
+          "name": "SSH 远程登录与隧道转发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "密钥认证与权限配置",
+            "端口转发与远程服务访问",
+            "远程命令执行与会话管理"
+          ]
+        },
+        {
+          "concept_id": "mobaxterm-远程开发工作流",
+          "name": "MobaXterm 远程开发工作流",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "SFTP 文件同步",
+            "远程终端与多会话管理",
+            "X11 图形界面转发"
+          ]
+        },
+        {
+          "concept_id": "机器人远程部署与日志排查",
+          "name": "机器人远程部署与日志排查",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "部署包与依赖检查",
+            "启动脚本与服务管理",
+            "运行日志与故障定位"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "软件测试与团队协作",
+      "slug": "软件测试与团队协作",
+      "concepts": [
+        {
+          "concept_id": "机器人测试用例设计方法",
+          "name": "机器人测试用例设计方法",
+          "status": "in_progress",
+          "confidence": 0.1,
+          "practice_count": 0,
+          "explain_count": 2,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "功能测试",
+            "边界条件",
+            "仿真与实机对照"
+          ]
+        },
+        {
+          "concept_id": "缺陷管理与问题清单",
+          "name": "缺陷管理与问题清单",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": [
+            "复现步骤",
+            "期望结果与实际结果",
+            "严重等级与跟踪状态"
+          ]
+        },
+        {
+          "concept_id": "git-团队协作流",
+          "name": "Git 团队协作流",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "代码评审与集成测试",
+          "name": "代码评审与集成测试",
+          "status": "in_progress",
+          "confidence": 0.05,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-13",
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "模型训练与部署工程",
+      "slug": "模型训练与部署工程",
+      "concepts": [
+        {
+          "concept_id": "边缘侧推理框架",
+          "name": "边缘侧推理框架",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "国产算力并行训练-昇腾-摩尔线程",
+          "name": "国产算力并行训练（昇腾/摩尔线程）",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "pytorch-cuda-训练推理流水线",
+          "name": "PyTorch / CUDA 训练推理流水线",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "RTX 5090 / bf16",
+            "latent 编码与样本对构造",
+            "断点续跑",
+            "pixi 环境管理"
+          ]
+        },
+        {
+          "concept_id": "本地大模型部署与推理",
+          "name": "本地大模型部署与推理",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "理解模型权重、推理引擎、显存占用与量化的关系",
+            "掌握本地推理服务的接口封装与并发限制",
+            "了解温度、top-p、最大输出长度等生成参数对答案质量的影响",
+            "理解本地大模型在科研问答中的能力边界与幻觉风险"
+          ]
+        }
+      ]
+    }
+  ]
+}

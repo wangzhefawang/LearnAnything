@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "智驾系统开发",
+  "slug": "智驾系统开发",
+  "created": "2026-07-14",
+  "concepts": [
+    {
+      "concept_id": "车辆动力与底盘基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "转向制动与线控执行系统",
+      "importance": "core"
+    },
+    {
+      "concept_id": "车身与座舱电气负载",
+      "importance": "core"
+    },
+    {
+      "concept_id": "车辆状态信号与动力学边界",
+      "importance": "core"
+    },
+    {
+      "concept_id": "整车-e-e-架构与域控制器",
+      "importance": "core"
+    },
+    {
+      "concept_id": "车载网络-can-lin-flexray-以太网",
+      "importance": "core"
+    },
+    {
+      "concept_id": "车载操作系统与中间件",
+      "importance": "core"
+    },
+    {
+      "concept_id": "诊断刷写与标定-uds-xcp",
+      "importance": "core"
+    },
+    {
+      "concept_id": "摄像头与环视感知系统",
+      "importance": "core"
+    },
+    {
+      "concept_id": "毫米波雷达与超声波雷达",
+      "importance": "core"
+    },
+    {
+      "concept_id": "激光雷达与组合定位",
+      "importance": "core"
+    },
+    {
+      "concept_id": "智驾域控制器计算平台",
+      "importance": "core"
+    },
+    {
+      "concept_id": "adas-noa-功能定义",
+      "importance": "core"
+    },
+    {
+      "concept_id": "感知融合工程化",
+      "importance": "core"
+    },
+    {
+      "concept_id": "预测规划控制接口",
+      "importance": "core"
+    },
+    {
+      "concept_id": "端到端与大模型智驾落地",
+      "importance": "core"
+    },
+    {
+      "concept_id": "v-模型开发流程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "需求管理与功能方案设计",
+      "importance": "core"
+    },
+    {
+      "concept_id": "整车集成与台架联调",
+      "importance": "core"
+    },
+    {
+      "concept_id": "问题闭环与版本发布",
+      "importance": "core"
+    },
+    {
+      "concept_id": "功能安全-iso-26262",
+      "importance": "core"
+    },
+    {
+      "concept_id": "预期功能安全-sotif",
+      "importance": "core"
+    },
+    {
+      "concept_id": "智驾测试验证体系",
+      "importance": "core"
+    },
+    {
+      "concept_id": "供应商协作与技术文档",
+      "importance": "core"
+    }
+  ]
+}
