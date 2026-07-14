@@ -89,11 +89,11 @@
         {
           "concept_id": "2d-图像识别与卷积神经网络",
           "name": "2D 图像识别与卷积神经网络",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-14",
           "last_practiced": null,
           "details": []
         },
