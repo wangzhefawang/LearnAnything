@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "kind": "knowledge_domain",
+  "topic": "应用领域",
+  "slug": "应用领域",
+  "created": "2026-07-01",
+  "domains": [
+    {
+      "name": "Agent 系统",
+      "slug": "agent-系统",
+      "concepts": [
+        {
+          "concept_id": "react-循环",
+          "name": "ReAct 循环",
+          "status": "needs_practice",
+          "confidence": 0.25,
+          "practice_count": 2,
+          "explain_count": 1,
+          "last_explained": "2026-07-05",
+          "last_practiced": "2026-07-06",
+          "details": ["推理与行动交替"]
+        }
+      ]
+    }
+  ]
+}

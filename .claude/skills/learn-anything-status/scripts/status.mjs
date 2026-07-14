@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
  * status.mjs — standalone script
- * Reads state.json (v1) and outputs a formatted learning heatmap to stdout.
+ * Reads the v2 learning store and outputs a formatted learning heatmap to stdout.
  *
  * Usage:
- *   node status.mjs <topic-dir>                    Detailed heatmap (English)
- *   node status.mjs --locale zh-CN <topic-dir>     Detailed heatmap (Chinese)
- *   node status.mjs --all [--locale zh-CN] <dir>   Summary of all topics
+ *   node status.mjs <topics-dir> <name>                  Domain or view heatmap
+ *   node status.mjs --locale zh-CN <topics-dir> <name>   Chinese heatmap
+ *   node status.mjs --all [--locale zh-CN] <topics-dir>  All domains and views
  *
  * This file is compiled from src/scripts/status.mts via tsc and
  * copied into learn-anything-status skill's scripts/ directory by init/update.
@@ -14,7 +14,15 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { validateStateV1, totalCount, masteredCount, STATUS_ICON, } from './utils.mjs';
+import { validateStateV2, totalCount, masteredCount, STATUS_ICON, } from './utils.mjs';
+import {
+    aggregateView,
+    formatConfidence,
+    LearningStoreError,
+    loadLearningStore,
+    stateSummary,
+    viewSummary,
+} from '../../../../scripts/learning-store-lib.mjs';
 const EN = {
     title: (topic) => `🌟 ${topic} Learning Status`,
     mastered: 'Mastered',
@@ -139,11 +147,51 @@ function daysBetween(dateStr, now = Date.now()) {
 function readStateJson(filePath) {
     const raw = readFileSync(filePath, 'utf-8');
     const data = JSON.parse(raw);
-    const errors = validateStateV1(data);
+    if (data.version === 1 || data.kind == null) {
+        throw new Error(`检测到 v1/未迁移格式：${filePath}，请先完成数据迁移`);
+    }
+    const errors = validateStateV2(data);
     if (errors.length > 0) {
         throw new Error(`state.json validation failed:\n${errors.map((e) => `  .${e.path}: ${e.message}`).join('\n')}`);
     }
     return data;
+}
+export function renderViewStatus(aggregate, locale = 'en') {
+    const t = STRINGS[locale];
+    const importance = locale === 'zh-CN'
+        ? { core: '核心', recommended: '推荐', optional: '可选' }
+        : { core: 'core', recommended: 'recommended', optional: 'optional' };
+    const lines = [t.title(aggregate.viewRecord.view.name), ''];
+    for (const [index, item] of aggregate.concepts.entries()) {
+        lines.push(`${index + 1}. [${importance[item.importance]}] ${conceptLine(item.concept, t)} · ${item.knowledge_domain}`);
+    }
+    lines.push('');
+    lines.push(locale === 'zh-CN'
+        ? `汇总：${aggregate.total} 个概念 · 已掌握 ${aggregate.mastered}/${aggregate.total} · 平均掌握度 ${formatConfidence(aggregate.meanConfidence)}`
+        : `Summary: ${aggregate.total} concepts · mastered ${aggregate.mastered}/${aggregate.total} · mean confidence ${formatConfidence(aggregate.meanConfidence)}`);
+    lines.push('');
+    return lines.join('\n');
+}
+
+export function renderAllStore(store, locale = 'en') {
+    const domainSummaries = store.states.map(stateSummary);
+    const viewSummaries = store.views.map((viewRecord) => viewSummary(store, viewRecord));
+    const typeLabel = locale === 'zh-CN'
+        ? { knowledge_domain: '知识领域', learning_view: '学习视图' }
+        : { knowledge_domain: 'Knowledge Domain', learning_view: 'Learning View' };
+    const lines = [
+        locale === 'zh-CN' ? '🌟 学习状态 — 所有知识领域与学习视图' : '🌟 Learning Status — All Domains and Views',
+        '',
+        locale === 'zh-CN'
+            ? '| 类型 | 名称 | 概念数 | 平均掌握度 | 已掌握 / 总数 |'
+            : '| Type | Name | Concepts | Mean Confidence | Mastered / Total |',
+        '| --- | --- | --- | --- | --- |',
+    ];
+    for (const summary of [...domainSummaries, ...viewSummaries]) {
+        lines.push(`| ${typeLabel[summary.kind]} | ${summary.name} | ${summary.total} | ${formatConfidence(summary.meanConfidence)} | ${summary.mastered} / ${summary.total} |`);
+    }
+    lines.push('');
+    return lines.join('\n');
 }
 /* ------------------------------------------------------------------ */
 /*  Single topic — detailed heatmap                                   */
@@ -350,7 +398,7 @@ export function renderAllTopics(summaries, now, locale = 'en') {
 function usage() {
     const script = process.argv[1]?.split('/').pop() || 'status.mjs';
     console.error(`Usage:`);
-    console.error(`  node ${script} [--locale en|zh-CN] <topic-dir>`);
+    console.error(`  node ${script} [--locale en|zh-CN] <topics-dir> <name>`);
     console.error(`  node ${script} --all [--locale en|zh-CN] <topics-dir>`);
     process.exit(1);
 }
@@ -362,7 +410,7 @@ function main() {
     // Parse flags
     let locale = 'en';
     let isAll = false;
-    let dirArg;
+    const positional = [];
     for (let i = 0; i < args.length; i++) {
         if (args[i] === '--all') {
             isAll = true;
@@ -377,37 +425,43 @@ function main() {
                 process.exit(1);
             }
         }
-        else if (!args[i].startsWith('--')) {
-            dirArg = args[i];
-        }
+        else if (!args[i].startsWith('--'))
+            positional.push(args[i]);
     }
-    if (!dirArg) {
+    if ((isAll && positional.length !== 1) || (!isAll && positional.length !== 2)) {
         usage();
     }
-    const dir = resolve(dirArg);
-    if (isAll) {
-        const summaries = scanTopics(dir);
-        console.log(renderAllTopics(summaries, undefined, locale));
+    const topicsDir = resolve(positional[0]);
+    try {
+        const store = loadLearningStore(topicsDir);
+        if (isAll) {
+            console.log(renderAllStore(store, locale));
+            return;
+        }
+        const name = positional[1];
+        const viewRecord = store.views.find((item) => item.fileName === `${name}.view.json`);
+        if (viewRecord) {
+            console.log(renderViewStatus(aggregateView(store, viewRecord), locale));
+            return;
+        }
+        const stateRecord = store.states.find((item) => item.dirName === name);
+        if (stateRecord) {
+            console.log(renderStatus(stateRecord.state, undefined, locale));
+            return;
+        }
+        console.error(STRINGS[locale].noData(join(topicsDir, name)));
+        process.exitCode = 1;
     }
-    else {
-        const statePath = join(dir, 'state.json');
-        let state;
-        try {
-            state = readStateJson(statePath);
+    catch (err) {
+        if (err instanceof LearningStoreError) {
+            console.error('Error: 学习存储校验失败');
+            for (const message of err.errors)
+                console.error(`  ${message}`);
         }
-        catch (err) {
-            const msg = err instanceof Error ? err.message : String(err);
-            if (msg.includes('ENOENT') || msg.includes('not found')) {
-                const t = STRINGS[locale];
-                console.error(t.noData(statePath));
-                console.error(t.startJourney);
-            }
-            else {
-                console.error(`Error: ${msg}`);
-            }
-            process.exit(1);
+        else {
+            console.error(`Error: ${err instanceof Error ? err.message : String(err)}`);
         }
-        console.log(renderStatus(state, undefined, locale));
+        process.exitCode = 1;
     }
 }
 const isMain = process.argv[1] != null &&
