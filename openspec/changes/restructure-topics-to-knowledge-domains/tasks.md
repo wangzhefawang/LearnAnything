@@ -2,17 +2,17 @@
 
 ## 1. 准备、冻结与基线
 
-- [ ] 1.1 冻结学习写入，提交完整快照 commit（迁移唯一输入）
-- [ ] 1.2 用现有 v1 工具生成并保存 status/review 基线输出（切换后旧工具无法再读旧结构）
-- [ ] 1.3 建迁移分支，创建 10 个知识领域的目录名与显示名对照（design D2）
+- [x] 1.1 冻结学习写入，提交完整快照 commit（迁移唯一输入）
+- [x] 1.2 用现有 v1 工具生成并保存 status/review 基线输出（切换后旧工具无法再读旧结构）
+- [x] 1.3 建迁移分支，创建 10 个知识领域的目录名与显示名对照（design D2）
 
 ## 2. 归并表（人工裁决输入）
 
-- [ ] 2.1 导出 158 个旧概念清单（topic/domain/concept/进度快照）
-- [ ] 2.2 按 design 冲突裁决清单 C1–C13 填入预裁决决议（keep/merge/split/discard + targets + 目标领域；split 项写明 details 与证据分配）
-- [ ] 2.3 为其余机械搬迁概念标注目标领域与 canonical concept_id（含 NFC/小写/连字符规范化）
-- [ ] 2.4 建立 36 份会话的 `(source_session_path, activity_type, concept_id)` 事件三元组清单（含孤儿会话挂载、primary concept 指定）
-- [ ] 2.5 归并表完整性自检：每个旧概念恰好一条决议、concept_id 在定义间全局唯一、每份会话恰好映射一次
+- [x] 2.1 导出 158 个旧概念清单（topic/domain/concept/进度快照）
+- [x] 2.2 按 design 冲突裁决清单 C1–C13 填入预裁决决议（keep/merge/split/discard + targets + 目标领域；split 项写明 details 与证据分配）
+- [x] 2.3 为其余机械搬迁概念标注目标领域与 canonical concept_id（含 NFC/小写/连字符规范化）
+- [x] 2.4 建立 36 份会话的 `(source_session_path, activity_type, concept_id)` 事件三元组清单（含孤儿会话挂载、primary concept 指定）
+- [x] 2.5 归并表完整性自检：每个旧概念恰好一条决议、concept_id 在定义间全局唯一、每份会话恰好映射一次
 - [ ] 2.6 归并表交用户抽查（冲突项全审、搬迁项抽查）后定稿
 
 ## 3. 校验器、渲染器与测试先行
