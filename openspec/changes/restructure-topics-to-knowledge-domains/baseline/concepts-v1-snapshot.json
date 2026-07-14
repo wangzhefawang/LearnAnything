@@ -1,0 +1,2461 @@
+[
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "Linux 与远程开发部署",
+    "concept": "SSH 远程登录与隧道转发",
+    "slug": "ssh-远程登录与隧道转发",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "密钥认证与权限配置",
+      "端口转发与远程服务访问",
+      "远程命令执行与会话管理"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "Linux 与远程开发部署",
+    "concept": "MobaXterm 远程开发工作流",
+    "slug": "mobaxterm-远程开发工作流",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "SFTP 文件同步",
+      "远程终端与多会话管理",
+      "X11 图形界面转发"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "Linux 与远程开发部署",
+    "concept": "机器人远程部署与日志排查",
+    "slug": "机器人远程部署与日志排查",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "部署包与依赖检查",
+      "启动脚本与服务管理",
+      "运行日志与故障定位"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "ROS 机器人操作系统",
+    "concept": "ROS 节点与话题通信",
+    "slug": "ros-节点与话题通信",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-12",
+    "last_practiced": null,
+    "details": [
+      "发布者与订阅者模型",
+      "消息类型定义",
+      "频率与延迟观测"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "ROS 机器人操作系统",
+    "concept": "ROS 服务与动作通信",
+    "slug": "ros-服务与动作通信",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "同步请求响应",
+      "长任务反馈机制",
+      "导航与机械臂任务接口"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "ROS 机器人操作系统",
+    "concept": "TF 坐标变换体系",
+    "slug": "tf-坐标变换体系",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "坐标系树",
+      "静态与动态变换",
+      "传感器坐标与机器人基座坐标"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "ROS 机器人操作系统",
+    "concept": "launch 启动编排与参数管理",
+    "slug": "launch-启动编排与参数管理",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "ROS 机器人操作系统",
+    "concept": "rosbag 数据录制与回放",
+    "slug": "rosbag-数据录制与回放",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "Gazebo 仿真环境",
+    "concept": "URDF 与 SDF 机器人建模",
+    "slug": "urdf-与-sdf-机器人建模",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "连杆与关节",
+      "碰撞体与视觉模型",
+      "惯性参数"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "Gazebo 仿真环境",
+    "concept": "Gazebo 传感器插件",
+    "slug": "gazebo-传感器插件",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "激光雷达插件",
+      "相机与深度相机插件",
+      "IMU 与里程计仿真"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "Gazebo 仿真环境",
+    "concept": "仿真世界构建与物理参数配置",
+    "slug": "仿真世界构建与物理参数配置",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "地图与障碍物布置",
+      "摩擦与重力参数",
+      "仿真时间与实时因子"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机器人导航",
+    "concept": "SLAM 建图基础",
+    "slug": "slam-建图基础",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "栅格地图",
+      "激光雷达建图",
+      "回环检测"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机器人导航",
+    "concept": "AMCL 蒙特卡洛定位",
+    "slug": "amcl-蒙特卡洛定位",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机器人导航",
+    "concept": "代价地图 Costmap",
+    "slug": "代价地图-costmap",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "静态层",
+      "障碍物层",
+      "膨胀层"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机器人导航",
+    "concept": "move_base 与 Nav2 路径规划",
+    "slug": "move-base-与-nav2-路径规划",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "全局规划器",
+      "局部规划器",
+      "导航行为树"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机械臂控制与运动规划",
+    "concept": "机械臂正逆运动学",
+    "slug": "机械臂正逆运动学",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "关节空间",
+      "末端位姿",
+      "奇异位形"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机械臂控制与运动规划",
+    "concept": "MoveIt 运动规划",
+    "slug": "moveit-运动规划",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "规划组配置",
+      "碰撞检测",
+      "轨迹生成与执行"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "机械臂控制与运动规划",
+    "concept": "机械臂抓取任务流程",
+    "slug": "机械臂抓取任务流程",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "目标识别",
+      "抓取位姿估计",
+      "夹爪控制"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "3D 视觉感知与 Open3D",
+    "concept": "点云数据结构与滤波",
+    "slug": "点云数据结构与滤波",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "体素下采样",
+      "离群点去除",
+      "法向量估计"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "3D 视觉感知与 Open3D",
+    "concept": "点云配准 ICP",
+    "slug": "点云配准-icp",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "粗配准",
+      "精配准",
+      "误差度量"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "3D 视觉感知与 Open3D",
+    "concept": "三维重建与场景扫描",
+    "slug": "三维重建与场景扫描",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "多视角融合",
+      "网格重建",
+      "场景尺度与坐标对齐"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "3D 视觉感知与 Open3D",
+    "concept": "RGB-D 感知数据处理",
+    "slug": "rgb-d-感知数据处理",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "软件测试与团队协作",
+    "concept": "机器人测试用例设计方法",
+    "slug": "机器人测试用例设计方法",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 2,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "功能测试",
+      "边界条件",
+      "仿真与实机对照"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "软件测试与团队协作",
+    "concept": "缺陷管理与问题清单",
+    "slug": "缺陷管理与问题清单",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "复现步骤",
+      "期望结果与实际结果",
+      "严重等级与跟踪状态"
+    ]
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "软件测试与团队协作",
+    "concept": "Git 团队协作流",
+    "slug": "git-团队协作流",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "机器人开发与仿真测试实习",
+    "domain": "软件测试与团队协作",
+    "concept": "代码评审与集成测试",
+    "slug": "代码评审与集成测试",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "大模型基础（大脑底座）",
+    "concept": "Transformer 架构",
+    "slug": "transformer-架构",
+    "status": "in_progress",
+    "confidence": 0.55,
+    "practice_count": 0,
+    "explain_count": 6,
+    "last_explained": "2026-07-02",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "大模型基础（大脑底座）",
+    "concept": "大模型预训练 Pretraining",
+    "slug": "大模型预训练-pretraining",
+    "status": "in_progress",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-06-28",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "大模型基础（大脑底座）",
+    "concept": "监督微调 SFT",
+    "slug": "监督微调-sft",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "大模型基础（大脑底座）",
+    "concept": "RLHF 与人类对齐",
+    "slug": "rlhf-与人类对齐",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "大模型基础（大脑底座）",
+    "concept": "多模态视觉语言模型 VLM",
+    "slug": "多模态视觉语言模型-vlm",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "VLA 视觉-语言-动作模型",
+    "concept": "VLA 架构范式",
+    "slug": "vla-架构范式",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-02",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "VLA 视觉-语言-动作模型",
+    "concept": "动作表征与 Action Tokenization",
+    "slug": "动作表征与-action-tokenization",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-02",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "VLA 视觉-语言-动作模型",
+    "concept": "模仿学习与行为克隆 Behavior Cloning",
+    "slug": "模仿学习与行为克隆-behavior-cloning",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-02",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "VLA 视觉-语言-动作模型",
+    "concept": "端到端策略与决策推理",
+    "slug": "端到端策略与决策推理",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "MDP 与策略-价值框架",
+    "slug": "mdp-与策略-价值框架",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "PPO 算法",
+    "slug": "ppo-算法",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "SAC 算法",
+    "slug": "sac-算法",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "TD3 算法",
+    "slug": "td3-算法",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "奖励工程 Reward Engineering",
+    "slug": "奖励工程-reward-engineering",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "全身运动控制 Whole-body Control",
+    "slug": "全身运动控制-whole-body-control",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "强化学习（小脑/运动智能）",
+    "concept": "抗扰动与高频动态平衡",
+    "slug": "抗扰动与高频动态平衡",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "物理仿真与 Sim-to-Real",
+    "concept": "仿真引擎 Isaac Gym / MuJoCo",
+    "slug": "仿真引擎-isaac-gym-mujoco",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "物理仿真与 Sim-to-Real",
+    "concept": "刚体动力学基础",
+    "slug": "刚体动力学基础",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "物理仿真与 Sim-to-Real",
+    "concept": "接触模型与摩擦力辨识",
+    "slug": "接触模型与摩擦力辨识",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "物理仿真与 Sim-to-Real",
+    "concept": "域随机化 Domain Randomization",
+    "slug": "域随机化-domain-randomization",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "物理仿真与 Sim-to-Real",
+    "concept": "策略迁移与实机反向对齐",
+    "slug": "策略迁移与实机反向对齐",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "安全评测与红队对抗",
+    "concept": "多模态对抗样本注入",
+    "slug": "多模态对抗样本注入",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "安全评测与红队对抗",
+    "concept": "安全熔断机制",
+    "slug": "安全熔断机制",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "安全评测与红队对抗",
+    "concept": "物理失效案例与迭代指标",
+    "slug": "物理失效案例与迭代指标",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "工程与部署",
+    "concept": "ROS2 机器人操作系统生态",
+    "slug": "ros2-机器人操作系统生态",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-02",
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "工程与部署",
+    "concept": "多源传感器数据处理（IMU/力传感器/关节角度）",
+    "slug": "多源传感器数据处理imu-力传感器-关节角度",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "工程与部署",
+    "concept": "边缘侧推理框架",
+    "slug": "边缘侧推理框架",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "具身智能",
+    "domain": "工程与部署",
+    "concept": "国产算力并行训练（昇腾/摩尔线程）",
+    "slug": "国产算力并行训练昇腾-摩尔线程",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "项目定位与整体架构",
+    "concept": "研究问题与动机",
+    "slug": "研究问题与动机",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "端到端驾驶的黑箱问题",
+      "可解释性诉求",
+      "各模态贡献缺乏受控验证"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "项目定位与整体架构",
+    "concept": "OpenEMMA 基座与 FSDrive 相关工作",
+    "slug": "openemma-基座与-fsdrive-相关工作",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "OpenEMMA 免训练 MLLM 驾驶",
+      "FSDrive 视觉时空 CoT",
+      "novelty 差异化"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "项目定位与整体架构",
+    "concept": "三分支架构总览",
+    "slug": "三分支架构总览",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "视觉 CoT 世界模型",
+      "文本 CoT 推理",
+      "数值 CoT 规划+自审计"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "项目定位与整体架构",
+    "concept": "发现弧线叙事定位",
+    "slug": "发现弧线叙事定位",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "建构跨模态 CoT",
+      "消融发现视觉拖后腿",
+      "受控归因研究"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "多模态大模型",
+    "concept": "MLLM/VLM 基础",
+    "slug": "mllm-vlm-基础",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "视觉编码器+LLM",
+      "视觉-语言对齐",
+      "图文交错输入"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "多模态大模型",
+    "concept": "Qwen-VL / Llama-Vision 主干",
+    "slug": "qwen-vl-与-llama-vision-主干",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "Qwen2.5-VL-7B",
+      "Llama-3.2-11B-Vision",
+      "第二主干外部效度"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "多模态大模型",
+    "concept": "多图条件输入",
+    "slug": "多图条件输入",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "当前帧+未来帧双图提示",
+      "时序接地混淆风险"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "多模态大模型",
+    "concept": "免训练推理范式",
+    "slug": "免训练推理范式",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "零训练驱动",
+      "max_new_tokens 与解析",
+      "推理调用次数与成本"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "思维链推理",
+    "concept": "思维链（CoT）原理",
+    "slug": "思维链-cot-原理",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "逐步推理",
+      "提示工程",
+      "结构化 vs 松散链"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "思维链推理",
+    "concept": "结构化文本 CoT",
+    "slug": "结构化文本-cot",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "事实→归因→决策",
+      "解析成功率",
+      "文本分支主导增益"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "思维链推理",
+    "concept": "数值 CoT 规划",
+    "slug": "数值-cot-规划",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "speed/curvature 序列",
+      "作为自审计信号"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "思维链推理",
+    "concept": "跨模态 CoT 耦合与解耦",
+    "slug": "跨模态-cot-耦合与解耦",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "分支可自由组合",
+      "视觉不与文本叠加",
+      "增益归因"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "视觉世界模型与生成",
+    "concept": "世界模型与未来帧预测",
+    "slug": "世界模型与未来帧预测",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "1s 后未来帧",
+      "作为视觉推理中间步骤",
+      "回输主干"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "视觉世界模型与生成",
+    "concept": "SD-VAE 潜空间编解码",
+    "slug": "sd-vae-潜空间编解码",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "图像压缩到潜空间",
+      "编码器/解码器",
+      "潜表示维度"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "视觉世界模型与生成",
+    "concept": "ViT 潜空间回归（LatentDiT）",
+    "slug": "vit-潜空间回归-latentdit",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "非扩散：单次前向直接回归",
+      "潜空间 MSE + LPIPS",
+      "回归到均值模糊"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "视觉世界模型与生成",
+    "concept": "视觉分支负结果与边界",
+    "slug": "视觉分支负结果与边界",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "oracle 真帧仍有害",
+      "LoRA 也无法解锁",
+      "界定 FSDrive 范式边界"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "轨迹规划与数值自审计",
+    "concept": "端到端轨迹规划",
+    "slug": "端到端轨迹规划",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "从感知直接到轨迹",
+      "开环规划"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "轨迹规划与数值自审计",
+    "concept": "speed-curvature 参数化与积分",
+    "slug": "speed-curvature-参数化与积分",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "速度-曲率建模",
+      "积分成轨迹",
+      "运动学约束"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "轨迹规划与数值自审计",
+    "concept": "数值物理自审计",
+    "slug": "数值物理自审计",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "加速度双侧钳制",
+      "零成本后处理",
+      "碰撞失败率归零"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "轨迹规划与数值自审计",
+    "concept": "3D 检测侧信息（YOLO3D）",
+    "slug": "3d-检测侧信息-yolo3d",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "3D 目标检测",
+      "BEV 表示",
+      "作为感知辅助"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "微调与实验方法",
+    "concept": "LoRA 参数高效微调",
+    "slug": "lora-参数高效微调",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "低秩适配",
+      "LLM vs 视觉塔适配",
+      "模仿式微调 -37%"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "微调与实验方法",
+    "concept": "消融实验与受控归因",
+    "slug": "消融实验与受控归因",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "8 配置消融",
+      "把增益归到具体分支",
+      "增益与视觉解耦"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "微调与实验方法",
+    "concept": "统计显著性与等价性检验",
+    "slug": "统计显著性与等价性检验-tost",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "配对 t 检验 / Wilcoxon",
+      "TOST 等价性检验",
+      "置信区间",
+      "伪复制风险"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "微调与实验方法",
+    "concept": "oracle / 安慰剂对照设计",
+    "slug": "oracle-安慰剂对照设计",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "oracle 真帧 vs 复制当前帧",
+      "双臂配对",
+      "混淆去除"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "微调与实验方法",
+    "concept": "可解释性量化",
+    "slug": "可解释性量化",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "推理一致性（文本决策 vs 数值轨迹）",
+      "横向 vs 纵向",
+      "混淆矩阵",
+      "不预测准确率"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "数据、评测与工程实现",
+    "concept": "nuScenes 与开环评测",
+    "slug": "nuscenes-与开环评测",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "nuScenes 数据集",
+      "val-150 划分",
+      "定位精度 ≤0.1m"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "数据、评测与工程实现",
+    "concept": "评测指标",
+    "slug": "评测指标-ade-cfr-parserate",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "ADE@T / L2",
+      "CFR 碰撞失败率",
+      "ParseRate 解析率",
+      "推理成本"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "数据、评测与工程实现",
+    "concept": "PyTorch / CUDA 训练推理流水线",
+    "slug": "pytorch-cuda-训练推理流水线",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "RTX 5090 / bf16",
+      "latent 编码与样本对构造",
+      "断点续跑",
+      "pixi 环境管理"
+    ]
+  },
+  {
+    "topic": "跨模态推理链自动驾驶",
+    "domain": "数据、评测与工程实现",
+    "concept": "LaTeX 学术写作与可视化",
+    "slug": "latex-学术写作与可视化",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "XeLaTeX + biblatex-apa",
+      "TikZ 矢量图",
+      "浮动体排版"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "LLM 基础与本地部署",
+    "concept": "大语言模型 LLM 基本原理",
+    "slug": "llm-fundamentals",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "理解自回归生成、token、上下文窗口与概率采样",
+      "掌握预训练、指令微调与对齐的基本区别",
+      "理解本地大模型在科研问答中的能力边界与幻觉风险"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "LLM 基础与本地部署",
+    "concept": "本地大模型部署与推理",
+    "slug": "local-llm-deployment-and-inference",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "理解模型权重、推理引擎、显存占用与量化的关系",
+      "掌握本地推理服务的接口封装与并发限制",
+      "了解温度、top-p、最大输出长度等生成参数对答案质量的影响"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "LLM 基础与本地部署",
+    "concept": "提示词 Prompt 与上下文管理",
+    "slug": "prompting-and-context-management",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "设计科研问答中的系统提示词、任务提示词与约束提示词",
+      "控制引用材料、用户问题与工具结果在上下文中的组织顺序",
+      "处理长上下文截断、冗余信息与无关证据干扰"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "文本向量化与语义匹配",
+    "concept": "Transformers 编码架构",
+    "slug": "transformers-encoder-architecture",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "理解 self-attention、位置编码与多头注意力",
+      "区分 encoder-only、decoder-only 与 encoder-decoder 架构",
+      "理解科研文本编码任务中 encoder 模型的适用性"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "文本向量化与语义匹配",
+    "concept": "RoBERTa 文本编码器",
+    "slug": "roberta-text-encoder",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "理解 RoBERTa 相对 BERT 的训练策略差异",
+      "掌握 CLS 向量、平均池化等句向量提取方式",
+      "了解领域语料对科研文本语义表示质量的影响"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "文本向量化与语义匹配",
+    "concept": "向量化 Embedding",
+    "slug": "text-embedding",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "将论文标题、摘要、段落或问题映射为稠密向量",
+      "理解向量维度、归一化与批量编码的工程影响",
+      "评估 embedding 模型对同义表达和跨句语义的捕捉能力"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "文本向量化与语义匹配",
+    "concept": "语义相似度计算",
+    "slug": "semantic-similarity",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "掌握余弦相似度、点积与欧氏距离的差异",
+      "理解向量归一化对相似度排序结果的影响",
+      "分析语义匹配误召回与漏召回的常见原因"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "向量检索与 FAISS",
+    "concept": "FAISS 向量索引构建",
+    "slug": "faiss-vector-indexing",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "理解向量入库、ID 映射、元数据回查与索引持久化",
+      "掌握批量构建索引与增量更新的基本流程",
+      "区分 CPU 索引与 GPU 加速检索的使用场景"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "向量检索与 FAISS",
+    "concept": "Flat、IVF、HNSW、PQ 索引类型",
+    "slug": "faiss-index-types-flat-ivf-hnsw-pq",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "理解 Flat 精确检索与近似检索的取舍",
+      "掌握 IVF 聚类倒排、HNSW 图检索与 PQ 量化压缩的核心思想",
+      "根据语料规模、延迟目标和内存限制选择索引类型"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "向量检索与 FAISS",
+    "concept": "向量相似度度量选择",
+    "slug": "vector-distance-metrics",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "向量检索与 FAISS",
+    "concept": "召回率与检索性能优化",
+    "slug": "recall-and-search-performance-optimization",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "调节 top-k、nprobe、efSearch 等参数平衡召回与延迟",
+      "设计基准集评估召回率、检索耗时和内存占用",
+      "分析分块粒度、向量质量和索引参数对召回效果的影响"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "RAG 检索增强生成",
+    "concept": "论文文档分块 Chunking",
+    "slug": "document-chunking",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "按章节、段落、滑动窗口或语义边界切分论文长文本",
+      "设置 chunk size、overlap 与元数据字段",
+      "处理公式、表格、引用和跨段落依赖对分块质量的影响"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "RAG 检索增强生成",
+    "concept": "RAG 召回与重排流程",
+    "slug": "rag-retrieval-and-reranking",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "构建 query embedding、向量召回、候选片段过滤的流水线",
+      "使用 cross-encoder 或规则特征进行 reranking",
+      "理解多路召回、去重和证据聚合对答案质量的作用"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "RAG 检索增强生成",
+    "concept": "上下文注入与答案生成",
+    "slug": "context-injection-and-answer-generation",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "将检索片段、来源信息和回答约束注入 LLM 上下文",
+      "要求模型基于证据回答并避免无依据扩展",
+      "处理上下文过长、证据冲突和引用定位问题"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "RAG 检索增强生成",
+    "concept": "RAG 效果评估指标",
+    "slug": "rag-evaluation-metrics",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "区分检索指标、生成指标和端到端问答准确率",
+      "设计人工标注、基准问题集与消融实验",
+      "评估答案相关性、忠实性、引用准确性和可复现性"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "知识图谱与 Neo4j",
+    "concept": "图数据模型与知识表示",
+    "slug": "graph-data-model-and-knowledge-representation",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "用节点、关系、属性表达论文、作者、方法、任务和指标",
+      "设计 schema 约束与实体类型层次",
+      "理解图结构查询相比纯向量检索的优势与边界"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "知识图谱与 Neo4j",
+    "concept": "Neo4j 与 Cypher 查询",
+    "slug": "neo4j-and-cypher-query",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "掌握 MATCH、WHERE、RETURN、MERGE 等基础语句",
+      "编写多跳关系查询和路径查询",
+      "理解索引、约束和查询计划对图查询性能的影响"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "知识图谱与 Neo4j",
+    "concept": "科研知识图谱构建",
+    "slug": "research-knowledge-graph-construction",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "从论文语料中抽取实体、关系、属性和出处",
+      "进行实体规范化、去重、消歧与关系校验",
+      "建立从原文证据到图谱事实的可追溯链路"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "知识图谱与 Neo4j",
+    "concept": "GraphRAG 与 KG+LLM 融合",
+    "slug": "graphrag-and-kg-llm-integration",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-12",
+    "last_practiced": null,
+    "details": [
+      "结合图查询、向量检索和 LLM 生成回答复杂问题",
+      "用知识图谱约束答案实体、关系和推理路径",
+      "设计图谱证据与文本证据的融合策略"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "Agent 与工具调用",
+    "concept": "Function Calling 工具接口",
+    "slug": "function-calling-tool-interface",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "定义检索、图查询、摘要、重排等工具的输入输出 schema",
+      "处理参数生成、类型校验、异常返回和重试",
+      "控制工具结果如何回填给 LLM 继续推理"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "Agent 与工具调用",
+    "concept": "ReAct 推理与行动循环",
+    "slug": "react-reasoning-and-acting-loop",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "理解 Thought、Action、Observation 的基本循环",
+      "让 Agent 根据中间观察决定继续检索、查询图谱或生成答案",
+      "识别循环失控、工具误用和无效推理链的问题"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "Agent 与工具调用",
+    "concept": "长文本问答策略",
+    "slug": "long-context-question-answering-strategies",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "使用分层检索、逐段摘要和证据合并处理论文长文本",
+      "针对综述型、事实型、比较型问题选择不同回答流程",
+      "控制答案结构、引用来源和不确定性表达"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "系统架构与评估",
+    "concept": "端到端系统架构设计",
+    "slug": "end-to-end-system-architecture",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "划分语料处理、向量索引、知识图谱、Agent 编排和 LLM 服务模块",
+      "设计模块间数据流、接口协议和失败回退路径",
+      "明确离线构建与在线问答链路的职责边界"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "系统架构与评估",
+    "concept": "论文语料处理流水线",
+    "slug": "research-corpus-processing-pipeline",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "完成论文解析、清洗、分块、元数据提取和版本管理",
+      "建立语料到向量库与知识图谱的双通道入库流程",
+      "处理重复论文、格式噪声和增量更新"
+    ]
+  },
+  {
+    "topic": "知识增强科研问答智能体",
+    "domain": "系统架构与评估",
+    "concept": "问答准确率评估与工程化部署",
+    "slug": "qa-accuracy-evaluation-and-productionization",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "定义本地大模型增强前后的准确率对比实验",
+      "记录约 18% 提升所需的样本集、评分标准和消融变量",
+      "补充日志、缓存、配置管理、资源监控和部署脚本等工程能力"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "汽车结构与整车工作原理",
+    "concept": "车辆动力与底盘基础",
+    "slug": "车辆动力与底盘基础",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "纯电平台动力系统",
+      "悬架与轮胎力",
+      "制动能量回收边界"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "汽车结构与整车工作原理",
+    "concept": "转向制动与线控执行系统",
+    "slug": "转向制动与线控执行系统",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "EPS 电动助力转向",
+      "ESC/IBC 制动控制",
+      "控制指令到执行器响应"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "汽车结构与整车工作原理",
+    "concept": "车身与座舱电气负载",
+    "slug": "车身与座舱电气负载",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "低压供电与唤醒",
+      "车灯雨刮门锁",
+      "智驾功能的人机交互依赖"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "汽车结构与整车工作原理",
+    "concept": "车辆状态信号与动力学边界",
+    "slug": "车辆状态信号与动力学边界",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "车速加速度横摆角速度",
+      "轮速与方向盘角",
+      "附着系数与极限工况"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "电子电气架构与车载通信",
+    "concept": "整车 E/E 架构与域控制器",
+    "slug": "整车-e-e-架构与域控制器",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "分布式到集中式架构",
+      "智驾域与车身域协同",
+      "中央网关与区域控制器"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "电子电气架构与车载通信",
+    "concept": "车载网络 CAN/LIN/FlexRay/以太网",
+    "slug": "车载网络-can-lin-flexray-以太网",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "报文周期与优先级",
+      "DBC/ARXML 信号定义",
+      "车载以太网与 SOME/IP"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "电子电气架构与车载通信",
+    "concept": "车载操作系统与中间件",
+    "slug": "车载操作系统与中间件",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "AUTOSAR Classic/Adaptive",
+      "QNX/Linux/RTOS",
+      "DDS 与服务化通信"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "电子电气架构与车载通信",
+    "concept": "诊断刷写与标定 UDS/XCP",
+    "slug": "诊断刷写与标定-uds-xcp",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "DTC 与诊断会话",
+      "ECU 软件刷写",
+      "参数标定与数据采集"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "智驾硬件与传感器系统",
+    "concept": "摄像头与环视感知系统",
+    "slug": "摄像头与环视感知系统",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-12",
+    "last_practiced": null,
+    "details": [
+      "前视侧视后视相机",
+      "内外参标定",
+      "曝光畸变与遮挡问题"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "智驾硬件与传感器系统",
+    "concept": "毫米波雷达与超声波雷达",
+    "slug": "毫米波雷达与超声波雷达",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-12",
+    "last_practiced": null,
+    "details": [
+      "目标距离速度角度",
+      "泊车低速感知",
+      "误检漏检与干扰"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "智驾硬件与传感器系统",
+    "concept": "激光雷达与组合定位",
+    "slug": "激光雷达与组合定位",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-12",
+    "last_practiced": null,
+    "details": [
+      "点云特性与安装位置",
+      "GNSS/IMU/轮速融合",
+      "时间同步与坐标系"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "智驾硬件与传感器系统",
+    "concept": "智驾域控制器计算平台",
+    "slug": "智驾域控制器计算平台",
+    "status": "in_progress",
+    "confidence": 0.05,
+    "practice_count": 0,
+    "explain_count": 1,
+    "last_explained": "2026-07-12",
+    "last_practiced": null,
+    "details": [
+      "SoC/GPU/NPU 算力",
+      "传感器输入链路",
+      "热设计与电源管理"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "自动驾驶功能与算法链路",
+    "concept": "ADAS/NOA 功能定义",
+    "slug": "adas-noa-功能定义",
+    "status": "in_progress",
+    "confidence": 0.25,
+    "practice_count": 0,
+    "explain_count": 4,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "ACC/LCC/AEB/APA",
+      "高速 NOA 与城市 NOA",
+      "ODD 运行设计域"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "自动驾驶功能与算法链路",
+    "concept": "感知融合工程化",
+    "slug": "感知融合工程化",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "目标车道线与占用网络",
+      "多传感器融合",
+      "感知结果接口与置信度"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "自动驾驶功能与算法链路",
+    "concept": "预测规划控制接口",
+    "slug": "预测规划控制接口",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "行为预测与交互",
+      "轨迹规划约束",
+      "控制量输出与仲裁"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "自动驾驶功能与算法链路",
+    "concept": "端到端与大模型智驾落地",
+    "slug": "端到端与大模型智驾落地",
+    "status": "in_progress",
+    "confidence": 0.15,
+    "practice_count": 0,
+    "explain_count": 3,
+    "last_explained": "2026-07-13",
+    "last_practiced": null,
+    "details": [
+      "感知决策一体化",
+      "VLM/MLLM 辅助理解",
+      "工程边界与安全约束"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "整车开发流程与系统集成",
+    "concept": "V 模型开发流程",
+    "slug": "v-模型开发流程",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "需求分解与系统设计",
+      "单元集成系统验证",
+      "整车 SOP 节点"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "整车开发流程与系统集成",
+    "concept": "需求管理与功能方案设计",
+    "slug": "需求管理与功能方案设计",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "用户场景到系统需求",
+      "功能边界与降级策略",
+      "接口控制文档 ICD"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "整车开发流程与系统集成",
+    "concept": "整车集成与台架联调",
+    "slug": "整车集成与台架联调",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "HIL/SIL/实车联调",
+      "传感器与控制器匹配",
+      "网络信号与时序排查"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "整车开发流程与系统集成",
+    "concept": "问题闭环与版本发布",
+    "slug": "问题闭环与版本发布",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "缺陷分级与根因分析",
+      "日志回灌与复现",
+      "软件版本与发布准入"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "安全测试验证与协同交付",
+    "concept": "功能安全 ISO 26262",
+    "slug": "功能安全-iso-26262",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "HARA 与 ASIL",
+      "安全目标与技术安全需求",
+      "故障诊断与安全机制"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "安全测试验证与协同交付",
+    "concept": "预期功能安全 SOTIF",
+    "slug": "预期功能安全-sotif",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "性能局限与触发条件",
+      "未知危险场景发现",
+      "ODD 内外风险识别"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "安全测试验证与协同交付",
+    "concept": "智驾测试验证体系",
+    "slug": "智驾测试验证体系",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "场景库与仿真测试",
+      "封闭场地与道路测试",
+      "覆盖率指标与准出标准"
+    ]
+  },
+  {
+    "topic": "智驾系统开发",
+    "domain": "安全测试验证与协同交付",
+    "concept": "供应商协作与技术文档",
+    "slug": "供应商协作与技术文档",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "SOR/技术协议",
+      "评审纪要与问题清单",
+      "跨部门节点推进"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "LLM 与 Prompt 基础",
+    "concept": "LLM 工作原理与 Token",
+    "slug": "llm-工作原理与-token",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": "2026-06-18",
+    "last_practiced": null,
+    "details": [
+      "自回归生成、上下文窗口、温度等采样参数"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "LLM 与 Prompt 基础",
+    "concept": "LLM API 调用与接口开发",
+    "slug": "llm-api-调用与接口开发",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "OpenAI 兼容接口、流式输出、Python SDK"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "LLM 与 Prompt 基础",
+    "concept": "Prompt 工程",
+    "slug": "prompt-工程",
+    "status": "in_progress",
+    "confidence": 0.15,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": "2026-06-10",
+    "details": [
+      "角色设定、Few-shot、思维链 CoT、结构化输出"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "LLM 与 Prompt 基础",
+    "concept": "上下文设计与管理",
+    "slug": "上下文设计与管理",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": "2026-06-10",
+    "details": [
+      "系统提示词、对话历史裁剪、上下文压缩"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "Agent 智能体",
+    "concept": "Agent 架构与 ReAct 模式",
+    "slug": "agent-架构与-react-模式",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "Agent 智能体",
+    "concept": "工具调用 Function Calling",
+    "slug": "工具调用-function-calling",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "Agent 智能体",
+    "concept": "任务拆解与规划",
+    "slug": "任务拆解与规划",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "Agent 智能体",
+    "concept": "记忆机制",
+    "slug": "记忆机制",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": "2026-06-11",
+    "details": [
+      "短期对话记忆、长期持久化记忆"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "Agent 智能体",
+    "concept": "多智能体协同",
+    "slug": "多智能体协同",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "RAG 知识库",
+    "concept": "文档解析与分块",
+    "slug": "文档解析与分块",
+    "status": "in_progress",
+    "confidence": 0.2,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": "2026-06-18",
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "RAG 知识库",
+    "concept": "向量化 Embedding",
+    "slug": "向量化-embedding",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": "2026-06-11",
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "RAG 知识库",
+    "concept": "向量数据库与检索",
+    "slug": "向量数据库与检索",
+    "status": "in_progress",
+    "confidence": 0.1,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": "2026-06-11",
+    "details": [
+      "Chroma/Milvus/FAISS、相似度检索、混合检索"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "RAG 知识库",
+    "concept": "检索调优与重排序",
+    "slug": "检索调优与重排序",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "RAG 知识库",
+    "concept": "RAG 效果评估",
+    "slug": "rag-效果评估",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工作流编排与自动化",
+    "concept": "工作流编排基础",
+    "slug": "工作流编排基础",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工作流编排与自动化",
+    "concept": "办公系统集成",
+    "slug": "办公系统集成",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "飞书/钉钉/企微 API、数据库与文档打通"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工作流编排与自动化",
+    "concept": "流程自动化设计",
+    "slug": "流程自动化设计",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": [
+      "周报月报生成、会议纪要整理、任务排期"
+    ]
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工作流编排与自动化",
+    "concept": "自迭代工作流",
+    "slug": "自迭代工作流",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "开发框架",
+    "concept": "LangChain",
+    "slug": "langchain",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "开发框架",
+    "concept": "LlamaIndex",
+    "slug": "llamaindex",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "开发框架",
+    "concept": "Dify",
+    "slug": "dify",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "开发框架",
+    "concept": "AutoGen 与多智能体框架",
+    "slug": "autogen-与多智能体框架",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工程落地",
+    "concept": "快速原型开发",
+    "slug": "快速原型开发",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工程落地",
+    "concept": "评估与监控",
+    "slug": "评估与监控",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工程落地",
+    "concept": "安全与权限控制",
+    "slug": "安全与权限控制",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  },
+  {
+    "topic": "ai-agent-应用开发",
+    "domain": "工程落地",
+    "concept": "成本与延迟优化",
+    "slug": "成本与延迟优化",
+    "status": "unexplored",
+    "confidence": 0,
+    "practice_count": 0,
+    "explain_count": 0,
+    "last_explained": null,
+    "last_practiced": null,
+    "details": []
+  }
+]

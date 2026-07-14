@@ -1,0 +1,343 @@
+[
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/记忆机制-2026-06-11.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "记忆机制"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "Agent 智能体"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/上下文设计与管理-2026-06-10.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "上下文设计与管理"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "Prompt 与上下文工程"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/文档解析与分块-2026-06-18.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "文档解析与分块"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "RAG 与向量检索"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/向量化-Embedding-2026-06-11.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "向量化-embedding"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "RAG 与向量检索"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/向量数据库与检索-2026-06-11.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "向量数据库与检索"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "RAG 与向量检索"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/LLM-工作原理与-Token-2026-06-18.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "llm-工作原理与-token"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/PDF-扫描件处理-2026-06-18.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "文档解析与分块"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "RAG 与向量检索",
+    "note": "孤儿会话裁决：挂入文档解析与分块（其子面向）"
+  },
+  {
+    "source_session_path": "ai-agent-应用开发/sessions/Prompt-工程-2026-06-10.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "prompt-工程"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "Prompt 与上下文工程"
+  },
+  {
+    "source_session_path": "具身智能/sessions/vla-视觉-语言-动作模型/动作表征与 Action Tokenization--2026-07-02--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "动作表征与-action-tokenization"
+    ],
+    "target_domain": "强化学习与具身模型",
+    "target_subdomain": "VLA 视觉-语言-动作模型"
+  },
+  {
+    "source_session_path": "具身智能/sessions/vla-视觉-语言-动作模型/模仿学习与行为克隆 Behavior Cloning--2026-07-02--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "模仿学习与行为克隆-behavior-cloning"
+    ],
+    "target_domain": "强化学习与具身模型",
+    "target_subdomain": "VLA 视觉-语言-动作模型"
+  },
+  {
+    "source_session_path": "具身智能/sessions/vla-视觉-语言-动作模型/VLA 架构范式--2026-07-02--从-transformer-到-vla.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "vla-架构范式"
+    ],
+    "target_domain": "强化学习与具身模型",
+    "target_subdomain": "VLA 视觉-语言-动作模型"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/大模型预训练 Pretraining--2026-06-28--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "大模型预训练-pretraining"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "训练与对齐"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-06-26--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-06-27--注意力分配.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-06-27--qkv计算机制.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-06-28--softmax注意力权重.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-07-01--多头注意力.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-07-02--完整-transformer-block.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础"
+  },
+  {
+    "source_session_path": "具身智能/sessions/大模型基础大脑底座/Transformer 架构--2026-07-02--位置编码.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "transformer-架构"
+    ],
+    "target_domain": "大模型基础与对齐",
+    "target_subdomain": "大模型基础",
+    "note": "state 计数 6 vs 证据 7：重建后 explain_count=7"
+  },
+  {
+    "source_session_path": "具身智能/sessions/工程与部署/ROS2 机器人操作系统生态--2026-07-02--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "ros2-机器人操作系统生态"
+    ],
+    "target_domain": "机器人系统与仿真",
+    "target_subdomain": "ROS 机器人操作系统"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/安全测试验证与协同交付/安全测试验证与协同交付--2026-07-12--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "功能安全-iso-26262",
+      "预期功能安全-sotif",
+      "智驾测试验证体系",
+      "供应商协作与技术文档"
+    ],
+    "target_domain": "车辆工程与功能安全",
+    "target_subdomain": "安全测试验证与协同交付",
+    "note": "数据修复：v1 state 未给这 4 概念记 explain，重建后各 +1（2026-07-12）"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/智驾硬件与传感器系统/智驾硬件与传感器系统--2026-07-12--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "摄像头与环视感知系统",
+      "毫米波雷达与超声波雷达",
+      "激光雷达与组合定位",
+      "智驾域控制器计算平台"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "智驾硬件与传感器系统"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/汽车结构与整车工作原理/汽车结构与整车工作原理--2026-07-13--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "车辆动力与底盘基础",
+      "转向制动与线控执行系统",
+      "车身与座舱电气负载",
+      "车辆状态信号与动力学边界"
+    ],
+    "target_domain": "车辆工程与功能安全",
+    "target_subdomain": "汽车结构与整车工作原理"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/端到端与大模型智驾落地--2026-07-13--小鹏第二代-vla.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "端到端与大模型智驾落地"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/端到端与大模型智驾落地--2026-07-13--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "端到端与大模型智驾落地"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/端到端与大模型智驾落地--2026-07-13--整体概览检查题解答.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "端到端与大模型智驾落地"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/ADAS-NOA 功能定义--2026-07-12--高速-noa-与城市-noa-场景难点深挖.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "adas-noa-功能定义"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/ADAS-NOA 功能定义--2026-07-12--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "adas-noa-功能定义"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/ADAS-NOA 功能定义--2026-07-12--odd-边界与降级策略设计.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "adas-noa-功能定义"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "智驾系统开发/sessions/自动驾驶功能与算法链路/ADAS-NOA 功能定义--2026-07-13--有图-轻图-无图技术路线之争.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "adas-noa-功能定义"
+    ],
+    "target_domain": "自动驾驶系统",
+    "target_subdomain": "功能与算法链路"
+  },
+  {
+    "source_session_path": "机器人开发与仿真测试实习/sessions/ros-机器人操作系统/ROS 服务与动作通信--2026-07-13--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "ros-服务与动作通信"
+    ],
+    "target_domain": "机器人系统与仿真",
+    "target_subdomain": "ROS 机器人操作系统"
+  },
+  {
+    "source_session_path": "机器人开发与仿真测试实习/sessions/ros-机器人操作系统/ROS 节点与话题通信--2026-07-12--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "ros-节点与话题通信"
+    ],
+    "target_domain": "机器人系统与仿真",
+    "target_subdomain": "ROS 机器人操作系统"
+  },
+  {
+    "source_session_path": "机器人开发与仿真测试实习/sessions/软件测试与团队协作/机器人测试用例设计方法--2026-07-13--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "机器人测试用例设计方法"
+    ],
+    "target_domain": "软件工程与协作",
+    "target_subdomain": "软件测试与团队协作"
+  },
+  {
+    "source_session_path": "机器人开发与仿真测试实习/sessions/软件测试与团队协作/软件测试与团队协作--2026-07-13--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "机器人测试用例设计方法",
+      "缺陷管理与问题清单",
+      "git-团队协作流",
+      "代码评审与集成测试"
+    ],
+    "target_domain": "软件工程与协作",
+    "target_subdomain": "软件测试与团队协作"
+  },
+  {
+    "source_session_path": "知识增强科研问答智能体/sessions/agent-and-tool-calling/Agent 与工具调用--2026-07-13--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "function-calling-工具调用",
+      "react-推理与行动循环",
+      "长文本问答策略"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "Agent 智能体"
+  },
+  {
+    "source_session_path": "知识增强科研问答智能体/sessions/knowledge-graph-and-neo4j/GraphRAG 与 KG+LLM 融合--2026-07-12--整体概览.md",
+    "activity_type": "explain",
+    "concept_ids": [
+      "graphrag-与-kg-llm-融合"
+    ],
+    "target_domain": "agent-rag-与知识系统",
+    "target_subdomain": "知识图谱与 GraphRAG"
+  }
+]
