@@ -20,10 +20,10 @@
         "hooks": [
           {
             "type": "command",
-            "command": "git add -A; if (git status --porcelain) { git commit -q -m \"chore: 会话结束自动提交 $(Get-Date -Format 'yyyy-MM-dd HH:mm')\" }; git push -q",
+            "command": "try { & node scripts/render-views.mjs .learn/topics; if ($LASTEXITCODE -ne 0) { Write-Warning \"视图报告刷新失败，继续会话收尾\" } } catch { Write-Warning \"视图报告刷新异常，继续会话收尾：$($_.Exception.Message)\" }; git add -A; if (git status --porcelain) { git commit -q -m \"chore: 会话结束自动提交 $(Get-Date -Format 'yyyy-MM-dd HH:mm')\" }; git push -q",
             "shell": "powershell",
             "timeout": 60,
-            "statusMessage": "会话结束：提交并推送",
+            "statusMessage": "会话结束：刷新视图、提交并推送",
             "suppressOutput": true
           }
         ]

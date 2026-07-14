@@ -35,16 +35,16 @@
 
 ## 5. 六技能与契约切换
 
-- [ ] 5.1 learn-anything-topic SKILL.md：知识领域创建 + 视图组装模式（禁止为视图凭空建概念树）
-- [ ] 5.2 learn-anything-explain SKILL.md：按 concept_id 定位、写进度到知识领域、同回合 render-views
-- [ ] 5.3 learn-anything-practice SKILL.md：同上，exercises 路径用 concept_id
-- [ ] 5.4 learn-anything-quiz SKILL.md：同上，quizzes 路径用 concept_id
-- [ ] 5.5 learn-anything-review SKILL.md：支持按 view 聚合推荐（公式不变，importance 次级排序）
-- [ ] 5.6 learn-anything-status SKILL.md：双视角只读展示
-- [ ] 5.7 6 个命令存根措辞同步
-- [ ] 5.8 CLAUDE.md：重写数据契约、删除跨 topic 同步规则、修正 state.yaml 漂移、会话命名规范目录部分更新
-- [ ] 5.9 遇 v1 残留报错不兼容的行为写入各技能与校验器
-- [ ] 5.10 SessionEnd hook 接入 render-views 兜底刷新
+- [x] 5.1 learn-anything-topic SKILL.md：知识领域创建 + 视图组装模式（禁止为视图凭空建概念树）
+- [x] 5.2 learn-anything-explain SKILL.md：按 concept_id 定位、写进度到知识领域、同回合 render-views
+- [x] 5.3 learn-anything-practice SKILL.md：同上，exercises 路径用 concept_id
+- [x] 5.4 learn-anything-quiz SKILL.md：同上，quizzes 路径用 concept_id
+- [x] 5.5 learn-anything-review SKILL.md：支持按 view 聚合推荐（公式不变，importance 次级排序）
+- [x] 5.6 learn-anything-status SKILL.md：双视角只读展示
+- [x] 5.7 6 个命令存根措辞同步
+- [x] 5.8 CLAUDE.md：重写数据契约、删除跨 topic 同步规则、修正 state.yaml 漂移、会话命名规范目录部分更新
+- [x] 5.9 遇 v1 残留报错不兼容的行为写入各技能与校验器
+- [x] 5.10 SessionEnd hook 接入 render-views 兜底刷新
 
 ## 6. 验证与原子切换
 
