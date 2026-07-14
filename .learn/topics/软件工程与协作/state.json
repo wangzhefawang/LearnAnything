@@ -115,6 +115,56 @@
       ]
     },
     {
+      "name": "软件系统开发与维护",
+      "slug": "软件系统开发与维护",
+      "concepts": [
+        {
+          "concept_id": "软件需求分析与系统设计",
+          "name": "软件需求分析与系统设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "后端服务与-api-开发",
+          "name": "后端服务与 API 开发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "关系数据库设计与-sql",
+          "name": "关系数据库设计与 SQL",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "软件运维与可观测性",
+          "name": "软件运维与可观测性",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
       "name": "模型训练与部署工程",
       "slug": "模型训练与部署工程",
       "concepts": [

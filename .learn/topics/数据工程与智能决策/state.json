@@ -1,62 +1,17 @@
 {
   "version": 2,
   "kind": "knowledge_domain",
-  "topic": "感知、传感器与空间智能",
-  "slug": "感知与空间智能",
+  "topic": "数据工程、分析挖掘与智能决策",
+  "slug": "数据工程与智能决策",
   "created": "2026-07-14",
   "domains": [
     {
-      "name": "3D 视觉与点云",
-      "slug": "3d-视觉与点云",
+      "name": "公路业务与数据治理",
+      "slug": "公路业务与数据治理",
       "concepts": [
         {
-          "concept_id": "点云数据结构与滤波",
-          "name": "点云数据结构与滤波",
-          "status": "unexplored",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
-          "last_practiced": null,
-          "details": [
-            "体素下采样",
-            "离群点去除",
-            "法向量估计"
-          ]
-        },
-        {
-          "concept_id": "点云配准-icp",
-          "name": "点云配准 ICP",
-          "status": "unexplored",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
-          "last_practiced": null,
-          "details": [
-            "粗配准",
-            "精配准",
-            "误差度量"
-          ]
-        },
-        {
-          "concept_id": "三维重建与场景扫描",
-          "name": "三维重建与场景扫描",
-          "status": "unexplored",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
-          "last_practiced": null,
-          "details": [
-            "多视角融合",
-            "网格重建",
-            "场景尺度与坐标对齐"
-          ]
-        },
-        {
-          "concept_id": "rgb-d-感知数据处理",
-          "name": "RGB-D 感知数据处理",
+          "concept_id": "公路交通业务与养护场景",
+          "name": "公路交通业务与养护场景",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -66,29 +21,8 @@
           "details": []
         },
         {
-          "concept_id": "3d-检测侧信息-yolo3d",
-          "name": "3D 检测侧信息（YOLO3D）",
-          "status": "unexplored",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
-          "last_practiced": null,
-          "details": [
-            "3D 目标检测",
-            "BEV 表示",
-            "作为感知辅助"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "2D 计算机视觉",
-      "slug": "2d-计算机视觉",
-      "concepts": [
-        {
-          "concept_id": "2d-图像识别与卷积神经网络",
-          "name": "2D 图像识别与卷积神经网络",
+          "concept_id": "公路多源数据采集",
+          "name": "公路多源数据采集",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -98,8 +32,8 @@
           "details": []
         },
         {
-          "concept_id": "2d-目标检测",
-          "name": "2D 目标检测",
+          "concept_id": "数据清洗与质量管理",
+          "name": "数据清洗与质量管理",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -109,8 +43,8 @@
           "details": []
         },
         {
-          "concept_id": "图像分割与公路病害识别",
-          "name": "图像分割与公路病害识别",
+          "concept_id": "etl-与数据处理管道",
+          "name": "ETL 与数据处理管道",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
@@ -122,12 +56,62 @@
       ]
     },
     {
-      "name": "传感器与数据处理",
-      "slug": "传感器与数据处理",
+      "name": "数据分析与挖掘",
+      "slug": "数据分析与挖掘",
       "concepts": [
         {
-          "concept_id": "多源传感器数据处理-imu-力传感器-关节角度",
-          "name": "多源传感器数据处理（IMU/力传感器/关节角度）",
+          "concept_id": "探索性数据分析",
+          "name": "探索性数据分析",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "特征工程与数据挖掘",
+          "name": "特征工程与数据挖掘",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "预测建模与时序分析",
+          "name": "预测建模与时序分析",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        }
+      ]
+    },
+    {
+      "name": "智能决策与大数据平台",
+      "slug": "智能决策与大数据平台",
+      "concepts": [
+        {
+          "concept_id": "决策优化与养护智能决策",
+          "name": "决策优化与养护智能决策",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "分布式数据处理与湖仓架构",
+          "name": "分布式数据处理与湖仓架构",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
