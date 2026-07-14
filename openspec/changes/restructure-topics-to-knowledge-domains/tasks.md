@@ -52,5 +52,5 @@
 - [x] 6.2 v2 status/review 输出与 1.2 保存的 v1 基线对账（概念数、活跃概念、最近学习记录；差异均可由归并表解释）
 - [x] 6.3 render-views --check 与全部结构校验、自动化测试通过
 - [x] 6.4 在复制出的 fixture 目录上冒烟一次 explain 全流程（同回合持久化 + 报告刷新），不污染真实数据
-- [ ] 6.5 用户验收 view.json 的 importance 初值与岗位 md 报告样式
-- [ ] 6.6 合并迁移里程碑 commit（数据 + 技能 + 脚本 + 契约同一提交），删除旧 topic 目录
+- [x] 6.5 用户验收 view.json 的 importance 初值与岗位 md 报告样式
+- [x] 6.6 合并迁移里程碑 commit（数据 + 技能 + 脚本 + 契约同一提交），删除旧 topic 目录
