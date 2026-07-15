@@ -5,7 +5,7 @@ import { spawnSync } from 'node:child_process';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { loadLearningStore } from '../../../../scripts/learning-store-lib.mjs';
+import { loadLearningStore } from '../../../../../scripts/learning-store-lib.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(HERE, '..', '..', '..', '..');

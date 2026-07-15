@@ -12,10 +12,10 @@ import {
     parseDomainMapping,
     parseSessionDate,
     rewriteSessionHeader,
-} from '../openspec/changes/restructure-topics-to-knowledge-domains/migration/migrate.mjs';
-import { assertExactExpectations } from '../openspec/changes/restructure-topics-to-knowledge-domains/migration/verify-migration.mjs';
+} from '../openspec/changes/archive/2026-07-14-restructure-topics-to-knowledge-domains/migration/migrate.mjs';
+import { assertExactExpectations } from '../openspec/changes/archive/2026-07-14-restructure-topics-to-knowledge-domains/migration/verify-migration.mjs';
 
-const CHANGE_ROOT = join(REPO_ROOT, 'openspec', 'changes', 'restructure-topics-to-knowledge-domains');
+const CHANGE_ROOT = join(REPO_ROOT, 'openspec', 'changes', 'archive', '2026-07-14-restructure-topics-to-knowledge-domains');
 const MIGRATION_ROOT = join(CHANGE_ROOT, 'migration');
 const MIGRATE = join(MIGRATION_ROOT, 'migrate.mjs');
 
