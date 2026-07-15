@@ -121,11 +121,11 @@
         {
           "concept_id": "软件需求分析与系统设计",
           "name": "软件需求分析与系统设计",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-15",
           "last_practiced": null,
           "details": []
         },

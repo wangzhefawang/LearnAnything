@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import test from 'node:test';
 
+import { renderViewMarkdown } from '../scripts/learning-store-lib.mjs';
 import { makeStore, REPO_ROOT } from './helpers/store-fixture.mjs';
 
 const RENDERER = join(REPO_ROOT, 'scripts', 'render-views.mjs');
@@ -11,6 +12,45 @@ const RENDERER = join(REPO_ROOT, 'scripts', 'render-views.mjs');
 function render(topics, ...args) {
     return spawnSync(process.execPath, [RENDERER, ...args, topics], { encoding: 'utf8' });
 }
+
+test('renderViewMarkdown prefixes every Chinese status and importance label with its colored dot', () => {
+    const concepts = [
+        ['未探索概念', 'unexplored', 'core'],
+        ['学习中概念', 'in_progress', 'recommended'],
+        ['需练习概念', 'needs_practice', 'optional'],
+        ['已掌握概念', 'mastered', 'core'],
+    ].map(([name, status, importance], index) => ({
+        concept_id: `concept-${index}`,
+        importance,
+        concept: {
+            name,
+            status,
+            confidence: 0,
+            last_explained: null,
+            last_practiced: null,
+        },
+        domain_name: '示例领域',
+        knowledge_domain: '示例知识领域',
+        state_slug: 'example',
+    }));
+    const report = renderViewMarkdown({
+        viewRecord: {
+            view: {
+                name: '标签测试',
+                concepts: concepts.map(({ concept_id, importance }) => ({ concept_id, importance })),
+            },
+        },
+        concepts,
+        total: concepts.length,
+        meanConfidence: 0,
+        mastered: 1,
+    });
+
+    assert.match(report, /\| 未探索概念 \| 🔴 核心 \| ⚪ 未探索 \|/);
+    assert.match(report, /\| 学习中概念 \| 🟡 推荐 \| 🔵 学习中 \|/);
+    assert.match(report, /\| 需练习概念 \| ⚪ 可选 \| 🟠 需练习 \|/);
+    assert.match(report, /\| 已掌握概念 \| 🔴 核心 \| 🟢 已掌握 \|/);
+});
 
 test('render-views generates deterministic Chinese reports with input hashes', () => {
     const store = makeStore();

@@ -23,11 +23,11 @@
         {
           "concept_id": "公路多源数据采集",
           "name": "公路多源数据采集",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-15",
           "last_practiced": null,
           "details": []
         },

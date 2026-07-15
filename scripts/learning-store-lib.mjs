@@ -7,17 +7,17 @@ import {
     validateViewV2,
 } from '../.claude/skills/learn-anything-status/scripts/utils.mjs';
 
-const STATUS_LABEL = {
-    unexplored: '未探索',
-    in_progress: '学习中',
-    needs_practice: '待练习',
-    mastered: '已掌握',
+export const STATUS_LABEL = {
+    unexplored: '⚪ 未探索',
+    in_progress: '🔵 学习中',
+    needs_practice: '🟠 需练习',
+    mastered: '🟢 已掌握',
 };
 
-const IMPORTANCE_LABEL = {
-    core: '核心',
-    recommended: '推荐',
-    optional: '可选',
+export const IMPORTANCE_LABEL = {
+    core: '🔴 核心',
+    recommended: '🟡 推荐',
+    optional: '⚪ 可选',
 };
 
 function compareName(a, b) {

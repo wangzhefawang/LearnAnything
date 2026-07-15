@@ -18,8 +18,10 @@ import { validateStateV2, totalCount, masteredCount, STATUS_ICON, } from './util
 import {
     aggregateView,
     formatConfidence,
+    IMPORTANCE_LABEL,
     LearningStoreError,
     loadLearningStore,
+    STATUS_LABEL,
     stateSummary,
     viewSummary,
 } from '../../../../scripts/learning-store-lib.mjs';
@@ -62,25 +64,20 @@ const EN = {
 };
 const ZH_CN = {
     title: (topic) => `🌟 ${topic} 学习状态`,
-    mastered: '已掌握',
-    active: '进行中',
-    practice: '需练习',
-    unexplored: '未探索',
+    mastered: STATUS_LABEL.mastered,
+    active: STATUS_LABEL.in_progress,
+    practice: STATUS_LABEL.needs_practice,
+    unexplored: STATUS_LABEL.unexplored,
     progress: '进度',
     statsTitle: '📊 学习统计',
     lastPractice: (name, rel) => `💪 最近练习: ${name} (${rel})`,
     startedLearning: (date) => `📅 开始学习: ${date}`,
     daysLearning: (days) => `⏱️  学习天数: ${days}`,
     legend: '图例',
-    statusLabel: {
-        mastered: '已掌握',
-        in_progress: '进行中',
-        needs_practice: '需练习',
-        unexplored: '未探索',
-    },
+    statusLabel: STATUS_LABEL,
     statusMeaning: {
         mastered: '已掌握 — 通过练习，掌握度高',
-        in_progress: '进行中 — 已开始但尚未掌握',
+        in_progress: '学习中 — 已开始但尚未掌握',
         needs_practice: '需练习 — 理解但需要巩固',
         unexplored: '未探索 — 尚未开始学习',
     },
@@ -131,6 +128,9 @@ function padEnd(s, width) {
 function countByStatus(state, status) {
     return state.domains.reduce((sum, d) => sum + d.concepts.filter((c) => c.status === status).length, 0);
 }
+function formatStatusCount(value, status, locale) {
+    return locale === 'zh-CN' ? String(value) : `${value} ${STATUS_ICON[status]}`;
+}
 function relativeDate(dateStr, t, now = Date.now()) {
     const then = new Date(dateStr.replace(' ', 'T')).getTime();
     const days = Math.floor((now - then) / 86400000);
@@ -159,7 +159,7 @@ function readStateJson(filePath) {
 export function renderViewStatus(aggregate, locale = 'en') {
     const t = STRINGS[locale];
     const importance = locale === 'zh-CN'
-        ? { core: '核心', recommended: '推荐', optional: '可选' }
+        ? IMPORTANCE_LABEL
         : { core: 'core', recommended: 'recommended', optional: 'optional' };
     const lines = [t.title(aggregate.viewRecord.view.name), ''];
     for (const [index, item] of aggregate.concepts.entries()) {
@@ -210,15 +210,16 @@ function findLastPracticed(state) {
 function conceptLine(concept, t) {
     const icon = STATUS_ICON[concept.status];
     const label = t.statusLabel[concept.status];
+    const subject = label.startsWith(`${icon} `) ? concept.name : `${icon} ${concept.name}`;
     if (concept.status === 'unexplored') {
-        return `${icon} ${concept.name}  ${label}`;
+        return `${subject}  ${label}`;
     }
     const parts = [label];
     if (concept.practice_count > 0)
         parts.push(t.practiceCount(concept.practice_count));
     if (concept.confidence > 0)
         parts.push(t.confidence(Math.round(concept.confidence * 100)));
-    return `${icon} ${concept.name}  ${parts.join(' · ')}`;
+    return `${subject}  ${parts.join(' · ')}`;
 }
 export function renderStatus(state, now, locale = 'en') {
     const t = STRINGS[locale];
@@ -258,7 +259,7 @@ export function renderStatus(state, now, locale = 'en') {
     lines.push(`│${padEnd(`    ${t.statsTitle}`, totalW - 2)}│`);
     lines.push(`├${'─'.repeat(colM)}┬${'─'.repeat(colA)}┬${'─'.repeat(colP)}┬${'─'.repeat(colU)}┬${'─'.repeat(colR)}┤`);
     lines.push(`│${padEnd(` ${t.mastered}`, colM)}│${padEnd(` ${t.active}`, colA)}│${padEnd(` ${t.practice}`, colP)}│${padEnd(` ${t.unexplored}`, colU)}│${padEnd(` ${t.progress}`, colR)}│`);
-    lines.push(`│${padEnd(` ${mastered} 🟢`, colM)}│${padEnd(` ${active} 🔵`, colA)}│${padEnd(` ${practice} 🟠`, colP)}│${padEnd(` ${unexplored} ⚪`, colU)}│${padEnd(` ${pct}%`, colR)}│`);
+    lines.push(`│${padEnd(` ${formatStatusCount(mastered, 'mastered', locale)}`, colM)}│${padEnd(` ${formatStatusCount(active, 'in_progress', locale)}`, colA)}│${padEnd(` ${formatStatusCount(practice, 'needs_practice', locale)}`, colP)}│${padEnd(` ${formatStatusCount(unexplored, 'unexplored', locale)}`, colU)}│${padEnd(` ${pct}%`, colR)}│`);
     lines.push(`├${'─'.repeat(colM)}┴${'─'.repeat(colA)}┴${'─'.repeat(colP)}┴${'─'.repeat(colU)}┴${'─'.repeat(colR)}┤`);
     const contentW = totalW - 2;
     const lastP = findLastPracticed(state);
@@ -275,10 +276,19 @@ export function renderStatus(state, now, locale = 'en') {
     // Legend
     lines.push(`## ${t.legend}`);
     lines.push('');
-    lines.push(`| Icon | Status | Meaning |`);
-    lines.push(`|------|--------|---------|`);
-    for (const status of ['mastered', 'in_progress', 'needs_practice', 'unexplored']) {
-        lines.push(`| ${STATUS_ICON[status]} | ${t.statusLabel[status]} | ${t.statusMeaning[status]} |`);
+    if (locale === 'zh-CN') {
+        lines.push(`| Status | Meaning |`);
+        lines.push(`|--------|---------|`);
+        for (const status of ['mastered', 'in_progress', 'needs_practice', 'unexplored']) {
+            lines.push(`| ${t.statusLabel[status]} | ${t.statusMeaning[status]} |`);
+        }
+    }
+    else {
+        lines.push(`| Icon | Status | Meaning |`);
+        lines.push(`|------|--------|---------|`);
+        for (const status of ['mastered', 'in_progress', 'needs_practice', 'unexplored']) {
+            lines.push(`| ${STATUS_ICON[status]} | ${t.statusLabel[status]} | ${t.statusMeaning[status]} |`);
+        }
     }
     return lines.join('\n').trimEnd() + '\n';
 }
@@ -357,7 +367,7 @@ export function renderAllTopics(summaries, now, locale = 'en') {
     lines.push(`│ ${padEnd(t.topic, topicCol - 1)}│ ${padEnd(t.mastered, masterCol - 1)}│ ${padEnd(t.active, activeCol - 1)}│ ${padEnd(t.practice, practiceCol - 1)}│ ${padEnd(t.progress, progressCol - 1)}│ ${padEnd(t.days, daysCol - 1)}│`);
     lines.push(sep);
     for (const s of summaries) {
-        lines.push(`│ ${padEnd(s.topic, topicCol - 1)}│ ${padEnd(`${s.mastered}/${s.total} 🟢`, masterCol - 1)}│ ${padEnd(`${s.active} 🔵`, activeCol - 1)}│ ${padEnd(`${s.practice} 🟠`, practiceCol - 1)}│ ${padEnd(`${s.pct}%`, progressCol - 1)}│ ${padEnd(`${s.days}`, daysCol - 1)}│`);
+        lines.push(`│ ${padEnd(s.topic, topicCol - 1)}│ ${padEnd(formatStatusCount(`${s.mastered}/${s.total}`, 'mastered', locale), masterCol - 1)}│ ${padEnd(formatStatusCount(s.active, 'in_progress', locale), activeCol - 1)}│ ${padEnd(formatStatusCount(s.practice, 'needs_practice', locale), practiceCol - 1)}│ ${padEnd(`${s.pct}%`, progressCol - 1)}│ ${padEnd(`${s.days}`, daysCol - 1)}│`);
     }
     // Overall totals
     const grandTotal = summaries.reduce((s, acc) => s + acc.total, 0);
@@ -366,7 +376,7 @@ export function renderAllTopics(summaries, now, locale = 'en') {
     const grandPractice = summaries.reduce((s, acc) => s + acc.practice, 0);
     const grandPct = grandTotal > 0 ? Math.round((grandMastered / grandTotal) * 100) : 0;
     lines.push(sep);
-    lines.push(`│ ${padEnd(t.total, topicCol - 1)}│ ${padEnd(`${grandMastered}/${grandTotal} 🟢`, masterCol - 1)}│ ${padEnd(`${grandActive} 🔵`, activeCol - 1)}│ ${padEnd(`${grandPractice} 🟠`, practiceCol - 1)}│ ${padEnd(`${grandPct}%`, progressCol - 1)}│ ${padEnd('', daysCol - 1)}│`);
+    lines.push(`│ ${padEnd(t.total, topicCol - 1)}│ ${padEnd(formatStatusCount(`${grandMastered}/${grandTotal}`, 'mastered', locale), masterCol - 1)}│ ${padEnd(formatStatusCount(grandActive, 'in_progress', locale), activeCol - 1)}│ ${padEnd(formatStatusCount(grandPractice, 'needs_practice', locale), practiceCol - 1)}│ ${padEnd(`${grandPct}%`, progressCol - 1)}│ ${padEnd('', daysCol - 1)}│`);
     lines.push(bot);
     lines.push('');
     // Find latest practice across all topics
@@ -385,10 +395,19 @@ export function renderAllTopics(summaries, now, locale = 'en') {
     // Legend
     lines.push(`## ${t.legend}`);
     lines.push('');
-    lines.push(`| Icon | Status |`);
-    lines.push(`|------|--------|`);
-    for (const status of ['mastered', 'in_progress', 'needs_practice', 'unexplored']) {
-        lines.push(`| ${STATUS_ICON[status]} | ${t.statusLabel[status]} |`);
+    if (locale === 'zh-CN') {
+        lines.push(`| Status |`);
+        lines.push(`|--------|`);
+        for (const status of ['mastered', 'in_progress', 'needs_practice', 'unexplored']) {
+            lines.push(`| ${t.statusLabel[status]} |`);
+        }
+    }
+    else {
+        lines.push(`| Icon | Status |`);
+        lines.push(`|------|--------|`);
+        for (const status of ['mastered', 'in_progress', 'needs_practice', 'unexplored']) {
+            lines.push(`| ${STATUS_ICON[status]} | ${t.statusLabel[status]} |`);
+        }
     }
     return lines.join('\n').trimEnd() + '\n';
 }
