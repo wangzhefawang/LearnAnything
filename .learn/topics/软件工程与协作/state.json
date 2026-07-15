@@ -12,11 +12,11 @@
         {
           "concept_id": "ssh-远程登录与隧道转发",
           "name": "SSH 远程登录与隧道转发",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-15",
           "last_practiced": null,
           "details": [
             "密钥认证与权限配置",

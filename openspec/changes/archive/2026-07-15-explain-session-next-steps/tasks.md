@@ -13,4 +13,4 @@
 ## 3. 验证
 
 - [x] 3.1 运行 `node --test tests/*.test.mjs`，确认全部 Node.js 契约与行为测试通过
-- [ ] 3.2 在 Claude Code 会话中运行 `/learn:explain` 冒烟，确认新会话文件的 `## Next Steps` 已填写，且方向、理由、顺序和 practice 入口与对话展示逐字一致
+- [x] 3.2 在 Claude Code 会话中运行 `/learn:explain` 冒烟，确认新会话文件的 `## Next Steps` 已填写，且方向、理由、顺序和 practice 入口与对话展示逐字一致
