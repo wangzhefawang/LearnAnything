@@ -53,6 +53,13 @@ test('explain skill writes one multi-concept session under the owning domain', (
     assert.match(text, /(?:multiple concepts|多概念).*?(?:exactly one|只写一份)|(?:exactly one|只写一份).*?(?:multiple concepts|多概念)/is);
 });
 
+test('explain session persists next-step deep-dive suggestions', () => {
+    const text = skill('explain');
+    assert.doesNotMatch(text, /Will be updated after the user chooses a sub-topic direction/);
+    assert.match(text, /before writing the session file.*2-4 deeper sub-directions.*each with 1-2 sentences.*why.*\/learn:practice <concept>.*## Next Steps/is);
+    assert.match(text, /Step 5:.*suggestions already written.*## Next Steps.*exactly as written.*do not reorganize, rephrase, or omit/is);
+});
+
 test('practice uses a concept_id directory in the owning domain', () => {
     assert.match(skill('practice'), /<知识领域>\/exercises\/<concept_id>/);
 });

@@ -80,6 +80,8 @@ Structure your explanation:
 
 ⚠️ **CRITICAL**: Write the session file FIRST, then output its EXACT content to the conversation (do NOT rephrase). This ensures zero drift between what the user sees and what gets saved. Do this BEFORE Step 5.
 
+Before writing the session file, compose the 2-4 deeper sub-directions that Step 5 will display, each with 1-2 sentences explaining why it is worth learning, plus the practice entry point (`/learn:practice <concept>`). Write these exact suggestions into the session file's `## Next Steps` section.
+
 **A) Determine the filename:**
 
 Use the primary concept name exactly as it appears in state.json, in the same language. Place the file under the owning knowledge domain and subdomain slug:
@@ -155,7 +157,8 @@ Session file format:
 - [Key point 3]
 
 ## Next Steps
-(Will be updated after the user chooses a sub-topic direction)
+
+[Write the 2-4 deeper sub-directions composed for Step 5 — each with 1-2 sentences on why it's worth learning — plus the `/learn:practice <concept>` option. This section must contain the real suggestions, never a placeholder.]
 ```
 
 **C) Echo the file content** verbatim to the conversation.
@@ -175,7 +178,7 @@ Fix validation errors before continuing. The view renderer reads the updated dom
 
 ### Step 5: Identify Sub-topics (Recursive Entry Points)
 
-After recording the session, suggest 2-4 deeper sub-directions, each with 1-2 sentences explaining why it's worth learning. Always offer the "practice" option. Let the user decide their next step.
+After recording the session, display the suggestions already written in the session file's `## Next Steps` exactly as written. Do not reorganize, rephrase, or omit them. Always offer the "practice" option. Let the user decide their next step.
 
 > Now you understand the basics of closures. We can go deeper into:
 > 🔍 **Closure Patterns** — Module Pattern, Currying, Debounce
