@@ -79,6 +79,36 @@
             "BEV 表示",
             "作为感知辅助"
           ]
+        },
+        {
+          "concept_id": "点云-3d-目标检测",
+          "name": "点云 3D 目标检测",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "PointPillars/CenterPoint",
+            "BEV 表示与体素化",
+            "PCL 工程化处理"
+          ]
+        },
+        {
+          "concept_id": "点云-slam-与高精地图",
+          "name": "点云 SLAM 与高精地图",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "激光里程计与回环检测",
+            "点云地图拼接",
+            "高精地图格式与更新"
+          ]
         }
       ]
     },
