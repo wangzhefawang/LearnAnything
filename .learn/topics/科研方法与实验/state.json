@@ -140,34 +140,6 @@
       ]
     },
     {
-      "name": "科研课题与技术文档",
-      "slug": "科研课题与技术文档",
-      "concepts": [
-        {
-          "concept_id": "科研课题申报与项目论证",
-          "name": "科研课题申报与项目论证",
-          "status": "in_progress",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 1,
-          "last_explained": "2026-07-14",
-          "last_practiced": null,
-          "details": []
-        },
-        {
-          "concept_id": "技术报告与科研文档写作",
-          "name": "技术报告与科研文档写作",
-          "status": "unexplored",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
-          "last_practiced": null,
-          "details": []
-        }
-      ]
-    },
-    {
       "name": "学术写作与可视化",
       "slug": "学术写作与可视化",
       "concepts": [

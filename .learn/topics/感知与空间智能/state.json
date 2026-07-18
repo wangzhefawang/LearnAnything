@@ -27,11 +27,11 @@
         {
           "concept_id": "点云配准-icp",
           "name": "点云配准 ICP",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": [
             "粗配准",
@@ -109,45 +109,21 @@
             "点云地图拼接",
             "高精地图格式与更新"
           ]
-        }
-      ]
-    },
-    {
-      "name": "2D 计算机视觉",
-      "slug": "2d-计算机视觉",
-      "concepts": [
-        {
-          "concept_id": "2d-图像识别与卷积神经网络",
-          "name": "2D 图像识别与卷积神经网络",
-          "status": "in_progress",
-          "confidence": 0.15,
-          "practice_count": 0,
-          "explain_count": 2,
-          "last_explained": "2026-07-15",
-          "last_practiced": null,
-          "details": []
         },
         {
-          "concept_id": "2d-目标检测",
-          "name": "2D 目标检测",
+          "concept_id": "虚拟相机成像与深度图",
+          "name": "虚拟相机成像与深度图",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
           "explain_count": 0,
           "last_explained": null,
           "last_practiced": null,
-          "details": []
-        },
-        {
-          "concept_id": "图像分割与公路病害识别",
-          "name": "图像分割与公路病害识别",
-          "status": "unexplored",
-          "confidence": 0,
-          "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
-          "last_practiced": null,
-          "details": []
+          "details": [
+            "视图矩阵与投影矩阵",
+            "非线性深度缓冲线性化",
+            "eye-in-hand 相机配置"
+          ]
         }
       ]
     },

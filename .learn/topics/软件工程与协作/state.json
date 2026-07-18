@@ -119,17 +119,6 @@
       "slug": "软件系统开发与维护",
       "concepts": [
         {
-          "concept_id": "软件需求分析与系统设计",
-          "name": "软件需求分析与系统设计",
-          "status": "in_progress",
-          "confidence": 0.05,
-          "practice_count": 0,
-          "explain_count": 1,
-          "last_explained": "2026-07-15",
-          "last_practiced": null,
-          "details": []
-        },
-        {
           "concept_id": "后端服务与-api-开发",
           "name": "后端服务与 API 开发",
           "status": "unexplored",
@@ -141,26 +130,34 @@
           "details": []
         },
         {
-          "concept_id": "关系数据库设计与-sql",
-          "name": "关系数据库设计与 SQL",
+          "concept_id": "python-asyncio-并发模型",
+          "name": "Python asyncio 并发模型",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
           "explain_count": 0,
           "last_explained": null,
           "last_practiced": null,
-          "details": []
+          "details": [
+            "事件循环与协程调度",
+            "单线程串行与免锁前提",
+            "同步阻塞调用的危害"
+          ]
         },
         {
-          "concept_id": "软件运维与可观测性",
-          "name": "软件运维与可观测性",
+          "concept_id": "websocket-实时通信",
+          "name": "WebSocket 实时通信",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,
           "explain_count": 0,
           "last_explained": null,
           "last_practiced": null,
-          "details": []
+          "details": [
+            "与 REST 的取舍",
+            "推送频率与通道拆分",
+            "断线重连策略"
+          ]
         }
       ]
     },
