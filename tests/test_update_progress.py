@@ -66,6 +66,19 @@ class UpdateProgressTests(unittest.TestCase):
             self.assertIn("| 应用领域 | 1 | 25% | 0 / 1 |", block)
             self.assertNotIn("快照时间", block)
 
+    def test_build_block_accepts_optional_view_note(self):
+        module = load_update_progress()
+        with tempfile.TemporaryDirectory() as tmp:
+            topics = prepare_store(module, Path(tmp))
+            view_path = topics / "示例岗位.view.json"
+            view = json.loads(view_path.read_text(encoding="utf-8"))
+            view["concepts"][0]["note"] = "实习直接重合"
+            view_path.write_text(json.dumps(view, ensure_ascii=False), encoding="utf-8")
+
+            block = module.build_block()
+
+            self.assertIn("| [示例岗位](.learn/topics/示例岗位.md) | 3 | 58% | 1 / 3 |", block)
+
     def test_quiet_mode_does_not_write_stdout_when_readme_is_current(self):
         module = load_update_progress()
         with tempfile.TemporaryDirectory() as tmp:

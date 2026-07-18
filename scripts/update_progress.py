@@ -142,12 +142,21 @@ def _validate_view(view: dict, path: Path) -> None:
     for index, reference in enumerate(view["concepts"]):
         if not isinstance(reference, dict):
             raise StoreValidationError(f"{path}: concepts[{index}] 必须是对象")
-        if set(reference) != {"concept_id", "importance"}:
-            raise StoreValidationError(f"{path}: concepts[{index}] 只能包含 concept_id 与 importance")
+        keys = set(reference)
+        if not {"concept_id", "importance"} <= keys or not keys <= {"concept_id", "importance", "note"}:
+            raise StoreValidationError(
+                f"{path}: concepts[{index}] 只能包含 concept_id、importance 与可选 note"
+            )
         if not _valid_concept_id(reference["concept_id"]):
             raise StoreValidationError(f"{path}: concepts[{index}].concept_id 不符合规范")
         if not isinstance(reference["importance"], str) or reference["importance"] not in IMPORTANCE:
             raise StoreValidationError(f"{path}: concepts[{index}].importance 不在三档枚举中")
+        if "note" in reference:
+            note = reference["note"]
+            if not isinstance(note, str) or not note.strip():
+                raise StoreValidationError(f"{path}: concepts[{index}].note trim 后必须是非空字符串")
+            if len(note) > 30:
+                raise StoreValidationError(f"{path}: concepts[{index}].note 最多 30 个字符")
 
 
 def load_store() -> tuple[list[dict], list[dict]]:

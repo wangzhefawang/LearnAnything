@@ -11,15 +11,18 @@
     },
     {
       "concept_id": "激光雷达与组合定位",
-      "importance": "core"
+      "importance": "core",
+      "note": "实习强相关"
     },
     {
       "concept_id": "点云数据结构与滤波",
-      "importance": "core"
+      "importance": "core",
+      "note": "实习直接重合"
     },
     {
       "concept_id": "点云-3d-目标检测",
-      "importance": "core"
+      "importance": "core",
+      "note": "实习强相关"
     },
     {
       "concept_id": "多目标跟踪与预测",
@@ -27,11 +30,13 @@
     },
     {
       "concept_id": "感知融合工程化",
-      "importance": "core"
+      "importance": "core",
+      "note": "实习强相关"
     },
     {
       "concept_id": "点云-slam-与高精地图",
-      "importance": "core"
+      "importance": "core",
+      "note": "实习强相关"
     },
     {
       "concept_id": "端到端与大模型智驾落地",
@@ -43,7 +48,8 @@
     },
     {
       "concept_id": "点云配准-icp",
-      "importance": "recommended"
+      "importance": "recommended",
+      "note": "实习直接重合"
     },
     {
       "concept_id": "pytorch-cuda-训练推理流水线",
@@ -51,7 +57,8 @@
     },
     {
       "concept_id": "预测规划控制接口",
-      "importance": "recommended"
+      "importance": "recommended",
+      "note": "实习强相关"
     },
     {
       "concept_id": "adas-noa-功能定义",
@@ -59,7 +66,8 @@
     },
     {
       "concept_id": "摄像头与环视感知系统",
-      "importance": "optional"
+      "importance": "optional",
+      "note": "实习强相关"
     },
     {
       "concept_id": "毫米波雷达与超声波雷达",
@@ -75,7 +83,8 @@
     },
     {
       "concept_id": "slam-建图基础",
-      "importance": "optional"
+      "importance": "optional",
+      "note": "实习直接重合"
     },
     {
       "concept_id": "边缘侧推理框架",

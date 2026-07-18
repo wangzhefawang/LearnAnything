@@ -55,6 +55,26 @@ test('validateViewV2 enforces exact entry keys and importance enum', () => {
     assert.ok(errors.some((error) => error.path === 'concepts[1].progress'));
 });
 
+test('validateViewV2 accepts an optional non-empty note up to 30 characters', () => {
+    const view = JSON.parse(readFileSync(fixturePath('topics', '示例岗位.view.json'), 'utf8'));
+    view.concepts[0].note = '实习直接重合';
+    view.concepts[1].note = '标'.repeat(30);
+
+    assert.deepEqual(validateViewV2(view), []);
+});
+
+test('validateViewV2 rejects invalid notes', () => {
+    const invalidNotes = ['', '   ', '标'.repeat(31), 42];
+    const base = JSON.parse(readFileSync(fixturePath('topics', '示例岗位.view.json'), 'utf8'));
+
+    for (const note of invalidNotes) {
+        const view = structuredClone(base);
+        view.concepts[0].note = note;
+        const errors = validateViewV2(view);
+        assert.ok(errors.some((error) => error.path === 'concepts[0].note'), JSON.stringify(note));
+    }
+});
+
 test('all five utils.mjs copies remain byte-identical', () => {
     const skills = ['topic', 'explain', 'practice', 'quiz', 'status'];
     const copies = skills.map((skill) => readFileSync(

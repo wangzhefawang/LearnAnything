@@ -142,6 +142,7 @@ export function aggregateView(store, viewRecord) {
         concepts.push({
             concept_id: reference.concept_id,
             importance: reference.importance,
+            note: reference.note,
             concept: definition.concept,
             domain_name: definition.domain.name,
             knowledge_domain: definition.state.topic,
@@ -196,12 +197,20 @@ function escapeTable(value) {
     return String(value).replaceAll('|', '\\|').replaceAll('\n', '<br>');
 }
 
+function escapeEmphasizedTable(value) {
+    const escaped = escapeTable(String(value).replace(/[\\`*_[\]{}()#+\-.!~]/g, '\\$&'));
+    return escaped.replace(/^\s+|\s+$/gu, (whitespace) => (
+        [...whitespace].map((character) => `&#${character.codePointAt(0)};`).join('')
+    ));
+}
+
 export function formatConfidence(confidence) {
     return `${Math.round(confidence * 100)}%`;
 }
 
 export function renderViewMarkdown(aggregate) {
     const digest = viewInputDigest(aggregate);
+    const hasNotes = aggregate.concepts.some((item) => item.note !== undefined);
     const lines = [
         `<!-- 自动生成勿手改；输入摘要：${digest} -->`,
         `# ${aggregate.viewRecord.view.name} 学习进度`,
@@ -216,11 +225,25 @@ export function renderViewMarkdown(aggregate) {
         '',
         '## 概念进度',
         '',
-        '| 概念名 | 重要性 | 状态 | 掌握度 | 最近学习日期 | 所属领域 |',
-        '| --- | --- | --- | --- | --- | --- |',
+        hasNotes
+            ? '| 概念名 | 标注 | 重要性 | 状态 | 掌握度 | 最近学习日期 | 所属领域 |'
+            : '| 概念名 | 重要性 | 状态 | 掌握度 | 最近学习日期 | 所属领域 |',
+        hasNotes
+            ? '| --- | --- | --- | --- | --- | --- | --- |'
+            : '| --- | --- | --- | --- | --- | --- |',
     ];
     for (const item of aggregate.concepts) {
-        lines.push(`| ${escapeTable(item.concept.name)} | ${IMPORTANCE_LABEL[item.importance]} | ${STATUS_LABEL[item.concept.status]} | ${formatConfidence(item.concept.confidence)} | ${latestLearningDate(item.concept)} | ${escapeTable(item.knowledge_domain)} |`);
+        if (hasNotes) {
+            const conceptName = item.note === undefined
+                ? escapeTable(item.concept.name)
+                : escapeEmphasizedTable(item.concept.name);
+            const displayedName = item.note === undefined ? conceptName : `**${conceptName}**`;
+            const displayedNote = item.note === undefined ? '—' : `*${escapeEmphasizedTable(item.note)}*`;
+            lines.push(`| ${displayedName} | ${displayedNote} | ${IMPORTANCE_LABEL[item.importance]} | ${STATUS_LABEL[item.concept.status]} | ${formatConfidence(item.concept.confidence)} | ${latestLearningDate(item.concept)} | ${escapeTable(item.knowledge_domain)} |`);
+        }
+        else {
+            lines.push(`| ${escapeTable(item.concept.name)} | ${IMPORTANCE_LABEL[item.importance]} | ${STATUS_LABEL[item.concept.status]} | ${formatConfidence(item.concept.confidence)} | ${latestLearningDate(item.concept)} | ${escapeTable(item.knowledge_domain)} |`);
+        }
     }
     lines.push('');
     return lines.join('\n');

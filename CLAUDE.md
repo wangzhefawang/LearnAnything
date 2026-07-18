@@ -92,7 +92,7 @@ learn-anything 的讲解会话文件位于 `.learn/topics/<知识领域>/session
 ```
 
 `state.json` 是领域内概念定义和进度的真相源，每个概念必须包含 `concept_id`、`name`、`status`、`confidence`、`practice_count`、`explain_count`、`last_explained`、`last_practiced` 与 `details` 喵。
-`view.json` 是视图成员和顺序的真相源，每项只能包含 `concept_id` 与 `importance`，其中 importance 为 `core`、`recommended` 或 `optional` 喵。
+`view.json` 是视图成员和顺序的真相源，每项必须包含 `concept_id` 与 `importance`，并可选包含 `note`；其中 importance 为 `core`、`recommended` 或 `optional`，note 必须是 trim 后非空且不超过 30 个字符的字符串喵。
 生成的 `<视图名>.md` 不是输入或真相源，任何技能都不得直接编辑喵。
 
 ### concept_id 规则

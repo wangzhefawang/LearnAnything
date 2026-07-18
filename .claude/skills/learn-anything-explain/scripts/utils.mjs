@@ -58,6 +58,14 @@ const arr = (itemChecker) => (v) => {
     return null;
 };
 const oneOf = (...values) => (v) => !values.includes(v) ? `Must be one of: ${values.join(', ')}` : null;
+const optional = (inner) => (v) => v === undefined ? null : inner(v);
+const note = (v) => {
+    if (typeof v !== 'string' || v.trim().length === 0)
+        return 'Must be a non-empty string after trimming';
+    if ([...v].length > 30)
+        return 'Must be at most 30 characters';
+    return null;
+};
 // ── Validation schemas ───────────────────────────────────────────────
 const STATE_RULES = {
     version: literal(1),
@@ -124,6 +132,7 @@ const VIEW_V2_RULES = {
 const VIEW_CONCEPT_RULES = {
     concept_id: conceptId,
     importance: oneOf('core', 'recommended', 'optional'),
+    note: optional(note),
 };
 // ── Core engine ──────────────────────────────────────────────────────
 function checkFields(obj, rules, prefix, errors) {

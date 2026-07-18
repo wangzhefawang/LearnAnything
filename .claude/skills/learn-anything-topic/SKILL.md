@@ -134,7 +134,7 @@ For a job, JD, or project, select concepts from existing knowledge domains and w
   "slug": "<view-slug>",
   "created": "<YYYY-MM-DD>",
   "concepts": [
-    { "concept_id": "<existing-id>", "importance": "core" },
+    { "concept_id": "<existing-id>", "importance": "core", "note": "<optional-note>" },
     { "concept_id": "<existing-id>", "importance": "recommended" },
     { "concept_id": "<existing-id>", "importance": "optional" }
   ]
