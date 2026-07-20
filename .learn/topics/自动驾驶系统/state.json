@@ -146,8 +146,8 @@
           "status": "in_progress",
           "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 1,
-          "last_explained": "2026-07-12",
+          "explain_count": 3,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": [
             "点云特性与安装位置",
@@ -260,11 +260,11 @@
         {
           "concept_id": "易成自动驾驶产品与场景",
           "name": "易成自动驾驶产品与场景",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": [
             "易达系无人物流车 100kg-100T",

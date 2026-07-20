@@ -42,11 +42,11 @@
         {
           "concept_id": "tf-坐标变换体系",
           "name": "TF 坐标变换体系",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": [
             "坐标系树",
@@ -68,11 +68,11 @@
         {
           "concept_id": "rosbag-数据录制与回放",
           "name": "rosbag 数据录制与回放",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": []
         },
@@ -111,11 +111,11 @@
         {
           "concept_id": "gazebo-传感器插件",
           "name": "Gazebo 传感器插件",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": [
             "激光雷达插件",
@@ -162,11 +162,11 @@
         {
           "concept_id": "amcl-蒙特卡洛定位",
           "name": "AMCL 蒙特卡洛定位",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-18",
           "last_practiced": null,
           "details": []
         },
@@ -250,6 +250,66 @@
             "抓取位姿估计",
             "夹爪控制"
           ]
+        },
+        {
+          "concept_id": "数值逆运动学求解与多起点策略",
+          "name": "数值逆运动学求解与多起点策略",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "局部极小与吸引盆",
+            "阻尼最小二乘 DLS",
+            "FK 回算校验与可达性判定"
+          ]
+        },
+        {
+          "concept_id": "位姿表示与坐标系约定",
+          "name": "位姿表示与坐标系约定",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "四元数与欧拉角",
+            "URDF link 帧与惯性（质心）帧",
+            "位姿误差度量"
+          ]
+        },
+        {
+          "concept_id": "关节位置控制与力矩限制",
+          "name": "关节位置控制与力矩限制",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "PD 位置控制",
+            "力矩饱和与重力负载",
+            "速度限幅"
+          ]
+        },
+        {
+          "concept_id": "运动学奇异性与工作空间",
+          "name": "运动学奇异性与工作空间",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "雅可比与奇异值",
+            "工作空间边界奇异",
+            "构型分支翻转"
+          ]
         }
       ]
     },
@@ -311,6 +371,21 @@
           "last_explained": null,
           "last_practiced": null,
           "details": []
+        },
+        {
+          "concept_id": "pybullet-仿真引擎实践",
+          "name": "PyBullet 仿真引擎实践",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "DIRECT/GUI 客户端模型",
+            "步进循环与实时节奏",
+            "关节电机参数的状态化语义"
+          ]
         }
       ]
     }

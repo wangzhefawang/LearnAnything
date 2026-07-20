@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "机械臂仿真控制考核项目",
+  "slug": "机械臂仿真控制考核项目",
+  "created": "2026-07-18",
+  "concepts": [
+    { "concept_id": "机械臂正逆运动学", "importance": "core" },
+    { "concept_id": "数值逆运动学求解与多起点策略", "importance": "core" },
+    { "concept_id": "位姿表示与坐标系约定", "importance": "core" },
+    { "concept_id": "关节位置控制与力矩限制", "importance": "core" },
+    { "concept_id": "urdf-与-sdf-机器人建模", "importance": "core" },
+    { "concept_id": "pybullet-仿真引擎实践", "importance": "core" },
+    { "concept_id": "虚拟相机成像与深度图", "importance": "core" },
+    { "concept_id": "python-asyncio-并发模型", "importance": "core" },
+    { "concept_id": "websocket-实时通信", "importance": "core" },
+    { "concept_id": "运动学奇异性与工作空间", "importance": "recommended" },
+    { "concept_id": "刚体动力学基础", "importance": "recommended" },
+    { "concept_id": "后端服务与-api-开发", "importance": "recommended" },
+    { "concept_id": "rgb-d-感知数据处理", "importance": "recommended" },
+    { "concept_id": "机器人测试用例设计方法", "importance": "optional" }
+  ]
+}
