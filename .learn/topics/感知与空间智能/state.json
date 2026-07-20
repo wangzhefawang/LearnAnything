@@ -12,11 +12,11 @@
         {
           "concept_id": "点云数据结构与滤波",
           "name": "点云数据结构与滤波",
-          "status": "unexplored",
-          "confidence": 0,
+          "status": "in_progress",
+          "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-20",
           "last_practiced": null,
           "details": [
             "体素下采样",

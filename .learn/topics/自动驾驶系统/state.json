@@ -146,8 +146,8 @@
           "status": "in_progress",
           "confidence": 0.05,
           "practice_count": 0,
-          "explain_count": 3,
-          "last_explained": "2026-07-18",
+          "explain_count": 4,
+          "last_explained": "2026-07-20",
           "last_practiced": null,
           "details": [
             "点云特性与安装位置",
