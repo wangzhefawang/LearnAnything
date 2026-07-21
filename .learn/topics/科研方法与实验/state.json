@@ -25,6 +25,17 @@
           ]
         },
         {
+          "concept_id": "学术论文阅读与快速复现",
+          "name": "学术论文阅读与快速复现",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
           "concept_id": "openemma-基座与-fsdrive-相关工作",
           "name": "OpenEMMA 基座与 FSDrive 相关工作",
           "status": "unexplored",

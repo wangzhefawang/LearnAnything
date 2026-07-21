@@ -6,6 +6,7 @@
 - 动作表征与 Action Tokenization
 - 模仿学习与行为克隆 Behavior Cloning
 - 端到端策略与决策推理
+- 大规模机器人策略训练与闭环评测
 
 ## 强化学习与运动控制
 

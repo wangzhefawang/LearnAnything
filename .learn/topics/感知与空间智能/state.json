@@ -55,6 +55,17 @@
           ]
         },
         {
+          "concept_id": "生成式三维资产与场景生成",
+          "name": "生成式三维资产与场景生成",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
           "concept_id": "rgb-d-感知数据处理",
           "name": "RGB-D 感知数据处理",
           "status": "unexplored",
@@ -94,6 +105,39 @@
             "BEV 表示与体素化",
             "PCL 工程化处理"
           ]
+        },
+        {
+          "concept_id": "6d-物体姿态估计",
+          "name": "6D 物体姿态估计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "复杂材质与密集商品鲁棒感知",
+          "name": "复杂材质与密集商品鲁棒感知",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "开集目标检测",
+          "name": "开集目标检测",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
         },
         {
           "concept_id": "点云-slam-与高精地图",

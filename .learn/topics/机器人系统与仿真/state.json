@@ -297,6 +297,17 @@
           ]
         },
         {
+          "concept_id": "精细力控与力控抓取",
+          "name": "精细力控与力控抓取",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
           "concept_id": "运动学奇异性与工作空间",
           "name": "运动学奇异性与工作空间",
           "status": "unexplored",
@@ -320,6 +331,17 @@
         {
           "concept_id": "仿真引擎-isaac-gym-mujoco",
           "name": "仿真引擎 Isaac Gym / MuJoCo",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "仿真交互数据生成与策略预训练",
+          "name": "仿真交互数据生成与策略预训练",
           "status": "unexplored",
           "confidence": 0,
           "practice_count": 0,

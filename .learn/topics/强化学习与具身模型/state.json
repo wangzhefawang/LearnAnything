@@ -52,6 +52,17 @@
           "last_explained": null,
           "last_practiced": null,
           "details": []
+        },
+        {
+          "concept_id": "大规模机器人策略训练与闭环评测",
+          "name": "大规模机器人策略训练与闭环评测",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
         }
       ]
     },

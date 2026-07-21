@@ -53,6 +53,17 @@
             "启动脚本与服务管理",
             "运行日志与故障定位"
           ]
+        },
+        {
+          "concept_id": "linux-cpp-机器人系统开发",
+          "name": "Linux / C++ 机器人系统开发",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
         }
       ]
     },
@@ -202,6 +213,50 @@
             "断点续跑",
             "pixi 环境管理"
           ]
+        },
+        {
+          "concept_id": "cuda-编程与自定义算子优化",
+          "name": "CUDA 编程与自定义算子优化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "tensorrt-推理部署与深度定制",
+          "name": "TensorRT 推理部署与深度定制",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "triton-torchcompile-服务与编译优化",
+          "name": "Triton / TorchCompile 服务与编译优化",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
+        },
+        {
+          "concept_id": "模型量化剪枝与算子融合",
+          "name": "模型量化剪枝与算子融合",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": []
         },
         {
           "concept_id": "本地大模型部署与推理",

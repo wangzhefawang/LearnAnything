@@ -6,6 +6,7 @@
   - 端到端驾驶的黑箱问题
   - 可解释性诉求
   - 各模态贡献缺乏受控验证
+- 学术论文阅读与快速复现
 - OpenEMMA 基座与 FSDrive 相关工作
   - OpenEMMA 免训练 MLLM 驾驶
   - FSDrive 视觉时空 CoT

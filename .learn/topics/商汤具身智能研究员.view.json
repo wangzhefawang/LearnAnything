@@ -1,0 +1,238 @@
+{
+  "version": 2,
+  "kind": "learning_view",
+  "name": "商汤具身智能研究员",
+  "slug": "商汤具身智能研究员",
+  "created": "2026-07-21",
+  "concepts": [
+    {
+      "concept_id": "学术论文阅读与快速复现",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "transformer-架构",
+      "importance": "core"
+    },
+    {
+      "concept_id": "多模态大模型-mllm-vlm-基础",
+      "importance": "core"
+    },
+    {
+      "concept_id": "大模型预训练-pretraining",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "监督微调-sft",
+      "importance": "core"
+    },
+    {
+      "concept_id": "lora-参数高效微调",
+      "importance": "core"
+    },
+    {
+      "concept_id": "pytorch-cuda-训练推理流水线",
+      "importance": "core"
+    },
+    {
+      "concept_id": "linux-cpp-机器人系统开发",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "cuda-编程与自定义算子优化",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "点云数据结构与滤波",
+      "importance": "core"
+    },
+    {
+      "concept_id": "点云配准-icp",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "rgb-d-感知数据处理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "点云-3d-目标检测",
+      "importance": "core"
+    },
+    {
+      "concept_id": "6d-物体姿态估计",
+      "importance": "core"
+    },
+    {
+      "concept_id": "位姿表示与坐标系约定",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "复杂材质与密集商品鲁棒感知",
+      "importance": "core"
+    },
+    {
+      "concept_id": "开集目标检测",
+      "importance": "core"
+    },
+    {
+      "concept_id": "三维重建与场景扫描",
+      "importance": "core"
+    },
+    {
+      "concept_id": "生成式三维资产与场景生成",
+      "importance": "core"
+    },
+    {
+      "concept_id": "虚拟相机成像与深度图",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "多源传感器数据处理-imu-力传感器-关节角度",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "机械臂正逆运动学",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "运动学奇异性与工作空间",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "机械臂抓取任务流程",
+      "importance": "core"
+    },
+    {
+      "concept_id": "精细力控与力控抓取",
+      "importance": "core"
+    },
+    {
+      "concept_id": "关节位置控制与力矩限制",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "接触模型与摩擦力辨识",
+      "importance": "core"
+    },
+    {
+      "concept_id": "刚体动力学基础",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "moveit-运动规划",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "ros2-机器人操作系统生态",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "urdf-与-sdf-机器人建模",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "仿真世界构建与物理参数配置",
+      "importance": "core"
+    },
+    {
+      "concept_id": "仿真引擎-isaac-gym-mujoco",
+      "importance": "core",
+      "note": "Isaac Sim/Lab、MuJoCo"
+    },
+    {
+      "concept_id": "仿真交互数据生成与策略预训练",
+      "importance": "core"
+    },
+    {
+      "concept_id": "域随机化-domain-randomization",
+      "importance": "core"
+    },
+    {
+      "concept_id": "策略迁移与实机反向对齐",
+      "importance": "core"
+    },
+    {
+      "concept_id": "机器人测试用例设计方法",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "物理失效案例与迭代指标",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "vla-架构范式",
+      "importance": "core"
+    },
+    {
+      "concept_id": "动作表征与-action-tokenization",
+      "importance": "core"
+    },
+    {
+      "concept_id": "模仿学习与行为克隆-behavior-cloning",
+      "importance": "core"
+    },
+    {
+      "concept_id": "端到端策略与决策推理",
+      "importance": "core"
+    },
+    {
+      "concept_id": "mdp-与策略-价值框架",
+      "importance": "core"
+    },
+    {
+      "concept_id": "ppo-算法",
+      "importance": "core"
+    },
+    {
+      "concept_id": "sac-算法",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "奖励工程-reward-engineering",
+      "importance": "core"
+    },
+    {
+      "concept_id": "大规模机器人策略训练与闭环评测",
+      "importance": "core"
+    },
+    {
+      "concept_id": "消融实验与受控归因",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "边缘侧推理框架",
+      "importance": "core",
+      "note": "Jetson/本地工作站"
+    },
+    {
+      "concept_id": "tensorrt-推理部署与深度定制",
+      "importance": "core"
+    },
+    {
+      "concept_id": "triton-torchcompile-服务与编译优化",
+      "importance": "core"
+    },
+    {
+      "concept_id": "模型量化剪枝与算子融合",
+      "importance": "core"
+    },
+    {
+      "concept_id": "机器人远程部署与日志排查",
+      "importance": "recommended",
+      "note": "真机调试"
+    },
+    {
+      "concept_id": "代码评审与集成测试",
+      "importance": "recommended"
+    },
+    {
+      "concept_id": "git-团队协作流",
+      "importance": "optional",
+      "note": "开源贡献加分"
+    },
+    {
+      "concept_id": "latex-学术写作与可视化",
+      "importance": "optional",
+      "note": "顶会论文加分"
+    }
+  ]
+}
