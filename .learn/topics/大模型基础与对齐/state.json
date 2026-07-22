@@ -108,11 +108,11 @@
         {
           "concept_id": "lora-参数高效微调",
           "name": "LoRA 参数高效微调",
-          "status": "unexplored",
+          "status": "in_progress",
           "confidence": 0,
           "practice_count": 0,
-          "explain_count": 0,
-          "last_explained": null,
+          "explain_count": 1,
+          "last_explained": "2026-07-22",
           "last_practiced": null,
           "details": [
             "低秩适配",

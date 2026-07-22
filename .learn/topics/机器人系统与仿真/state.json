@@ -82,8 +82,8 @@
           "status": "in_progress",
           "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 1,
-          "last_explained": "2026-07-02",
+          "explain_count": 2,
+          "last_explained": "2026-07-22",
           "last_practiced": null,
           "details": []
         }
@@ -93,6 +93,21 @@
       "name": "Gazebo 仿真环境",
       "slug": "gazebo-仿真环境",
       "concepts": [
+        {
+          "concept_id": "gazebo-仿真平台概览",
+          "name": "Gazebo 仿真平台概览",
+          "status": "in_progress",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 1,
+          "last_explained": "2026-07-22",
+          "last_practiced": null,
+          "details": [
+            "物理引擎与传感器仿真",
+            "Gazebo Classic 与 gz-sim 版本关系",
+            "与 ROS 的桥接方式"
+          ]
+        },
         {
           "concept_id": "urdf-与-sdf-机器人建模",
           "name": "URDF 与 SDF 机器人建模",

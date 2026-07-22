@@ -22,17 +22,31 @@
             }
           },
           {
-            "id": "457a43552e78005a",
+            "id": "f76001e1c861056d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md",
+                "file": "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-22--上下文窗口工程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LLM 工作原理与 Token--2026-07-21--推理流程与采样策略"
+              "title": "LLM 工作原理与 Token--2026-07-22--上下文窗口工程"
+            }
+          },
+          {
+            "id": "cfeea39b4f1c69b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "机器人开发与仿真测试实习.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "机器人开发与仿真测试实习"
             }
           }
         ]
@@ -200,21 +214,24 @@
   },
   "active": "0c6e082fe1ec0515",
   "lastOpenFiles": [
-    "大模型基础与对齐/state.json.tmp.23968.ecf533d3cace",
+    "机器人系统与仿真/sessions/gazebo-仿真环境/Gazebo 仿真平台概览--2026-07-22--整体概览.md",
+    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md",
+    "机器人系统与仿真/state.json.tmp.25112.99a7384adff5",
+    "机器人系统与仿真/state.json.tmp.25112.a120407349f5",
+    "机器人系统与仿真/sessions/gazebo-仿真环境",
+    "大模型基础与对齐/sessions/训练与对齐/LoRA 参数高效微调--2026-07-22--整体概览.md",
+    "大模型基础与对齐/sessions/训练与对齐/LoRA 参数高效微调--2026-07-22--整体概览.md.tmp.37108.76911f8cbda0",
     "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-22--上下文窗口工程.md",
+    "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md",
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md",
+    "机器人开发与仿真测试实习.md",
+    "大模型基础与对齐/state.json.tmp.23968.ecf533d3cace",
     "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-22--上下文窗口工程.md.tmp.23968.561f55e245bb",
     "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md.tmp.36668.81693935dd19",
-    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md",
-    "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md",
     "大模型基础与对齐/sessions/大模型基础/LLM-工作原理与 Token-2026-06-18.md",
     "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.67a9a0335333",
     "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.0b77a8e7eeb6",
     "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.418e0bfe612a",
-    "软件工程与协作/state.json.tmp.33532.e73d2d5a8146",
-    "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md.tmp.33532.112eefcedc2f",
-    "软件工程与协作/sessions/模型训练与部署工程",
-    "大模型基础与对齐/state.json.tmp.5100.7979b8c28aeb",
-    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.b4b693321be4",
     "商汤具身智能研究员.md",
     "ai-agent-应用开发.md",
     "自动驾驶系统/sessions/智驾硬件与传感器系统/激光雷达与组合定位--2026-07-20--卡尔曼滤波详解.md",
