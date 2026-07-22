@@ -4,49 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "d80925599bb8fcbf",
+        "id": "e409728aecd23951",
         "type": "tabs",
         "children": [
           {
-            "id": "f238b0dfa2fb1bb0",
+            "id": "0c6e082fe1ec0515",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "易成感知算法工程师.md",
+                "file": "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "易成感知算法工程师"
+              "title": "模型量化剪枝与算子融合--2026-07-22--整体概览"
             }
           },
           {
-            "id": "95321ad45a80fc6e",
+            "id": "457a43552e78005a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "自动驾驶系统/sessions/智驾硬件与传感器系统/激光雷达与组合定位--2026-07-18--整体概览.md",
+                "file": "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "激光雷达与组合定位--2026-07-18--整体概览"
-            }
-          },
-          {
-            "id": "5c34231f876b54ee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "自动驾驶系统/sessions/智驾硬件与传感器系统/激光雷达与组合定位--2026-07-20--卡尔曼滤波详解.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "激光雷达与组合定位--2026-07-20--卡尔曼滤波详解"
+              "title": "LLM 工作原理与 Token--2026-07-21--推理流程与采样策略"
             }
           }
         ]
@@ -212,17 +198,27 @@
       "bases:新建数据库": false
     }
   },
-  "active": "f238b0dfa2fb1bb0",
+  "active": "0c6e082fe1ec0515",
   "lastOpenFiles": [
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md",
+    "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md",
+    "大模型基础与对齐/sessions/大模型基础/LLM-工作原理与 Token-2026-06-18.md",
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.67a9a0335333",
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.0b77a8e7eeb6",
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.418e0bfe612a",
+    "软件工程与协作/state.json.tmp.33532.e73d2d5a8146",
+    "软件工程与协作/sessions/模型训练与部署工程/模型量化剪枝与算子融合--2026-07-22--整体概览.md.tmp.33532.112eefcedc2f",
+    "软件工程与协作/sessions/模型训练与部署工程",
+    "大模型基础与对齐/state.json.tmp.5100.7979b8c28aeb",
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md.tmp.5100.b4b693321be4",
+    "商汤具身智能研究员.md",
+    "ai-agent-应用开发.md",
+    "商汤具身智能研究员.view.json",
     "自动驾驶系统/sessions/智驾硬件与传感器系统/激光雷达与组合定位--2026-07-20--卡尔曼滤波详解.md",
     "自动驾驶系统/sessions/智驾硬件与传感器系统/激光雷达与组合定位--2026-07-18--整体概览.md",
+    "易成感知算法工程师.md",
     "1, dt], [0, 1.md",
     "自动驾驶系统/state.json.tmp.3884.0f7f4ba912f4",
-    "自动驾驶系统/sessions/智驾硬件与传感器系统/激光雷达与组合定位--2026-07-20--卡尔曼滤波详解.md.tmp.3884.61ce46612847",
-    "感知与空间智能/state.json.tmp.51592.550370e76b09",
-    "感知与空间智能/sessions/3d-视觉与点云/点云数据结构与滤波--2026-07-20--整体概览.md",
-    "感知与空间智能/sessions/3d-视觉与点云/点云数据结构与滤波--2026-07-20--整体概览.md.tmp.51592.76b12014be63",
-    "感知与空间智能/sessions/3d-视觉与点云",
-    "易成感知算法工程师.md"
+    "感知与空间智能/sessions/3d-视觉与点云/点云数据结构与滤波--2026-07-20--整体概览.md"
   ]
 }
