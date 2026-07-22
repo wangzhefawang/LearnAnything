@@ -159,6 +159,8 @@ Session file format:
 ## Next Steps
 
 [Write the 2-4 deeper sub-directions composed for Step 5 — each with 1-2 sentences on why it's worth learning — plus the `/learn:practice <concept>` option. This section must contain the real suggestions, never a placeholder.]
+
+<!-- A later follow-up may append a `## 追问与解答` section here; do not create it when first writing the session file. -->
 ```
 
 **C) Echo the file content** verbatim to the conversation.
@@ -184,6 +186,33 @@ After recording the session, display the suggestions already written in the sess
 > 🔍 **Closure Patterns** — Module Pattern, Currying, Debounce
 > 🔍 **Closure Performance** — Memory leaks, V8 optimization
 > Which direction interests you? Or practice with `/learn:practice closures`?
+
+### Step 6: Persist Follow-up Q&A
+
+After the session file has been written, if the user continues in the current conversation with a follow-up about this concept — including a brief term-definition request or a clarifying question — answer it, then **in the same turn** append that question and answer exactly as given to this concept's current session file.
+
+Append each entry under `## 追问与解答` at the end of the file. Create this section on the first follow-up, after `## Next Steps`. Number entries sequentially within that file and use the date on which the question was asked:
+
+```markdown
+### Q<序号>（YYYY-MM-DD）<简短标题>
+
+**问：** <用户原话，逐字保留>
+
+**答：**
+
+<当时给出的完整回答，逐字保留，不改写、不缩写、不删减格式>
+```
+
+The record must be **verbatim（如实转录）**: preserve the user's original wording and the complete answer exactly as delivered, including formatting. Never polish, rewrite, shorten, or summarize it afterward. This allows the user to revisit the full exchange later without relying on the chat history.
+
+After appending the Q&A, run both commands in the same turn:
+
+```powershell
+node scripts/validate-learning-store.mjs .learn/topics
+node scripts/render-views.mjs .learn/topics
+```
+
+If the follow-up clearly belongs to another concept and resolves to a different `concept_id`, do not append it to the current session file. Suggest that the user start a separate `/learn:explain <concept>` for that concept instead.
 
 ---
 
