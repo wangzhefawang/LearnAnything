@@ -185,6 +185,21 @@
           "last_explained": null,
           "last_practiced": null,
           "details": []
+        },
+        {
+          "concept_id": "传感器驱动开发与实时数据采集",
+          "name": "传感器驱动开发与实时数据采集",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "编码器与扭矩传感器接口驱动",
+            "采样同步与时间戳对齐",
+            "滤波预处理与实时传输闭环"
+          ]
         }
       ]
     }

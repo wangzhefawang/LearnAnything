@@ -336,6 +336,87 @@
             "工作空间边界奇异",
             "构型分支翻转"
           ]
+        },
+        {
+          "concept_id": "轨迹规划与运动插补",
+          "name": "轨迹规划与运动插补",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "关节空间与笛卡尔空间轨迹",
+            "梯形与 S 形速度规划",
+            "样条插值与连续性约束"
+          ]
+        },
+        {
+          "concept_id": "机器人标定与定位精度评估",
+          "name": "机器人标定与定位精度评估",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "DH 参数与运动学标定",
+            "手眼标定",
+            "重复定位精度与绝对定位精度测量"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "控制理论与运动控制",
+      "slug": "控制理论与运动控制",
+      "concepts": [
+        {
+          "concept_id": "经典控制理论与-pid",
+          "name": "经典控制理论与 PID",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "开环闭环与反馈结构",
+            "传递函数、极点与频域分析",
+            "PID 参数整定与抗积分饱和"
+          ]
+        },
+        {
+          "concept_id": "现代控制理论与状态空间",
+          "name": "现代控制理论与状态空间",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "状态空间建模与能控能观性",
+            "状态反馈与极点配置",
+            "LQR 最优控制与卡尔曼观测器"
+          ]
+        },
+        {
+          "concept_id": "伺服驱动与电机控制",
+          "name": "伺服驱动与电机控制",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "直流无刷与谐波减速关节结构",
+            "位置-速度-电流三环控制",
+            "编码器反馈与力矩常数标定"
+          ]
         }
       ]
     },
@@ -422,6 +503,72 @@
             "DIRECT/GUI 客户端模型",
             "步进循环与实时节奏",
             "关节电机参数的状态化语义"
+          ]
+        },
+        {
+          "concept_id": "matlab-simulink-控制建模仿真",
+          "name": "Matlab/Simulink 控制建模仿真",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "Simulink 框图建模与求解器配置",
+            "Robotics System Toolbox 运动学动力学",
+            "控制器设计验证与代码生成"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "机器人软件架构与实时系统",
+      "slug": "机器人软件架构与实时系统",
+      "concepts": [
+        {
+          "concept_id": "机器人软件架构设计",
+          "name": "机器人软件架构设计",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "分层架构与模块解耦",
+            "硬件抽象层与驱动插件化",
+            "可扩展接口与 SDK 设计"
+          ]
+        },
+        {
+          "concept_id": "实时性与实时操作系统",
+          "name": "实时性与实时操作系统",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "硬实时与软实时需求",
+            "PREEMPT_RT 与线程优先级调度",
+            "控制周期抖动测量与优化"
+          ]
+        },
+        {
+          "concept_id": "现场总线与伺服通信-can-rs485-ethercat",
+          "name": "现场总线与伺服通信（CAN/RS485/EtherCAT）",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "CAN 报文格式与 CANopen 协议",
+            "RS485 串行总线与多从机寻址",
+            "EtherCAT 分布式时钟与同步"
           ]
         }
       ]

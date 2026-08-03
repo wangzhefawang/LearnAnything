@@ -122,6 +122,21 @@
           "last_explained": "2026-07-13",
           "last_practiced": null,
           "details": []
+        },
+        {
+          "concept_id": "技术文档与接口规范编写",
+          "name": "技术文档与接口规范编写",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "设计规范与接口协议文档",
+            "SDK 文档与示例编写",
+            "测试报告与问题闭环记录"
+          ]
         }
       ]
     },
@@ -168,6 +183,51 @@
             "与 REST 的取舍",
             "推送频率与通道拆分",
             "断线重连策略"
+          ]
+        },
+        {
+          "concept_id": "tcp-udp-socket-网络编程",
+          "name": "TCP/UDP Socket 网络编程",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "TCP 可靠传输与 UDP 低延迟取舍",
+            "Socket API 与阻塞/非阻塞模型",
+            "粘包拆包与自定义二进制协议"
+          ]
+        },
+        {
+          "concept_id": "面向对象设计与设计模式",
+          "name": "面向对象设计与设计模式",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "SOLID 原则与职责划分",
+            "工厂、策略、观察者、状态模式",
+            "机器人模块中的模式取舍"
+          ]
+        },
+        {
+          "concept_id": "数据库基础与数据存储",
+          "name": "数据库基础与数据存储",
+          "status": "unexplored",
+          "confidence": 0,
+          "practice_count": 0,
+          "explain_count": 0,
+          "last_explained": null,
+          "last_practiced": null,
+          "details": [
+            "关系型建模与 SQL 查询",
+            "时序数据与日志存储选型",
+            "机器人运行数据采集入库"
           ]
         }
       ]
