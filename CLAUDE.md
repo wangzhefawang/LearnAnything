@@ -6,13 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 每句话的结尾都要加一个「喵」字喵。
 
-## 默认工作方式
-
-- **除非用户明确要求，默认召唤 codex 来干活，Claude 负责审查其产出内容**——即先把任务交给 codex（`mcp__codex__codex` 工具）执行，Claude 再对结果做审查、把关和必要的修正喵。
-- **适用范围包含讲解辅导**：不只是写代码/改文件/跑脚本这类实现任务，连 learn-anything 的讲解、练习、答疑等内容，也要先让 codex 起草，Claude 再审查修正后交付喵。
-- 用户明确说「你自己做」「不用 codex」之类时，Claude 直接执行，不再转交喵。
-- **codex 也必须遵守本文件的所有约定**：委派 codex 起草时，要把「会话文件命名规范」等约束一并传达给它；无论是 codex 还是 Claude 落盘，最终文件名都必须符合下面的规范喵。
-
 ## 会话文件命名规范
 
 learn-anything 的讲解会话文件位于 `.learn/topics/<知识领域>/sessions/<子域-slug>/`，统一采用如下命名喵：
