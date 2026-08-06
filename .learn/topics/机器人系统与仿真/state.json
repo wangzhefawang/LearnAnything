@@ -82,7 +82,7 @@
           "status": "in_progress",
           "confidence": 0.1,
           "practice_count": 0,
-          "explain_count": 3,
+          "explain_count": 4,
           "last_explained": "2026-08-06",
           "last_practiced": null,
           "details": []
