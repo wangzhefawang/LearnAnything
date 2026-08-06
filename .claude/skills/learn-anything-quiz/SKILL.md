@@ -1,6 +1,7 @@
 ---
 name: learn-anything-quiz
 description: Quick text-based Q&A quiz. Generates, grades, and persists a reusable question deck per concept for zero-token re-practice later.
+user-invocable: false
 license: MIT
 compatibility: Requires learn-anything CLI.
 metadata:

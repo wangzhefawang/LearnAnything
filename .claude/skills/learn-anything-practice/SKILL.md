@@ -1,6 +1,7 @@
 ---
 name: learn-anything-practice
 description: Master concepts through hands-on practice. Coding topics get real project files to edit in your IDE; conceptual topics get chat-based discussion. Dual-mode (Project Mode + Chat Mode).
+user-invocable: false
 license: MIT
 compatibility: Requires learn-anything CLI.
 metadata:

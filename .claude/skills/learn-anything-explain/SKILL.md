@@ -1,6 +1,7 @@
 ---
 name: learn-anything-explain
 description: Recursively deep-dive into a concept. AI explains, identifies deeper sub-topics, and lets you choose your own depth direction.
+user-invocable: false
 license: MIT
 compatibility: Requires learn-anything CLI.
 metadata:

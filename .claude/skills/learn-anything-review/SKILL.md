@@ -1,6 +1,7 @@
 ---
 name: learn-anything-review
 description: Review your learning progress. See mastered, weak, and unexplored concepts. Get personalized recommendations based on spaced repetition.
+user-invocable: false
 license: MIT
 compatibility: Requires learn-anything CLI.
 metadata:

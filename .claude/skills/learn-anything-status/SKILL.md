@@ -1,6 +1,7 @@
 ---
 name: learn-anything-status
 description: Visualize your current learning state. Display a knowledge map heatmap with mastery status for each concept.
+user-invocable: false
 license: MIT
 compatibility: Requires learn-anything CLI.
 metadata:

@@ -1,6 +1,7 @@
 ---
 name: learn-anything-topic
 description: Initialize or load a learning topic. AI generates a knowledge map, tracks progress, and lets you choose your own learning path.
+user-invocable: false
 license: MIT
 compatibility: Requires learn-anything CLI.
 metadata:
