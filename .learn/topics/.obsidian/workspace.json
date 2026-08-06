@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "e409728aecd23951",
+        "id": "aaf247c5657110ab",
         "type": "tabs",
         "children": [
           {
-            "id": "8317c46bfc88b930",
+            "id": "d8340f25e6beb9be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "大模型基础与对齐/sessions/训练与对齐/LoRA 参数高效微调--2026-07-22--整体概览.md",
+                "file": "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-08-06--工程结构与运行模型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LoRA 参数高效微调--2026-07-22--整体概览"
-            }
-          },
-          {
-            "id": "4698dd56ae9443f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ROS2 机器人操作系统生态--2026-07-22--整体概览"
-            }
-          },
-          {
-            "id": "c1a6194c378e0ebe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-02--整体概览.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ROS2 机器人操作系统生态--2026-07-02--整体概览"
-            }
-          },
-          {
-            "id": "f76001e1c861056d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-22--上下文窗口工程.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "LLM 工作原理与 Token--2026-07-22--上下文窗口工程"
+              "title": "ROS2 机器人操作系统生态--2026-08-06--工程结构与运行模型"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -84,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -121,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 435.5
+    "width": 236.83334350585938
   },
   "right": {
     "id": "97649f94ea131252",
@@ -226,14 +185,17 @@
       "bases:新建数据库": false
     }
   },
-  "active": "4698dd56ae9443f0",
+  "active": "d8340f25e6beb9be",
   "lastOpenFiles": [
-    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md.tmp.25112.7142841c0754",
-    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-02--整体概览.md",
-    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md.tmp.25112.ed5c5fb3e92a",
-    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-22--上下文窗口工程.md",
-    "机器人开发与仿真测试实习.md",
     "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md",
+    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-02--整体概览.md",
+    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-08-06--工程结构与运行模型.md",
+    "机器人系统工程师.md",
+    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-08-06--工程结构与运行模型.md.tmp.26760.3e11a3e14684",
+    "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-22--上下文窗口工程.md",
+    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md.tmp.25112.7142841c0754",
+    "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md.tmp.25112.ed5c5fb3e92a",
+    "机器人开发与仿真测试实习.md",
     "机器人系统与仿真/sessions/ros-机器人操作系统/ROS2 机器人操作系统生态--2026-07-22--整体概览.md.tmp.25112.f0d3ff057c46",
     "机器人系统与仿真/sessions/gazebo-仿真环境/Gazebo 仿真平台概览--2026-07-22--整体概览.md",
     "大模型基础与对齐/sessions/训练与对齐/LoRA 参数高效微调--2026-07-22--整体概览.md",
@@ -244,9 +206,7 @@
     "机器人系统与仿真/state.json.tmp.25112.99a7384adff5",
     "机器人系统与仿真/state.json.tmp.25112.a120407349f5",
     "机器人系统与仿真/sessions/gazebo-仿真环境",
-    "大模型基础与对齐/sessions/训练与对齐/LoRA 参数高效微调--2026-07-22--整体概览.md.tmp.37108.76911f8cbda0",
     "大模型基础与对齐/sessions/大模型基础/LLM 工作原理与 Token--2026-07-21--推理流程与采样策略.md",
-    "大模型基础与对齐/state.json.tmp.23968.ecf533d3cace",
     "大模型基础与对齐/sessions/大模型基础/LLM-工作原理与 Token-2026-06-18.md",
     "商汤具身智能研究员.md",
     "ai-agent-应用开发.md",
